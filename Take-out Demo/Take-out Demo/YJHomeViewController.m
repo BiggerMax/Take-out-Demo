@@ -7,9 +7,12 @@
 //
 
 #import "YJHomeViewController.h"
-
-@interface YJHomeViewController ()
-
+#import "YJGoods.h"
+#import "YJHomeHeadData.h"
+@interface YJHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@property(nonatomic,strong)UICollectionView *collectionView;
+@property(nonatomic,strong)YJHomeHeadData *homeHeadData;
+@property(nonatomic,strong)YJHomeHead
 @end
 
 @implementation YJHomeViewController

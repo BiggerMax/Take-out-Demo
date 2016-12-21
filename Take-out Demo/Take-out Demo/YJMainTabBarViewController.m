@@ -12,6 +12,8 @@
 #import "YJCircleViewController.h"
 #import "YJShoppingViewController.h"
 #import "YJMyViewController.h"
+#import "YJShopCarTool.h"
+#import "YJShoppingViewController.h"
 @interface YJMainTabBarViewController ()
 
 @end
@@ -32,12 +34,21 @@
 }
 
 -(void)addNotification{
-    [YJNotification addObserver:self selector:@selector(IncreaseShoppingCart) name:LFBShopCarBuyNumberDidChangeNotification object:nil];
+    [YJNotification addObserver:self selector:@selector(IncreaseShopppingCart) name:LFBShopCarBuyNumberDidChangeNotification object:nil];
 }
 
 -(void)IncreaseShopppingCart{
     UIViewController *shoppingVC = self.childViewControllers[2];
-    NSInteger shoppingIndex = [yj]
+    NSInteger shoppingIndex = [[YJShopCarTool sharedInstance] getShopCarGoodsNumber];
+    if (shoppingIndex == 0) {
+        shoppingVC.tabBarItem.badgeValue = nil;
+        return;
+    }
+    shoppingVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%zd",shoppingIndex];
+}
+
+-(void)dealloc{
+    [YJNotification removeObserver:self];
 }
 -(void)addChildViewController:(NSString *)title viewController:(UIViewController *)controller image:(NSString *)image selectedImage:(NSString *)selectedImage {
     UITabBarItem *item = [[UITabBarItem alloc]init];

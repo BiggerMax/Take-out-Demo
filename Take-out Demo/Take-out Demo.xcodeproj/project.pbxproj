@@ -10,7 +10,6 @@
 		5D40ACB6ED36D2AF08FC9B1C /* libPods-Take-out Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */; };
 		9DA818281E090B1400DD80B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818271E090B1400DD80B7 /* main.m */; };
 		9DA8182B1E090B1400DD80B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8182A1E090B1400DD80B7 /* AppDelegate.m */; };
-		9DA818311E090B1400DD80B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8182F1E090B1400DD80B7 /* Main.storyboard */; };
 		9DA818341E090B1400DD80B7 /* Take_out_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818321E090B1400DD80B7 /* Take_out_Demo.xcdatamodeld */; };
 		9DA818361E090B1400DD80B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA818351E090B1400DD80B7 /* Assets.xcassets */; };
 		9DA818391E090B1400DD80B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA818371E090B1400DD80B7 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,14 @@
 		9DA818801E0A189900DD80B7 /* YJShopCarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8187F1E0A189900DD80B7 /* YJShopCarTool.m */; };
 		9DA818831E0A18EF00DD80B7 /* YJGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818821E0A18EF00DD80B7 /* YJGoods.m */; };
 		9DA818871E0A25AC00DD80B7 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818861E0A25AC00DD80B7 /* NSString+Extension.m */; };
+		9DA8188A1E0AD8FB00DD80B7 /* YJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818891E0AD8FB00DD80B7 /* YJBaseViewController.m */; };
+		9DA8188D1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8188C1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m */; };
+		9DA818911E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818901E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m */; };
+		9DA818941E0ADA4900DD80B7 /* ItemCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818931E0ADA4900DD80B7 /* ItemCustomButton.m */; };
+		9DA818971E0AE17100DD80B7 /* YJHomeHeadData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818961E0AE17100DD80B7 /* YJHomeHeadData.m */; };
+		9DA8189A1E0AE30400DD80B7 /* YJActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818991E0AE30400DD80B7 /* YJActivity.m */; };
+		9DA8189D1E0AE9AE00DD80B7 /* YJHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8189C1E0AE9AE00DD80B7 /* YJHomeHeadView.m */; };
+		9DA818A01E0AE9E400DD80B7 /* YJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8189F1E0AE9E400DD80B7 /* YJScrollPageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +50,6 @@
 		9DA818271E090B1400DD80B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DA818291E090B1400DD80B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9DA8182A1E090B1400DD80B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9DA818301E090B1400DD80B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DA818331E090B1400DD80B7 /* Take_out_Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Take_out_Demo.xcdatamodel; sourceTree = "<group>"; };
 		9DA818351E090B1400DD80B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DA818381E090B1400DD80B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +80,22 @@
 		9DA818821E0A18EF00DD80B7 /* YJGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJGoods.m; sourceTree = "<group>"; };
 		9DA818851E0A25AC00DD80B7 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		9DA818861E0A25AC00DD80B7 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		9DA818881E0AD8FB00DD80B7 /* YJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJBaseViewController.h; sourceTree = "<group>"; };
+		9DA818891E0AD8FB00DD80B7 /* YJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJBaseViewController.m; sourceTree = "<group>"; };
+		9DA8188B1E0AD93D00DD80B7 /* YJSelectedAdressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSelectedAdressViewController.h; sourceTree = "<group>"; };
+		9DA8188C1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSelectedAdressViewController.m; sourceTree = "<group>"; };
+		9DA8188F1E0AD9AB00DD80B7 /* UIBarButtonItem+Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Button.h"; sourceTree = "<group>"; };
+		9DA818901E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Button.m"; sourceTree = "<group>"; };
+		9DA818921E0ADA4900DD80B7 /* ItemCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCustomButton.h; sourceTree = "<group>"; };
+		9DA818931E0ADA4900DD80B7 /* ItemCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCustomButton.m; sourceTree = "<group>"; };
+		9DA818951E0AE17100DD80B7 /* YJHomeHeadData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHomeHeadData.h; sourceTree = "<group>"; };
+		9DA818961E0AE17100DD80B7 /* YJHomeHeadData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeHeadData.m; sourceTree = "<group>"; };
+		9DA818981E0AE30400DD80B7 /* YJActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJActivity.h; sourceTree = "<group>"; };
+		9DA818991E0AE30400DD80B7 /* YJActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJActivity.m; sourceTree = "<group>"; };
+		9DA8189B1E0AE9AE00DD80B7 /* YJHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHomeHeadView.h; sourceTree = "<group>"; };
+		9DA8189C1E0AE9AE00DD80B7 /* YJHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeHeadView.m; sourceTree = "<group>"; };
+		9DA8189E1E0AE9E400DD80B7 /* YJScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJScrollPageView.h; sourceTree = "<group>"; };
+		9DA8189F1E0AE9E400DD80B7 /* YJScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJScrollPageView.m; sourceTree = "<group>"; };
 		CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Take-out Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4769EA533306E7C89CE4DF5 /* Pods-Take-out Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F02E2890019195B57247E513 /* Pods-Take-out Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +153,6 @@
 				9DA8184F1E090B4000DD80B7 /* Main */,
 				9DA818291E090B1400DD80B7 /* AppDelegate.h */,
 				9DA8182A1E090B1400DD80B7 /* AppDelegate.m */,
-				9DA8182F1E090B1400DD80B7 /* Main.storyboard */,
 				9DA818351E090B1400DD80B7 /* Assets.xcassets */,
 				9DA818371E090B1400DD80B7 /* LaunchScreen.storyboard */,
 				9DA8183A1E090B1400DD80B7 /* Info.plist */,
@@ -209,6 +230,7 @@
 		9DA818531E090B6100DD80B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9DA8188E1E0AD98D00DD80B7 /* View */,
 				9DA818841E0A259000DD80B7 /* Extension */,
 			);
 			name = Common;
@@ -249,6 +271,10 @@
 				9DA8185C1E090E4E00DD80B7 /* YJMainTabBarViewController.m */,
 				9DA8185E1E09100B00DD80B7 /* YJBaseNavigationController.h */,
 				9DA8185F1E09100B00DD80B7 /* YJBaseNavigationController.m */,
+				9DA818881E0AD8FB00DD80B7 /* YJBaseViewController.h */,
+				9DA818891E0AD8FB00DD80B7 /* YJBaseViewController.m */,
+				9DA8188B1E0AD93D00DD80B7 /* YJSelectedAdressViewController.h */,
+				9DA8188C1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -265,6 +291,10 @@
 		9DA818621E09121900DD80B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9DA8189B1E0AE9AE00DD80B7 /* YJHomeHeadView.h */,
+				9DA8189C1E0AE9AE00DD80B7 /* YJHomeHeadView.m */,
+				9DA8189E1E0AE9E400DD80B7 /* YJScrollPageView.h */,
+				9DA8189F1E0AE9E400DD80B7 /* YJScrollPageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -274,6 +304,10 @@
 			children = (
 				9DA818811E0A18EF00DD80B7 /* YJGoods.h */,
 				9DA818821E0A18EF00DD80B7 /* YJGoods.m */,
+				9DA818951E0AE17100DD80B7 /* YJHomeHeadData.h */,
+				9DA818961E0AE17100DD80B7 /* YJHomeHeadData.m */,
+				9DA818981E0AE30400DD80B7 /* YJActivity.h */,
+				9DA818991E0AE30400DD80B7 /* YJActivity.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -363,6 +397,17 @@
 				9DA818861E0A25AC00DD80B7 /* NSString+Extension.m */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		9DA8188E1E0AD98D00DD80B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DA8188F1E0AD9AB00DD80B7 /* UIBarButtonItem+Button.h */,
+				9DA818901E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m */,
+				9DA818921E0ADA4900DD80B7 /* ItemCustomButton.h */,
+				9DA818931E0ADA4900DD80B7 /* ItemCustomButton.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		B38A398B2B6B1F33F02FDACD /* Frameworks */ = {
@@ -471,7 +516,6 @@
 			files = (
 				9DA818391E090B1400DD80B7 /* LaunchScreen.storyboard in Resources */,
 				9DA818361E090B1400DD80B7 /* Assets.xcassets in Resources */,
-				9DA818311E090B1400DD80B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,19 +581,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA8188D1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m in Sources */,
 				9DA818591E090C4B00DD80B7 /* YJConst.m in Sources */,
 				9DA818831E0A18EF00DD80B7 /* YJGoods.m in Sources */,
 				9DA818601E09100B00DD80B7 /* YJBaseNavigationController.m in Sources */,
 				9DA818721E0912FA00DD80B7 /* YJShoppingViewController.m in Sources */,
 				9DA818801E0A189900DD80B7 /* YJShopCarTool.m in Sources */,
 				9DA8187C1E09185700DD80B7 /* AppConst.m in Sources */,
+				9DA8189A1E0AE30400DD80B7 /* YJActivity.m in Sources */,
+				9DA8189D1E0AE9AE00DD80B7 /* YJHomeHeadView.m in Sources */,
+				9DA818A01E0AE9E400DD80B7 /* YJScrollPageView.m in Sources */,
+				9DA818941E0ADA4900DD80B7 /* ItemCustomButton.m in Sources */,
 				9DA8182B1E090B1400DD80B7 /* AppDelegate.m in Sources */,
 				9DA818661E09124A00DD80B7 /* YJHomeViewController.m in Sources */,
+				9DA8188A1E0AD8FB00DD80B7 /* YJBaseViewController.m in Sources */,
 				9DA818341E090B1400DD80B7 /* Take_out_Demo.xcdatamodeld in Sources */,
+				9DA818971E0AE17100DD80B7 /* YJHomeHeadData.m in Sources */,
 				9DA8186C1E0912D100DD80B7 /* YJCircleViewController.m in Sources */,
 				9DA818781E09131F00DD80B7 /* YJMyViewController.m in Sources */,
 				9DA8185D1E090E4E00DD80B7 /* YJMainTabBarViewController.m in Sources */,
 				9DA818281E090B1400DD80B7 /* main.m in Sources */,
+				9DA818911E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m in Sources */,
 				9DA818871E0A25AC00DD80B7 /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,14 +625,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9DA8182F1E090B1400DD80B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9DA818301E090B1400DD80B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9DA818371E090B1400DD80B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

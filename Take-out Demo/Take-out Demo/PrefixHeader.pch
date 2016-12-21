@@ -15,8 +15,23 @@
 #import "MJExtension.h"
 #import "UIImageView+WebCache.h"
 
-typedef void (^CompleteBlock)(id data,NSError *error);
-#define YJNotification   [NSNotificationCenter defaultCenter]
+typedef NS_ENUM(NSInteger ,HeadViewItemType){
+    HeadViewItemTypePage,
+    HeadViewItemTypeHot,
+    HeadViewItemTypeHeadLine,
+    HeadViewItemTypeBrand,
+    HeadViewItemTypeScene
+};
 
+typedef void (^CompleteBlock)(id data,NSError *error);
+typedef void(^ClikedCallback) (HeadViewItemType type,NSInteger tag);
+
+
+#define YJNotification   [NSNotificationCenter defaultCenter]
+#define Width  [[UIScreen mainScreen] bounds].size.width
+#define Height [[UIScreen mainScreen] bounds].size.height
+#define GrayColor [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1]
+#define GrayColor [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1]
+#define GeneralColor [UIColor colorWithRed:0.992 green:0.831 blue:0.192 alpha:1.000]
 
 #endif /* PrefixHeader_pch */
