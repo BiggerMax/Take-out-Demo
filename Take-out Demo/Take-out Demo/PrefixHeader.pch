@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  Take-out Demo
+//
+//  Created by 袁杰 on 16/12/20.
+//  Copyright © 2016年 袁杰. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AppConst.h"
+#import "Masonry.h"
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+
+typedef void (^CompleteBlock)(id data,NSError *error);
+#define YJNotification   [NSNotificationCenter defaultCenter]
+
+
+#endif /* PrefixHeader_pch */
