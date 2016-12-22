@@ -40,6 +40,15 @@
 		9DA818AF1E0BB57600DD80B7 /* YJIconImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818AE1E0BB57600DD80B7 /* YJIconImageTextView.m */; };
 		9DA818B21E0BDE0000DD80B7 /* YJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818B11E0BDE0000DD80B7 /* YJWebViewController.m */; };
 		9DA818B51E0BDF7C00DD80B7 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818B41E0BDF7C00DD80B7 /* BaseTabBarViewController.m */; };
+		9DA818B91E0BFE5500DD80B7 /* BaseTabBatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818B81E0BFE5500DD80B7 /* BaseTabBatButton.m */; };
+		9DA818BC1E0C124300DD80B7 /* YJHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818BB1E0C124300DD80B7 /* YJHomeCell.m */; };
+		9DA818BF1E0C143B00DD80B7 /* YJDiscountPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818BE1E0C143B00DD80B7 /* YJDiscountPriceView.m */; };
+		9DA818C21E0C1F1C00DD80B7 /* YJBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818C11E0C1F1C00DD80B7 /* YJBuyView.m */; };
+		9DA818C61E0C202A00DD80B7 /* YJProgressHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818C51E0C202A00DD80B7 /* YJProgressHUDManager.m */; };
+		9DA818C91E0C311200DD80B7 /* YJHomeCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818C81E0C311200DD80B7 /* YJHomeCategoryCell.m */; };
+		9DA818CC1E0C315200DD80B7 /* YJHomeCellTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818CB1E0C315200DD80B7 /* YJHomeCellTitleView.m */; };
+		9DA818CF1E0C31E000DD80B7 /* UIColor+YJExpand.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818CE1E0C31E000DD80B7 /* UIColor+YJExpand.m */; };
+		9DA818D21E0C37C600DD80B7 /* YJHomeCellGoodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818D11E0C37C600DD80B7 /* YJHomeCellGoodsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +126,24 @@
 		9DA818B11E0BDE0000DD80B7 /* YJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWebViewController.m; sourceTree = "<group>"; };
 		9DA818B31E0BDF7C00DD80B7 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
 		9DA818B41E0BDF7C00DD80B7 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
+		9DA818B71E0BFE5500DD80B7 /* BaseTabBatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBatButton.h; sourceTree = "<group>"; };
+		9DA818B81E0BFE5500DD80B7 /* BaseTabBatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBatButton.m; sourceTree = "<group>"; };
+		9DA818BA1E0C124300DD80B7 /* YJHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHomeCell.h; sourceTree = "<group>"; };
+		9DA818BB1E0C124300DD80B7 /* YJHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeCell.m; sourceTree = "<group>"; };
+		9DA818BD1E0C143B00DD80B7 /* YJDiscountPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJDiscountPriceView.h; sourceTree = "<group>"; };
+		9DA818BE1E0C143B00DD80B7 /* YJDiscountPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJDiscountPriceView.m; sourceTree = "<group>"; };
+		9DA818C01E0C1F1C00DD80B7 /* YJBuyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJBuyView.h; sourceTree = "<group>"; };
+		9DA818C11E0C1F1C00DD80B7 /* YJBuyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJBuyView.m; sourceTree = "<group>"; };
+		9DA818C41E0C202A00DD80B7 /* YJProgressHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJProgressHUDManager.h; sourceTree = "<group>"; };
+		9DA818C51E0C202A00DD80B7 /* YJProgressHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJProgressHUDManager.m; sourceTree = "<group>"; };
+		9DA818C71E0C311200DD80B7 /* YJHomeCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHomeCategoryCell.h; sourceTree = "<group>"; };
+		9DA818C81E0C311200DD80B7 /* YJHomeCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeCategoryCell.m; sourceTree = "<group>"; };
+		9DA818CA1E0C315200DD80B7 /* YJHomeCellTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHomeCellTitleView.h; sourceTree = "<group>"; };
+		9DA818CB1E0C315200DD80B7 /* YJHomeCellTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeCellTitleView.m; sourceTree = "<group>"; };
+		9DA818CD1E0C31E000DD80B7 /* UIColor+YJExpand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YJExpand.h"; sourceTree = "<group>"; };
+		9DA818CE1E0C31E000DD80B7 /* UIColor+YJExpand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YJExpand.m"; sourceTree = "<group>"; };
+		9DA818D01E0C37C600DD80B7 /* YJHomeCellGoodsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHomeCellGoodsView.h; sourceTree = "<group>"; };
+		9DA818D11E0C37C600DD80B7 /* YJHomeCellGoodsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeCellGoodsView.m; sourceTree = "<group>"; };
 		CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Take-out Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4769EA533306E7C89CE4DF5 /* Pods-Take-out Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F02E2890019195B57247E513 /* Pods-Take-out Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +241,7 @@
 		9DA8184F1E090B4000DD80B7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9DA818B61E0BFE4000DD80B7 /* View */,
 				9DA8185A1E090E2F00DD80B7 /* Controller */,
 			);
 			name = Main;
@@ -251,6 +279,7 @@
 		9DA818531E090B6100DD80B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9DA818C31E0C1FF500DD80B7 /* Tool */,
 				9DA8188E1E0AD98D00DD80B7 /* View */,
 				9DA818841E0A259000DD80B7 /* Extension */,
 			);
@@ -328,6 +357,18 @@
 				9DA818A81E0B790700DD80B7 /* YJHeadLineContentView.m */,
 				9DA818AA1E0BB4EF00DD80B7 /* YJHotView.h */,
 				9DA818AB1E0BB4EF00DD80B7 /* YJHotView.m */,
+				9DA818BA1E0C124300DD80B7 /* YJHomeCell.h */,
+				9DA818BB1E0C124300DD80B7 /* YJHomeCell.m */,
+				9DA818BD1E0C143B00DD80B7 /* YJDiscountPriceView.h */,
+				9DA818BE1E0C143B00DD80B7 /* YJDiscountPriceView.m */,
+				9DA818C01E0C1F1C00DD80B7 /* YJBuyView.h */,
+				9DA818C11E0C1F1C00DD80B7 /* YJBuyView.m */,
+				9DA818C71E0C311200DD80B7 /* YJHomeCategoryCell.h */,
+				9DA818C81E0C311200DD80B7 /* YJHomeCategoryCell.m */,
+				9DA818CA1E0C315200DD80B7 /* YJHomeCellTitleView.h */,
+				9DA818CB1E0C315200DD80B7 /* YJHomeCellTitleView.m */,
+				9DA818D01E0C37C600DD80B7 /* YJHomeCellGoodsView.h */,
+				9DA818D11E0C37C600DD80B7 /* YJHomeCellGoodsView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -428,6 +469,8 @@
 			children = (
 				9DA818851E0A25AC00DD80B7 /* NSString+Extension.h */,
 				9DA818861E0A25AC00DD80B7 /* NSString+Extension.m */,
+				9DA818CD1E0C31E000DD80B7 /* UIColor+YJExpand.h */,
+				9DA818CE1E0C31E000DD80B7 /* UIColor+YJExpand.m */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -443,6 +486,24 @@
 				9DA818AE1E0BB57600DD80B7 /* YJIconImageTextView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		9DA818B61E0BFE4000DD80B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DA818B71E0BFE5500DD80B7 /* BaseTabBatButton.h */,
+				9DA818B81E0BFE5500DD80B7 /* BaseTabBatButton.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9DA818C31E0C1FF500DD80B7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				9DA818C41E0C202A00DD80B7 /* YJProgressHUDManager.h */,
+				9DA818C51E0C202A00DD80B7 /* YJProgressHUDManager.m */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 		B38A398B2B6B1F33F02FDACD /* Frameworks */ = {
@@ -625,22 +686,31 @@
 				9DA818B51E0BDF7C00DD80B7 /* BaseTabBarViewController.m in Sources */,
 				9DA818601E09100B00DD80B7 /* YJBaseNavigationController.m in Sources */,
 				9DA818721E0912FA00DD80B7 /* YJShoppingViewController.m in Sources */,
+				9DA818C61E0C202A00DD80B7 /* YJProgressHUDManager.m in Sources */,
 				9DA818801E0A189900DD80B7 /* YJShopCarTool.m in Sources */,
+				9DA818BF1E0C143B00DD80B7 /* YJDiscountPriceView.m in Sources */,
 				9DA8187C1E09185700DD80B7 /* AppConst.m in Sources */,
 				9DA818AC1E0BB4EF00DD80B7 /* YJHotView.m in Sources */,
+				9DA818CF1E0C31E000DD80B7 /* UIColor+YJExpand.m in Sources */,
+				9DA818C21E0C1F1C00DD80B7 /* YJBuyView.m in Sources */,
 				9DA8189A1E0AE30400DD80B7 /* YJActivity.m in Sources */,
 				9DA8189D1E0AE9AE00DD80B7 /* YJHomeHeadView.m in Sources */,
+				9DA818CC1E0C315200DD80B7 /* YJHomeCellTitleView.m in Sources */,
 				9DA818A01E0AE9E400DD80B7 /* YJScrollPageView.m in Sources */,
 				9DA818941E0ADA4900DD80B7 /* ItemCustomButton.m in Sources */,
 				9DA8182B1E090B1400DD80B7 /* AppDelegate.m in Sources */,
 				9DA818661E09124A00DD80B7 /* YJHomeViewController.m in Sources */,
+				9DA818B91E0BFE5500DD80B7 /* BaseTabBatButton.m in Sources */,
+				9DA818BC1E0C124300DD80B7 /* YJHomeCell.m in Sources */,
 				9DA8188A1E0AD8FB00DD80B7 /* YJBaseViewController.m in Sources */,
 				9DA818341E090B1400DD80B7 /* Take_out_Demo.xcdatamodeld in Sources */,
 				9DA818971E0AE17100DD80B7 /* YJHomeHeadData.m in Sources */,
 				9DA818B21E0BDE0000DD80B7 /* YJWebViewController.m in Sources */,
+				9DA818C91E0C311200DD80B7 /* YJHomeCategoryCell.m in Sources */,
 				9DA8186C1E0912D100DD80B7 /* YJCircleViewController.m in Sources */,
 				9DA818781E09131F00DD80B7 /* YJMyViewController.m in Sources */,
 				9DA8185D1E090E4E00DD80B7 /* YJMainTabBarViewController.m in Sources */,
+				9DA818D21E0C37C600DD80B7 /* YJHomeCellGoodsView.m in Sources */,
 				9DA818A61E0B789200DD80B7 /* YJHeadLinePageVIew.m in Sources */,
 				9DA818281E090B1400DD80B7 /* main.m in Sources */,
 				9DA818911E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m in Sources */,
