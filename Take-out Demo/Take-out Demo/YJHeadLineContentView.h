@@ -1,5 +1,5 @@
 //
-//  YJHomeHeadView.h
+//  YJHeadLineContentView.h
 //  Take-out Demo
 //
 //  Created by 袁杰 on 16/12/22.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "YJHomeHeadData.h"
-#import "YJScrollPageView.h"
-@interface YJHomeHeadView : UIView
-
+@interface YJHeadLineContentView : UIView
+@property(nonatomic,strong)ActRow *actRow;
 @end

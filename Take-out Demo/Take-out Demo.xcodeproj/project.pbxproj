@@ -33,6 +33,9 @@
 		9DA8189A1E0AE30400DD80B7 /* YJActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818991E0AE30400DD80B7 /* YJActivity.m */; };
 		9DA8189D1E0AE9AE00DD80B7 /* YJHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8189C1E0AE9AE00DD80B7 /* YJHomeHeadView.m */; };
 		9DA818A01E0AE9E400DD80B7 /* YJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8189F1E0AE9E400DD80B7 /* YJScrollPageView.m */; };
+		9DA818A31E0B782F00DD80B7 /* YJHeadLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818A21E0B782F00DD80B7 /* YJHeadLineView.m */; };
+		9DA818A61E0B789200DD80B7 /* YJHeadLinePageVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818A51E0B789200DD80B7 /* YJHeadLinePageVIew.m */; };
+		9DA818A91E0B790700DD80B7 /* YJHeadLineContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818A81E0B790700DD80B7 /* YJHeadLineContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,12 @@
 		9DA8189C1E0AE9AE00DD80B7 /* YJHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeHeadView.m; sourceTree = "<group>"; };
 		9DA8189E1E0AE9E400DD80B7 /* YJScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJScrollPageView.h; sourceTree = "<group>"; };
 		9DA8189F1E0AE9E400DD80B7 /* YJScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJScrollPageView.m; sourceTree = "<group>"; };
+		9DA818A11E0B782F00DD80B7 /* YJHeadLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHeadLineView.h; sourceTree = "<group>"; };
+		9DA818A21E0B782F00DD80B7 /* YJHeadLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHeadLineView.m; sourceTree = "<group>"; };
+		9DA818A41E0B789200DD80B7 /* YJHeadLinePageVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHeadLinePageVIew.h; sourceTree = "<group>"; };
+		9DA818A51E0B789200DD80B7 /* YJHeadLinePageVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHeadLinePageVIew.m; sourceTree = "<group>"; };
+		9DA818A71E0B790700DD80B7 /* YJHeadLineContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHeadLineContentView.h; sourceTree = "<group>"; };
+		9DA818A81E0B790700DD80B7 /* YJHeadLineContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHeadLineContentView.m; sourceTree = "<group>"; };
 		CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Take-out Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4769EA533306E7C89CE4DF5 /* Pods-Take-out Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F02E2890019195B57247E513 /* Pods-Take-out Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +304,12 @@
 				9DA8189C1E0AE9AE00DD80B7 /* YJHomeHeadView.m */,
 				9DA8189E1E0AE9E400DD80B7 /* YJScrollPageView.h */,
 				9DA8189F1E0AE9E400DD80B7 /* YJScrollPageView.m */,
+				9DA818A11E0B782F00DD80B7 /* YJHeadLineView.h */,
+				9DA818A21E0B782F00DD80B7 /* YJHeadLineView.m */,
+				9DA818A41E0B789200DD80B7 /* YJHeadLinePageVIew.h */,
+				9DA818A51E0B789200DD80B7 /* YJHeadLinePageVIew.m */,
+				9DA818A71E0B790700DD80B7 /* YJHeadLineContentView.h */,
+				9DA818A81E0B790700DD80B7 /* YJHeadLineContentView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -581,8 +596,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA818A31E0B782F00DD80B7 /* YJHeadLineView.m in Sources */,
 				9DA8188D1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m in Sources */,
 				9DA818591E090C4B00DD80B7 /* YJConst.m in Sources */,
+				9DA818A91E0B790700DD80B7 /* YJHeadLineContentView.m in Sources */,
 				9DA818831E0A18EF00DD80B7 /* YJGoods.m in Sources */,
 				9DA818601E09100B00DD80B7 /* YJBaseNavigationController.m in Sources */,
 				9DA818721E0912FA00DD80B7 /* YJShoppingViewController.m in Sources */,
@@ -600,6 +617,7 @@
 				9DA8186C1E0912D100DD80B7 /* YJCircleViewController.m in Sources */,
 				9DA818781E09131F00DD80B7 /* YJMyViewController.m in Sources */,
 				9DA8185D1E090E4E00DD80B7 /* YJMainTabBarViewController.m in Sources */,
+				9DA818A61E0B789200DD80B7 /* YJHeadLinePageVIew.m in Sources */,
 				9DA818281E090B1400DD80B7 /* main.m in Sources */,
 				9DA818911E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m in Sources */,
 				9DA818871E0A25AC00DD80B7 /* NSString+Extension.m in Sources */,

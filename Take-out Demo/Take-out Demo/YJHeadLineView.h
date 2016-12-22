@@ -1,5 +1,5 @@
 //
-//  YJHomeHeadView.h
+//  YJHeadLineView.h
 //  Take-out Demo
 //
 //  Created by 袁杰 on 16/12/22.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YJHomeHeadData.h"
-#import "YJScrollPageView.h"
-@interface YJHomeHeadView : UIView
-
+@interface YJHeadLineView : UIView
+@property(nonatomic,strong)ActInfo *headLine;
+@property(nonatomic,copy)ClikedCallback calBack;
 @end

@@ -11,4 +11,6 @@
 @interface YJScrollPageView : UIView
 
 @property(nonatomic,copy)ClikedCallback clikeCall;
++(instancetype)pageController:(NSArray <NSString *>*)images
+             placeHolderImage:(UIImage *)placeHolderImage;
 @end
