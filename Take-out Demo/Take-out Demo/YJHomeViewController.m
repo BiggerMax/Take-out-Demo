@@ -9,6 +9,7 @@
 #import "YJHomeViewController.h"
 #import "YJGoods.h"
 #import "YJHomeHeadData.h"
+#import "<#header#>"
 @interface YJHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic,strong)UICollectionView *collectionView;
 @property(nonatomic,strong)YJHomeHeadData *homeHeadData;

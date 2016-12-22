@@ -7,7 +7,7 @@
 //
 
 #import "YJHeadLineContentView.h"
-
+#import "YJHeadLineContentView.h"
 @interface YJHeadLineContentView ()
 @property(nonatomic,strong)UILabel *titleLabel;
 @property(nonatomic,strong)UILabel *contentLabel;

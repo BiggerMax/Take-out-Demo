@@ -36,6 +36,10 @@
 		9DA818A31E0B782F00DD80B7 /* YJHeadLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818A21E0B782F00DD80B7 /* YJHeadLineView.m */; };
 		9DA818A61E0B789200DD80B7 /* YJHeadLinePageVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818A51E0B789200DD80B7 /* YJHeadLinePageVIew.m */; };
 		9DA818A91E0B790700DD80B7 /* YJHeadLineContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818A81E0B790700DD80B7 /* YJHeadLineContentView.m */; };
+		9DA818AC1E0BB4EF00DD80B7 /* YJHotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818AB1E0BB4EF00DD80B7 /* YJHotView.m */; };
+		9DA818AF1E0BB57600DD80B7 /* YJIconImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818AE1E0BB57600DD80B7 /* YJIconImageTextView.m */; };
+		9DA818B21E0BDE0000DD80B7 /* YJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818B11E0BDE0000DD80B7 /* YJWebViewController.m */; };
+		9DA818B51E0BDF7C00DD80B7 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818B41E0BDF7C00DD80B7 /* BaseTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,14 @@
 		9DA818A51E0B789200DD80B7 /* YJHeadLinePageVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHeadLinePageVIew.m; sourceTree = "<group>"; };
 		9DA818A71E0B790700DD80B7 /* YJHeadLineContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHeadLineContentView.h; sourceTree = "<group>"; };
 		9DA818A81E0B790700DD80B7 /* YJHeadLineContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHeadLineContentView.m; sourceTree = "<group>"; };
+		9DA818AA1E0BB4EF00DD80B7 /* YJHotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHotView.h; sourceTree = "<group>"; };
+		9DA818AB1E0BB4EF00DD80B7 /* YJHotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHotView.m; sourceTree = "<group>"; };
+		9DA818AD1E0BB57600DD80B7 /* YJIconImageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJIconImageTextView.h; sourceTree = "<group>"; };
+		9DA818AE1E0BB57600DD80B7 /* YJIconImageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJIconImageTextView.m; sourceTree = "<group>"; };
+		9DA818B01E0BDE0000DD80B7 /* YJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJWebViewController.h; sourceTree = "<group>"; };
+		9DA818B11E0BDE0000DD80B7 /* YJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJWebViewController.m; sourceTree = "<group>"; };
+		9DA818B31E0BDF7C00DD80B7 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
+		9DA818B41E0BDF7C00DD80B7 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
 		CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Take-out Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4769EA533306E7C89CE4DF5 /* Pods-Take-out Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F02E2890019195B57247E513 /* Pods-Take-out Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +296,8 @@
 				9DA818891E0AD8FB00DD80B7 /* YJBaseViewController.m */,
 				9DA8188B1E0AD93D00DD80B7 /* YJSelectedAdressViewController.h */,
 				9DA8188C1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m */,
+				9DA818B31E0BDF7C00DD80B7 /* BaseTabBarViewController.h */,
+				9DA818B41E0BDF7C00DD80B7 /* BaseTabBarViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -293,6 +307,8 @@
 			children = (
 				9DA818641E09124A00DD80B7 /* YJHomeViewController.h */,
 				9DA818651E09124A00DD80B7 /* YJHomeViewController.m */,
+				9DA818B01E0BDE0000DD80B7 /* YJWebViewController.h */,
+				9DA818B11E0BDE0000DD80B7 /* YJWebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -310,6 +326,8 @@
 				9DA818A51E0B789200DD80B7 /* YJHeadLinePageVIew.m */,
 				9DA818A71E0B790700DD80B7 /* YJHeadLineContentView.h */,
 				9DA818A81E0B790700DD80B7 /* YJHeadLineContentView.m */,
+				9DA818AA1E0BB4EF00DD80B7 /* YJHotView.h */,
+				9DA818AB1E0BB4EF00DD80B7 /* YJHotView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -421,6 +439,8 @@
 				9DA818901E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m */,
 				9DA818921E0ADA4900DD80B7 /* ItemCustomButton.h */,
 				9DA818931E0ADA4900DD80B7 /* ItemCustomButton.m */,
+				9DA818AD1E0BB57600DD80B7 /* YJIconImageTextView.h */,
+				9DA818AE1E0BB57600DD80B7 /* YJIconImageTextView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -596,15 +616,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA818AF1E0BB57600DD80B7 /* YJIconImageTextView.m in Sources */,
 				9DA818A31E0B782F00DD80B7 /* YJHeadLineView.m in Sources */,
 				9DA8188D1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m in Sources */,
 				9DA818591E090C4B00DD80B7 /* YJConst.m in Sources */,
 				9DA818A91E0B790700DD80B7 /* YJHeadLineContentView.m in Sources */,
 				9DA818831E0A18EF00DD80B7 /* YJGoods.m in Sources */,
+				9DA818B51E0BDF7C00DD80B7 /* BaseTabBarViewController.m in Sources */,
 				9DA818601E09100B00DD80B7 /* YJBaseNavigationController.m in Sources */,
 				9DA818721E0912FA00DD80B7 /* YJShoppingViewController.m in Sources */,
 				9DA818801E0A189900DD80B7 /* YJShopCarTool.m in Sources */,
 				9DA8187C1E09185700DD80B7 /* AppConst.m in Sources */,
+				9DA818AC1E0BB4EF00DD80B7 /* YJHotView.m in Sources */,
 				9DA8189A1E0AE30400DD80B7 /* YJActivity.m in Sources */,
 				9DA8189D1E0AE9AE00DD80B7 /* YJHomeHeadView.m in Sources */,
 				9DA818A01E0AE9E400DD80B7 /* YJScrollPageView.m in Sources */,
@@ -614,6 +637,7 @@
 				9DA8188A1E0AD8FB00DD80B7 /* YJBaseViewController.m in Sources */,
 				9DA818341E090B1400DD80B7 /* Take_out_Demo.xcdatamodeld in Sources */,
 				9DA818971E0AE17100DD80B7 /* YJHomeHeadData.m in Sources */,
+				9DA818B21E0BDE0000DD80B7 /* YJWebViewController.m in Sources */,
 				9DA8186C1E0912D100DD80B7 /* YJCircleViewController.m in Sources */,
 				9DA818781E09131F00DD80B7 /* YJMyViewController.m in Sources */,
 				9DA8185D1E090E4E00DD80B7 /* YJMainTabBarViewController.m in Sources */,

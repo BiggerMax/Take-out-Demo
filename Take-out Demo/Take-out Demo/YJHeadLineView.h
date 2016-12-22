@@ -10,5 +10,5 @@
 #import "YJHomeHeadData.h"
 @interface YJHeadLineView : UIView
 @property(nonatomic,strong)ActInfo *headLine;
-@property(nonatomic,copy)ClikedCallback calBack;
+@property(nonatomic,copy)ClikedCallback callBack;
 @end
