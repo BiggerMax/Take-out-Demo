@@ -33,7 +33,7 @@
 @implementation YJHomeCell
 -(instancetype)initWithFrame:(CGRect)frame{
     if ([super initWithFrame:frame]) {
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cellTapgesture:)];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cellTapgesture)];
         [self addGestureRecognizer:tap];
         self.backgroundColor = [UIColor whiteColor];
         _backImageView = [[UIImageView alloc]init];

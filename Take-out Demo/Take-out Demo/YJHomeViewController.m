@@ -11,10 +11,13 @@
 #import "YJHomeHeadData.h"
 #import "YJWebViewController.h"
 #import "YJHomeCell.h"
+#import "YJHomeCategoryCell.h"
+#import "YJHomeHeadView.h"
 @interface YJHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic,strong)UICollectionView *collectionView;
 @property(nonatomic,strong)YJHomeHeadData *homeHeadData;
-@property(nonatomic,strong)YJHomeHead
+@property(nonatomic,strong)YJHomeHeadView *homeHeadView;
+@property(nonatomic,strong)NSArray<YJGoods *>*freshHots;
 @end
 
 @implementation YJHomeViewController

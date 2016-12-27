@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YJGoods.h"
 
-typedef void(^ClickedCellBack)(YJGoods *goods);
+typedef void(^ClickedCallBack)(YJGoods *goods);
 
 typedef enum : NSUInteger{
     AJHomeCellTypeVerticalScreen,
@@ -19,5 +19,5 @@ typedef enum : NSUInteger{
 @property(nonatomic,strong)YJGoods *goods;
 //不在显示减号
 @property(nonatomic,assign)BOOL minusNeverShow;
-@property(nonatomic,copy)ClickedCellBack cellBack;
+@property(nonatomic,copy)ClickedCallBack cellBack;
 @end

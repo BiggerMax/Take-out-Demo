@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "YJHomeHeadData.h"
 #import "YJHomeCellTitleView.h"
-
+#import "YJHomeCellGoodsView.h"
 @interface YJHomeCategoryCell : UICollectionViewCell
-
+@property(nonatomic,strong)ActRow *cellInfo;
+@property(nonatomic,copy)ClickedCallBack callBack;
 @end

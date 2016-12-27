@@ -43,7 +43,8 @@
 -(void)setActRow:(ActRow *)actRow{
     for (int i = 0; i < self.subviews.count; i++) {
         YJHomeCell *cell = self.subviews[i];
-        cell.
+        cell.minusNeverShow = YES;
+        cell.goods = actRow.category_detail.goods[i];
     }
 }
 @end
