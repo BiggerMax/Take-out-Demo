@@ -11,5 +11,5 @@
 #import "YJHomeCell.h"
 @interface YJHomeCellGoodsView : UIView
 @property(nonatomic,strong)ActRow *actRow;
-@property(nonatomic,copy)ClickedCellBack cellBack;
+@property(nonatomic,copy)ClickedCallBack cellBack;
 @end
