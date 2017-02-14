@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5D40ACB6ED36D2AF08FC9B1C /* libPods-Take-out Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */; };
+		9DA5117B1E53495800F8684D /* 首页热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 9DA5117A1E53495800F8684D /* 首页热卖 */; };
+		9DA5117D1E534A1C00F8684D /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */; };
+		9DA511801E534B0700F8684D /* YJAnimationRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5117F1E534B0700F8684D /* YJAnimationRefreshHeader.m */; };
 		9DA818281E090B1400DD80B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818271E090B1400DD80B7 /* main.m */; };
 		9DA8182B1E090B1400DD80B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8182A1E090B1400DD80B7 /* AppDelegate.m */; };
 		9DA818341E090B1400DD80B7 /* Take_out_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DA818321E090B1400DD80B7 /* Take_out_Demo.xcdatamodeld */; };
@@ -62,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9DA5117A1E53495800F8684D /* 首页热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页热卖"; path = "Resource/首页热卖"; sourceTree = "<group>"; };
+		9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页新鲜热卖"; path = "Resource/首页新鲜热卖"; sourceTree = "<group>"; };
+		9DA5117E1E534B0700F8684D /* YJAnimationRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJAnimationRefreshHeader.h; sourceTree = "<group>"; };
+		9DA5117F1E534B0700F8684D /* YJAnimationRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJAnimationRefreshHeader.m; sourceTree = "<group>"; };
 		9DA818231E090B1400DD80B7 /* Take-out Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take-out Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA818271E090B1400DD80B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DA818291E090B1400DD80B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -289,6 +296,8 @@
 		9DA818541E090B6D00DD80B7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9DA5117A1E53495800F8684D /* 首页热卖 */,
+				9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -484,6 +493,8 @@
 				9DA818931E0ADA4900DD80B7 /* ItemCustomButton.m */,
 				9DA818AD1E0BB57600DD80B7 /* YJIconImageTextView.h */,
 				9DA818AE1E0BB57600DD80B7 /* YJIconImageTextView.m */,
+				9DA5117E1E534B0700F8684D /* YJAnimationRefreshHeader.h */,
+				9DA5117F1E534B0700F8684D /* YJAnimationRefreshHeader.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -610,6 +621,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA5117D1E534A1C00F8684D /* 首页新鲜热卖 in Resources */,
+				9DA5117B1E53495800F8684D /* 首页热卖 in Resources */,
 				9DA818391E090B1400DD80B7 /* LaunchScreen.storyboard in Resources */,
 				9DA818361E090B1400DD80B7 /* Assets.xcassets in Resources */,
 			);
@@ -710,6 +723,7 @@
 				9DA8186C1E0912D100DD80B7 /* YJCircleViewController.m in Sources */,
 				9DA818781E09131F00DD80B7 /* YJMyViewController.m in Sources */,
 				9DA8185D1E090E4E00DD80B7 /* YJMainTabBarViewController.m in Sources */,
+				9DA511801E534B0700F8684D /* YJAnimationRefreshHeader.m in Sources */,
 				9DA818D21E0C37C600DD80B7 /* YJHomeCellGoodsView.m in Sources */,
 				9DA818A61E0B789200DD80B7 /* YJHeadLinePageVIew.m in Sources */,
 				9DA818281E090B1400DD80B7 /* main.m in Sources */,
