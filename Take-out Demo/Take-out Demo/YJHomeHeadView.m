@@ -19,12 +19,7 @@
     NSMutableArray *focusImages = [NSMutableArray array];
     NSMutableArray *iconImages = [NSMutableArray array];
     NSMutableArray *iconTitles = [NSMutableArray array];
-    
-    [headData.focus.act_rows enumerateObjectsUsingBlock:^(ActRow * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [iconImages addObject:obj.activity.img];
-        [iconTitles addObject:obj.activity.name];
-    }];
-    
+
     [headData.focus.act_rows enumerateObjectsUsingBlock:^(ActRow * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [focusImages addObject:obj.activity.img];
     }];
@@ -33,6 +28,7 @@
         [iconImages addObject:obj.activity.img];
         [iconTitles addObject:obj.activity.name];
     }];
+
     _scrollView = [YJScrollPageView pageController:focusImages placeHolderImage:[UIImage imageNamed:@"v2_placeholder_full_size"]];
     _scrollView.backgroundColor = [UIColor orangeColor];
     _hotView = [[YJHotView alloc] initWithImages:iconImages titles:iconTitles placeHolder:[UIImage imageNamed:@"v2_placeholder_square"]];
@@ -54,8 +50,8 @@
     }];
     
     [_hotView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self);
-        make.top.equalTo(self);
+        make.top.equalTo(_scrollView.mas_bottom);
+        make.leading.equalTo(self);
         make.trailing.equalTo(self);
         make.height.mas_equalTo(_hotView.bounds.size.height);
     }];
@@ -64,7 +60,7 @@
         make.top.equalTo(_hotView.mas_bottom);
         make.trailing.equalTo(self);
         make.leading.equalTo(self);
-        make.height.mas_equalTo(_hotView.bounds.size.height);
+        make.height.mas_equalTo(30);
     }];
     return self;
 }

@@ -32,10 +32,21 @@ static NSString *expandCell = @"expandCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [NSThread sleepForTimeInterval:1];
-    
+    [self addNotification];
     [self buildCollectionView];
     [self buildTableHeadView];
     [self bulidTableViewRefresh];
+}
+-(void)addNotification{
+    [YJNotification addObserver:self selector:@selector(homeTableHeadViewHeightDidChange:) name:HomeTableHeadViewHeightDidChange object:nil];
+}
+-(void)homeTableHeadViewHeightDidChange:(NSNotification *)notification{
+    CGFloat height = [notification.object floatValue];
+    CGFloat room = 10;
+    self.collectionView.mj_header.ignoredScrollViewContentInsetTop = height+10;
+    self.homeHeadView.frame = CGRectMake(0, -height-room, Width, height);
+    self.collectionView.contentInset = UIEdgeInsetsMake(height+room, 0, 100, 0);
+    self.collectionView.contentOffset = CGPointMake(0, -height-room);
 }
 -(void)buildTableHeadView{
     __weak typeof (self) weakSelf = self;
@@ -109,11 +120,13 @@ static NSString *expandCell = @"expandCell";
         };
         cell.cellInfo = self.homeHeadData.category.act_rows[indexPath.row];
         return cell;
-    }
+    }else{
+ 
     YJHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:expandCell forIndexPath:indexPath];
     YJGoods *goods = self.freshHots[indexPath.row];
     cell.goods = goods;
-    return cell;
+     return cell;
+    }
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGSize itemSize = CGSizeZero;

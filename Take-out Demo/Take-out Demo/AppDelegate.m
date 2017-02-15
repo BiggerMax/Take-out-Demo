@@ -20,10 +20,10 @@
     
     [self setAppStyle];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    NSString *isFirstOpenApp = [[NSUserDefaults standardUserDefaults] objectForKey:IsFirstOpenApp];
-    if (isFirstOpenApp == nil) {
+    //NSString *isFirstOpenApp = [[NSUserDefaults standardUserDefaults] objectForKey:IsFirstOpenApp];
+    if (true) {
         [self showMainTabBarController];
-        [[NSUserDefaults standardUserDefaults]setObject:isFirstOpenApp forKey:isFirstOpenApp];
+     //   [[NSUserDefaults standardUserDefaults]setObject:isFirstOpenApp forKey:isFirstOpenApp];
     }else{
         [self showMainTabBarController];
     }

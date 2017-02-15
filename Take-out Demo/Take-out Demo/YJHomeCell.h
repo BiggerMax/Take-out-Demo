@@ -19,5 +19,5 @@ typedef enum : NSUInteger{
 @property(nonatomic,strong)YJGoods *goods;
 //不在显示减号
 @property(nonatomic,assign)BOOL minusNeverShow;
-@property(nonatomic,copy)ClickedCallBack cellBack;
+@property(nonatomic,copy)ClickedCallBack callBack;
 @end

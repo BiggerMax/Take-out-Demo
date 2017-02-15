@@ -126,8 +126,8 @@
 }
 
 -(void)cellTapgesture{
-    if (self.cellBack) {
-        self.cellBack(self.goods);
+    if (self.callBack) {
+        self.callBack(self.goods);
     }
 }
 @end

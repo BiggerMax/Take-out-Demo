@@ -43,4 +43,13 @@
     }
     return self;
 }
+- (void)setCellInfo:(ActRow *)cellInfo{
+    self.titleView.actRow = cellInfo;
+    self.goodsView.actRow = cellInfo;
+    [self.sortImage sd_setImageWithURL:[NSURL URLWithString:cellInfo.activity.img] placeholderImage:[UIImage imageNamed:cellInfo.category_detail.name]];
+}
+- (void)setCellback:(ClickedCallBack)callback{
+    _callBack = callback;
+    self.goodsView.callBack = callback;
+}
 @end

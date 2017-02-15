@@ -22,6 +22,7 @@
         _headlineImageView = [[UIImageView alloc]init];
         _headlineImageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_headlineImageView];
+        _pageView = [YJHeadLinePageVIew new];
         UIView *line = [[UIView alloc]init];
         line.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0];
         [self addSubview:line];
@@ -37,6 +38,12 @@
             make.leading.equalTo(_headlineImageView.mas_trailing).offset(5);
             make.bottom.equalTo(self).offset(-5);
             make.width.mas_equalTo(1);
+        }];
+        [_pageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(_headlineImageView.mas_trailing);
+            make.top.equalTo(self);
+            make.height.equalTo(self);
+            make.trailing.equalTo(self);
         }];
     }
     return self;
