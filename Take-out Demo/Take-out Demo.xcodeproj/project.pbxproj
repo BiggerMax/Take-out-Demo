@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D40ACB6ED36D2AF08FC9B1C /* libPods-Take-out Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */; };
+		9D7A243F1E55EE2400F1DBCA /* YJMyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A243E1E55EE2400F1DBCA /* YJMyHeadView.m */; };
 		9DA5117B1E53495800F8684D /* 首页热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 9DA5117A1E53495800F8684D /* 首页热卖 */; };
 		9DA5117D1E534A1C00F8684D /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */; };
 		9DA511801E534B0700F8684D /* YJAnimationRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5117F1E534B0700F8684D /* YJAnimationRefreshHeader.m */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D7A243D1E55EE2400F1DBCA /* YJMyHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJMyHeadView.h; path = My/View/YJMyHeadView.h; sourceTree = "<group>"; };
+		9D7A243E1E55EE2400F1DBCA /* YJMyHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJMyHeadView.m; path = My/View/YJMyHeadView.m; sourceTree = "<group>"; };
 		9DA5117A1E53495800F8684D /* 首页热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页热卖"; path = "Resource/首页热卖"; sourceTree = "<group>"; };
 		9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页新鲜热卖"; path = "Resource/首页新鲜热卖"; sourceTree = "<group>"; };
 		9DA5117E1E534B0700F8684D /* YJAnimationRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJAnimationRefreshHeader.h; sourceTree = "<group>"; };
@@ -444,6 +447,8 @@
 		9DA818731E0912FE00DD80B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D7A243D1E55EE2400F1DBCA /* YJMyHeadView.h */,
+				9D7A243E1E55EE2400F1DBCA /* YJMyHeadView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -713,6 +718,7 @@
 				9DA818941E0ADA4900DD80B7 /* ItemCustomButton.m in Sources */,
 				9DA8182B1E090B1400DD80B7 /* AppDelegate.m in Sources */,
 				9DA818661E09124A00DD80B7 /* YJHomeViewController.m in Sources */,
+				9D7A243F1E55EE2400F1DBCA /* YJMyHeadView.m in Sources */,
 				9DA818B91E0BFE5500DD80B7 /* BaseTabBatButton.m in Sources */,
 				9DA818BC1E0C124300DD80B7 /* YJHomeCell.m in Sources */,
 				9DA8188A1E0AD8FB00DD80B7 /* YJBaseViewController.m in Sources */,

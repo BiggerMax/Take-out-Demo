@@ -7,31 +7,48 @@
 //
 
 #import "YJMyViewController.h"
-
+#import "YJMyHeadView.h"
 @interface YJMyViewController ()
-
+@property(nonatomic,strong)NSArray *orderArr;
+@property(nonatomic,strong)NSArray *mineArr;
+@property(nonatomic,strong)UIScrollView *mainScrollView;
+@property(nonatomic,strong)UIView *footerView;
+@property(nonatomic,strong)YJMyHeadView *mainHeadView;
 @end
 
 @implementation YJMyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self buildHeadView];
+
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)buildHeadView{
+    self.mainHeadView = [[YJMyHeadView alloc] init];
+    [self.view addSubview:self.mainHeadView];
+    [self.mainHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.leading.and.trailing.equalTo(self.view);
+        make.height.mas_equalTo(200);
+    }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)buildScrollView{
+    self.mainScrollView = [[UIScrollView alloc] init];
+    self.mainScrollView.backgroundColor = self.view.backgroundColor;
+    [self.view addSubview:_mainScrollView];
+    
+    [self.mainScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mainHeadView.mas_bottom);
+        make.leading.trailing.equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(-49);
+    }];
+    //
+    UIView *contenView = [[UIView alloc] init];
+    [self.mainScrollView addSubview:contenView];
+    [contenView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.mainScrollView);
+        make.width.equalTo(self.mainScrollView);
+    }];
+    //
+    
 }
-*/
-
 @end
