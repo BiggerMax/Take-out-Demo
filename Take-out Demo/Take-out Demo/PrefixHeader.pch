@@ -16,6 +16,7 @@
 #import "UIImageView+WebCache.h"
 #import "BaseTabBarViewController.h"
 
+
 typedef NS_ENUM(NSInteger ,HeadViewItemType){
     HeadViewItemTypePage,
     HeadViewItemTypeHot,

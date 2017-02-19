@@ -8,19 +8,50 @@
 
 #import "YJMyViewController.h"
 #import "YJMyHeadView.h"
+#import "YJOrderHeadView.h"
+#import "YJMenuView.h"
+#import "YJFooterBannerData.h"
+#import "YJScrollPageView.h"
 @interface YJMyViewController ()
 @property(nonatomic,strong)NSArray *orderArr;
 @property(nonatomic,strong)NSArray *mineArr;
-@property(nonatomic,strong)UIScrollView *mainScrollView;
+@property(nonatomic,strong)UIView *mainScrollView;
 @property(nonatomic,strong)UIView *footerView;
 @property(nonatomic,strong)YJMyHeadView *mainHeadView;
 @end
 
 @implementation YJMyViewController
 
+-(NSArray *)orderArr{
+    if (!_orderArr) {
+        _orderArr = @[
+                      [YJTitleIconAction titleIconWithTitle:@"待支付" icon:[UIImage imageNamed:@"icon_daifukuan"] controller:nil tag:0],
+                      [YJTitleIconAction titleIconWithTitle:@"待收货" icon:[UIImage imageNamed:@"icon_daishouhuo"] controller:nil tag:1],
+                      [YJTitleIconAction titleIconWithTitle:@"待评价" icon:[UIImage imageNamed:@"icon_daipingjia"] controller:nil tag:2],
+                      [YJTitleIconAction titleIconWithTitle:@"退款/售后" icon:[UIImage imageNamed:@"icon_tuikuan"] controller:nil tag:3],
+                      ];
+    }
+    return _orderArr;
+}
+- (NSArray *)mineArr{
+    if (!_mineArr) {
+        _mineArr = @[
+                     [YJTitleIconAction titleIconWithTitle:@"收货地址" icon:[UIImage imageNamed:@"v2_my_address_icon-1"] controller:nil tag:0],
+                     [YJTitleIconAction titleIconWithTitle:@"我的店铺" icon:[UIImage imageNamed:@"icon_mystore-1"] controller:nil tag:0],
+                     [YJTitleIconAction titleIconWithTitle:@"我的消息" icon:[UIImage imageNamed:@"icon_message"] controller:nil tag:0],
+                     [YJTitleIconAction titleIconWithTitle:@"在线客服" icon:[UIImage imageNamed:@"v2_my_serviceonline_icon-1"] controller:nil tag:0],
+                     [YJTitleIconAction titleIconWithTitle:@"意见反馈" icon:[UIImage imageNamed:@"v2_my_feedback_icon-1"] controller:nil tag:0],
+                     [YJTitleIconAction titleIconWithTitle:@"分享给朋友" icon:[UIImage imageNamed:@"v2_my_share_icon-1"] controller:nil tag:0],
+                     [YJTitleIconAction titleIconWithTitle:@"帮助中心" icon:[UIImage imageNamed:@"icon_help"] controller:nil tag:0],
+                       ];
+    }
+    return _mineArr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self buildHeadView];
+    [self buildScrollView];
+    [self buildFooterView];
 
 }
 -(void)buildHeadView{
@@ -32,9 +63,9 @@
     }];
 }
 -(void)buildScrollView{
-    self.mainScrollView = [[UIScrollView alloc] init];
-    self.mainScrollView.backgroundColor = self.view.backgroundColor;
-    [self.view addSubview:_mainScrollView];
+    self.mainScrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.height-49)];
+    self.mainScrollView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.mainScrollView];
     
     [self.mainScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mainHeadView.mas_bottom);
@@ -49,6 +80,67 @@
         make.width.equalTo(self.mainScrollView);
     }];
     //
+    YJOrderHeadView *orderHeadView = [[YJOrderHeadView alloc] init];
+    [self.mainScrollView addSubview:orderHeadView];
+    [orderHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mainScrollView).offset(10);
+        make.leading.trailing.equalTo(self.mainScrollView);
+        make.height.mas_equalTo(40);
+    }];
+    //
+    YJMenuView *orderMenuView = [[YJMenuView alloc] initMenu:self.orderArr withLine:NO];
+   // orderMenuView.backgroundColor = [UIColor redColor];
+    YJMenuView *mineMenView = [[YJMenuView alloc] initMenu:self.mineArr withLine:YES];
+    mineMenView.backgroundColor = [UIColor yellowColor];
+    [contenView addSubview:orderMenuView];
+    [contenView addSubview:mineMenView];
+    
+    [orderMenuView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(orderMenuView.mas_bottom).offset(1);
+        make.leading.trailing.equalTo(contenView);
+        make.height.mas_equalTo(75);
+    }];
+    [mineMenView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(orderMenuView.mas_bottom).offset(15);
+        make.leading.trailing.equalTo(contenView);
+        make.height.mas_equalTo(150);
+    }];
+    _footerView = [[UIView alloc] init];
+    _footerView.backgroundColor = [UIColor redColor];
+    [contenView addSubview:_footerView];
+    
+    [_footerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(mineMenView.mas_bottom).offset(20);
+        make.leading.trailing.equalTo(contenView);
+        make.height.mas_equalTo(150);
+    }];
+    [contenView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(_footerView);
+    }];
     
 }
+
+-(void)buildFooterView{
+    [YJFooterBannerData loadFooterBannerData:^(id data, NSError *error) {
+        NSMutableArray *imageUrl = [NSMutableArray array];
+        [data enumerateObjectsUsingBlock:^(YJActivity  *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [imageUrl addObject:obj.img];
+        }];
+        YJScrollPageView *page = [YJScrollPageView pageController:imageUrl placeHolderImage:[UIImage imageNamed:@"v2_placeholder_full_size"]];
+        [self.footerView addSubview:page];
+        //
+        [page mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.footerView);
+            make.leading.equalTo(self.footerView).offset(10);
+            make.trailing.equalTo(self.footerView).offset(-10);
+            make.centerY.equalTo(self.footerView);
+            make.height.mas_equalTo(self.footerView.mas_width).multipliedBy(0.37);
+        }];
+    }];
+}
+-(void)loadView{
+    [super loadView];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
 @end
