@@ -15,6 +15,7 @@
 		9D6769301E59BAD80029E45C /* YJFooterBannerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67692F1E59BAD80029E45C /* YJFooterBannerData.m */; };
 		9D6769321E59C6CE0029E45C /* footerBanner in Resources */ = {isa = PBXBuildFile; fileRef = 9D6769311E59C6CE0029E45C /* footerBanner */; };
 		9D7A243F1E55EE2400F1DBCA /* YJMyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A243E1E55EE2400F1DBCA /* YJMyHeadView.m */; };
+		9D8375D71E5C95820040E2E9 /* YJCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8375D61E5C95820040E2E9 /* YJCategoryCell.m */; };
 		9DA5117B1E53495800F8684D /* 首页热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 9DA5117A1E53495800F8684D /* 首页热卖 */; };
 		9DA5117D1E534A1C00F8684D /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */; };
 		9DA511801E534B0700F8684D /* YJAnimationRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5117F1E534B0700F8684D /* YJAnimationRefreshHeader.m */; };
@@ -85,6 +86,8 @@
 		9D6769311E59C6CE0029E45C /* footerBanner */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = footerBanner; path = Resource/footerBanner; sourceTree = "<group>"; };
 		9D7A243D1E55EE2400F1DBCA /* YJMyHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJMyHeadView.h; path = My/View/YJMyHeadView.h; sourceTree = "<group>"; };
 		9D7A243E1E55EE2400F1DBCA /* YJMyHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJMyHeadView.m; path = My/View/YJMyHeadView.m; sourceTree = "<group>"; };
+		9D8375D51E5C95820040E2E9 /* YJCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJCategoryCell.h; path = Category/Views/YJCategoryCell.h; sourceTree = "<group>"; };
+		9D8375D61E5C95820040E2E9 /* YJCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJCategoryCell.m; path = Category/Views/YJCategoryCell.m; sourceTree = "<group>"; };
 		9DA5117A1E53495800F8684D /* 首页热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页热卖"; path = "Resource/首页热卖"; sourceTree = "<group>"; };
 		9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页新鲜热卖"; path = "Resource/首页新鲜热卖"; sourceTree = "<group>"; };
 		9DA5117E1E534B0700F8684D /* YJAnimationRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJAnimationRefreshHeader.h; sourceTree = "<group>"; };
@@ -442,6 +445,8 @@
 		9DA8186D1E0912DE00DD80B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D8375D51E5C95820040E2E9 /* YJCategoryCell.h */,
+				9D8375D61E5C95820040E2E9 /* YJCategoryCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -752,6 +757,7 @@
 				9D6769271E599E3C0029E45C /* YJMenuView.m in Sources */,
 				9D7A243F1E55EE2400F1DBCA /* YJMyHeadView.m in Sources */,
 				9DA818B91E0BFE5500DD80B7 /* BaseTabBatButton.m in Sources */,
+				9D8375D71E5C95820040E2E9 /* YJCategoryCell.m in Sources */,
 				9D6769301E59BAD80029E45C /* YJFooterBannerData.m in Sources */,
 				9DA818BC1E0C124300DD80B7 /* YJHomeCell.m in Sources */,
 				9DA8188A1E0AD8FB00DD80B7 /* YJBaseViewController.m in Sources */,

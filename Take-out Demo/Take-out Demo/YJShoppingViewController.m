@@ -8,30 +8,40 @@
 
 #import "YJShoppingViewController.h"
 
-@interface YJShoppingViewController ()
-
+@interface YJShoppingViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property UITableView *sortTableView;
 @end
 
 @implementation YJShoppingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self buildSortTableView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)buildSortTableView{
+    self.sortTableView = ({
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        tableView.rowHeight = 40;
+        tableView.showsVerticalScrollIndicator = NO;
+        tableView.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0];
+        tableView;
+    });
+    [self.view addSubview:self.sortTableView];
+    [self.sortTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view);
+        make.leading.equalTo(self.view);
+        make.bottom.equalTo(self.view);
+        make.height.equalTo(self.view).multipliedBy(0.25);
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
 }
-*/
-
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 @end
