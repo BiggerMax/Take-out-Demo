@@ -7,7 +7,7 @@
 //
 
 #import "YJCategoryCell.h"
-
+#import "YJCategorySource.h"
 @interface YJCategoryCell()
 @property UILabel *titleLabel;
 @property UIImageView *bgImageView;
@@ -34,18 +34,49 @@ static NSString *categoryCell = @"categoryCell";
         _lineView = [[UIView alloc]init];
         _lineView.backgroundColor = [UIColor darkGrayColor];
         _lineView.alpha = 0.3;
-
+        
+        [self addSubview:_bgImageView];
+        [self addSubview:_yellowView];
+        [self addSubview:_lineView];
+        [self addSubview:_titleLabel];
+        
+        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self);
+        }];
+        [_bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
+        [_yellowView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(self);
+            make.height.equalTo(self).multipliedBy(0.8);
+            make.width.equalTo(@5);
+            make.centerY.equalTo(self);
+        }];
+        [_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@0.5);
+            make.width.equalTo(self);
+            make.bottom.equalTo(self);
+        }];
     }
+    return self;
 }
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+-(void)setSelected:(BOOL)selected animated:(BOOL)animated{
     [super setSelected:selected animated:animated];
+    _yellowView.hidden = !selected;
+    _titleLabel.highlighted = selected;
+    _bgImageView.highlighted = selected;
+}
 
-    // Configure the view for the selected state
++(instancetype)cellWithTable:(UITableView*)tableView{
+    YJCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryCell];
+    if (!cell) {
+        cell = [[YJCategoryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:categoryCell];
+    }
+    return cell;
+}
+-(void)setCategoryData:(ProductCategory *)categoryData{
+    _categoryData = categoryData;
+    self.titleLabel.text = categoryData.name;
 }
 
 @end

@@ -7,9 +7,13 @@
 //
 
 #import "YJShoppingViewController.h"
-
+#import "YJCategorySource.h"
+#import "YJCategoryCell.h"
+#import "YJProductsViewController.h"
 @interface YJShoppingViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property UITableView *sortTableView;
+@property SuperMarketData *superMarketData;
+@property YJProductsViewController *productsController;
 @end
 
 @implementation YJShoppingViewController
@@ -37,11 +41,21 @@
         make.height.equalTo(self.view).multipliedBy(0.25);
     }];
 }
-
+-(void)buildProductsTableView{
+    self
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return self.superMarketData.categories.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    YJCategoryCell *cell = [YJCategoryCell cellWithTable:tableView];
+    cell.categoryData = self.superMarketData.categories[indexPath.row];
+    return cell;
 }
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([self.delegate ]) {
+        <#statements#>
+    }
+}
+
 @end

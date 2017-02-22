@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YJCategorySource.h"
 @interface YJCategoryCell : UITableViewCell
-
+@property(nonatomic,strong) ProductCategory *categoryData;
++(instancetype)cellWithTable:(UITableView*)tableView;
 @end

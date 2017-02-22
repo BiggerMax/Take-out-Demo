@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YJShoppingViewController : UIViewController
+@protocol YJShoppingViewControllerDelegate <NSObject>
 
+-(void)didTableView:(UITableView *)tableView clickIndexPath:(NSIndexPath *)indexPath;
+
+@end
+@interface YJShoppingViewController : UIViewController
+@property(nonatomic,weak)id<YJShoppingViewControllerDelegate>delegate;
 @end
