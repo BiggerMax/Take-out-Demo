@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D40ACB6ED36D2AF08FC9B1C /* libPods-Take-out Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */; };
+		9D511D541E632B9E008C7348 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 9D511D531E632B9E008C7348 /* supermarket */; };
 		9D6769241E599BCA0029E45C /* YJOrderHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769231E599BCA0029E45C /* YJOrderHeadView.m */; };
 		9D6769271E599E3C0029E45C /* YJMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769261E599E3C0029E45C /* YJMenuView.m */; };
 		9D67692A1E599E940029E45C /* YJTitleIconAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769291E599E940029E45C /* YJTitleIconAction.m */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D511D531E632B9E008C7348 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Resource/supermarket; sourceTree = "<group>"; };
 		9D6769221E599BCA0029E45C /* YJOrderHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJOrderHeadView.h; path = My/View/YJOrderHeadView.h; sourceTree = "<group>"; };
 		9D6769231E599BCA0029E45C /* YJOrderHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJOrderHeadView.m; path = My/View/YJOrderHeadView.m; sourceTree = "<group>"; };
 		9D6769251E599E3C0029E45C /* YJMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJMenuView.h; path = My/View/YJMenuView.h; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				9DA5117A1E53495800F8684D /* 首页热卖 */,
 				9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */,
 				9D6769311E59C6CE0029E45C /* footerBanner */,
+				9D511D531E632B9E008C7348 /* supermarket */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 			files = (
 				9DA5117D1E534A1C00F8684D /* 首页新鲜热卖 in Resources */,
 				9DA5117B1E53495800F8684D /* 首页热卖 in Resources */,
+				9D511D541E632B9E008C7348 /* supermarket in Resources */,
 				9DA818391E090B1400DD80B7 /* LaunchScreen.storyboard in Resources */,
 				9D6769321E59C6CE0029E45C /* footerBanner in Resources */,
 				9DA818361E090B1400DD80B7 /* Assets.xcassets in Resources */,

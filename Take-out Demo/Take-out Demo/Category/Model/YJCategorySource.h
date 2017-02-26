@@ -17,6 +17,7 @@
 @property(nonatomic,copy)NSString *code;
 @property(nonatomic,copy)NSString *msg;
 @property(nonatomic,strong)SuperMarketData *data;
++(void)loadSupermarketData:(CompleteBlock)complete;
 @end
 @interface SuperMarketData : NSObject
 @property(nonatomic,strong)NSArray<ProductCategory *>*categories;
