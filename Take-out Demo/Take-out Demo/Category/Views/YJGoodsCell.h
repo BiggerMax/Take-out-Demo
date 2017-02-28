@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "YJCategorySource.h"
 @interface YJGoodsCell : UITableViewCell
-@property YJGoods *goods;
+@property (nonatomic,strong)YJGoods *goods;
 @end

@@ -99,7 +99,18 @@
     if (self.goods.is_xf) {
         _refinedLabel.hidden = NO;
     }else{
-        
+        _refinedLabel.hidden = YES;
+        [_goodsName mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(_goodsIcon.mas_leading);
+        }];
     }
+    _buyView.goods = goods;
+    _heftLabel.text = goods.specifics;
+    _priceLabel.text = [NSString stringWithFormat:@"￥%@",goods.price];
+    [_goodsIcon sd_setImageWithURL:[NSURL URLWithString:goods.img] placeholderImage:[UIImage imageNamed:@"v2_placeholder_half_size"]];
+    _goodsName.text = goods.name;
+}
+-(void)setHighlighted:(BOOL)highlighted{
+    
 }
 @end

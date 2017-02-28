@@ -32,6 +32,7 @@
         tableView.dataSource = self;
         tableView.rowHeight = 40;
         tableView.showsVerticalScrollIndicator = NO;
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableView.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0];
         tableView;
     });
@@ -40,7 +41,7 @@
         make.top.equalTo(self.view);
         make.leading.equalTo(self.view);
         make.bottom.equalTo(self.view);
-        make.height.equalTo(self.view).multipliedBy(0.25);
+        make.width.equalTo(self.view).multipliedBy(0.25);
     }];
 }
 -(void)buildProductsTableView{
