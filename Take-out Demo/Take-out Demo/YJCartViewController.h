@@ -1,5 +1,5 @@
 //
-//  YJCircleViewController.h
+//  YJCartViewController.h
 //  Take-out Demo
 //
 //  Created by 袁杰 on 16/12/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YJCircleViewController : UIViewController
+@interface YJCartViewController : UIViewController
 
 @end

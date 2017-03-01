@@ -107,7 +107,7 @@
     _buyView.goods = goods;
     _heftLabel.text = goods.specifics;
     _priceLabel.text = [NSString stringWithFormat:@"￥%@",goods.price];
-    [_goodsIcon sd_setImageWithURL:[NSURL URLWithString:goods.img] placeholderImage:[UIImage imageNamed:@"v2_placeholder_half_size"]];
+    [_goodsIcon sd_setImageWithURL:[NSURL URLWithString:goods.img] placeholderImage:[UIImage imageNamed:@"v2_placeholder_full_size.png"]];
     _goodsName.text = goods.name;
 }
 -(void)setHighlighted:(BOOL)highlighted{
