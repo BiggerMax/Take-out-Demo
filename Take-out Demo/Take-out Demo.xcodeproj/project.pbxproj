@@ -68,6 +68,7 @@
 		9DBC69C81E671A200077D042 /* YJDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC69C71E671A200077D042 /* YJDefaultView.m */; };
 		9DBC69CB1E671D490077D042 /* YJShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC69CA1E671D490077D042 /* YJShoppingCell.m */; };
 		9DBC69CE1E671DD30077D042 /* YJUserShopCarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC69CD1E671DD30077D042 /* YJUserShopCarTool.m */; };
+		9DEB1BDB1E6F04BB00EFD2C7 /* YJTableFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB1BDA1E6F04BB00EFD2C7 /* YJTableFootView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +198,8 @@
 		9DBC69CA1E671D490077D042 /* YJShoppingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJShoppingCell.m; path = Cart/View/YJShoppingCell.m; sourceTree = "<group>"; };
 		9DBC69CC1E671DD30077D042 /* YJUserShopCarTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJUserShopCarTool.h; path = Common/Tools/YJUserShopCarTool.h; sourceTree = "<group>"; };
 		9DBC69CD1E671DD30077D042 /* YJUserShopCarTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJUserShopCarTool.m; path = Common/Tools/YJUserShopCarTool.m; sourceTree = "<group>"; };
+		9DEB1BD91E6F04BB00EFD2C7 /* YJTableFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJTableFootView.h; path = Cart/View/YJTableFootView.h; sourceTree = "<group>"; };
+		9DEB1BDA1E6F04BB00EFD2C7 /* YJTableFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJTableFootView.m; path = Cart/View/YJTableFootView.m; sourceTree = "<group>"; };
 		CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Take-out Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4769EA533306E7C89CE4DF5 /* Pods-Take-out Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F02E2890019195B57247E513 /* Pods-Take-out Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -450,6 +453,8 @@
 				9DBC69C71E671A200077D042 /* YJDefaultView.m */,
 				9DBC69C91E671D490077D042 /* YJShoppingCell.h */,
 				9DBC69CA1E671D490077D042 /* YJShoppingCell.m */,
+				9DEB1BD91E6F04BB00EFD2C7 /* YJTableFootView.h */,
+				9DEB1BDA1E6F04BB00EFD2C7 /* YJTableFootView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -790,6 +795,7 @@
 				9DA818C21E0C1F1C00DD80B7 /* YJBuyView.m in Sources */,
 				9DA8189A1E0AE30400DD80B7 /* YJActivity.m in Sources */,
 				9DA8189D1E0AE9AE00DD80B7 /* YJHomeHeadView.m in Sources */,
+				9DEB1BDB1E6F04BB00EFD2C7 /* YJTableFootView.m in Sources */,
 				9DA818CC1E0C315200DD80B7 /* YJHomeCellTitleView.m in Sources */,
 				9DA818A01E0AE9E400DD80B7 /* YJScrollPageView.m in Sources */,
 				9DA818941E0ADA4900DD80B7 /* ItemCustomButton.m in Sources */,

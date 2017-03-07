@@ -8,12 +8,14 @@
 
 #import "YJCartViewController.h"
 #import "YJDefaultView.h"
+#import "YJTableFootView.h"
+#import "YJUserShopCarTool.h"
 
 @interface YJCartViewController ()
 @property UITableView *view;
 @property NSArray *dataList;
 @property UIView *headView;
-@property
+@property (nonatomic,strong) YJTableFootView *footView;
 @end
 
 @implementation YJCartViewController
@@ -31,8 +33,10 @@
     [YJNotification addObserver:self selector:@selector(didRemoveGoods) name:LFBShopCarDidRemoveProductNSNotification object:nil];
 }
 -(void)IncreaseShoppingCart{
-    self.
+    self.footView.sumMoney = [[YJUserShopCarTool sharedInstance] getShopCarGoodsPrice];
 }
-
+-(void)didRemoveGoods{
+    self.footView.sumMoney = [[YJUserShopCarTool sharedInstance] getShopCarGoodsPrice];
+}
 
 @end
