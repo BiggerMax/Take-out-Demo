@@ -9,7 +9,7 @@
 #import "YJCartViewController.h"
 #import "YJDefaultView.h"
 #import "YJTableFootView.h"
-#import "YJUserShopCarTool.h"
+#import "YJShopCarTool.h"
 #import "YJAddressView.h"
 #import "YJLightingView.h"
 #import "YJShoppingCell.h"
@@ -38,10 +38,10 @@
     [YJNotification addObserver:self selector:@selector(didRemoveGoods) name:LFBShopCarDidRemoveProductNSNotification object:nil];
 }
 -(void)IncreaseShoppingCart{
-    self.footView.sumMoney = [[YJUserShopCarTool sharedInstance] getShopCarGoodsPrice];
+    self.footView.sumMoney = [[YJShopCarTool sharedInstance] getShopCarGoodsPrice];
 }
 -(void)didRemoveGoods{
-    self.footView.sumMoney = [[YJUserShopCarTool sharedInstance] getShopCarGoodsPrice];
+    self.footView.sumMoney = [[YJShopCarTool sharedInstance] getShopCarGoodsPrice];
 }
 -(void)buildTableView{
     self.tableView = ({
@@ -84,7 +84,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    if ([[YJUserShopCarTool sharedInstance] isEmpty]) {
+    if ([[YJShopCarTool sharedInstance] isEmpty]) {
         self.defaultView.hidden = NO;
         self.tableView.hidden = YES;
     }else{
@@ -93,8 +93,8 @@
         __weak typeof (self) weakSelf = self;
         [SVProgressHUD showWithStatus:@"加载中"];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            weakSelf.dataList = [YJUserShopCarTool sharedInstance].shopCar;
-            weakSelf.footView.sumMoney = [[YJUserShopCarTool sharedInstance]getShopCarGoodsPrice];
+            weakSelf.dataList = [YJShopCarTool sharedInstance].shopCar;
+            weakSelf.footView.sumMoney = [[YJShopCarTool sharedInstance]getShopCarGoodsPrice];
             [weakSelf.tableView reloadData];
             [SVProgressHUD dismiss];
         });
@@ -117,7 +117,7 @@
 -(void)didTableFootViewCommit{
     UIViewController *moneyVC = [UIViewController new];
     moneyVC.view.backgroundColor = [UIColor whiteColor];
-    moneyVC.title = [NSString stringWithFormat:@"%.2lf",[[YJUserShopCarTool sharedInstance] getShopCarGoodsPrice]];
+    moneyVC.title = [NSString stringWithFormat:@"%.2lf",[[YJShopCarTool sharedInstance] getShopCarGoodsPrice]];
     [self.navigationController pushViewController:moneyVC animated:YES];
 }
 @end

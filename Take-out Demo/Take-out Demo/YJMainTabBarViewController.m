@@ -14,6 +14,7 @@
 #import "YJMyViewController.h"
 #import "YJShopCarTool.h"
 #import "YJShoppingViewController.h"
+#import "YJUserShopCarTool.h"
 @interface YJMainTabBarViewController ()
 
 @end
@@ -34,10 +35,10 @@
 }
 
 -(void)addNotification{
-    [YJNotification addObserver:self selector:@selector(IncreaseShopppingCart) name:LFBShopCarBuyNumberDidChangeNotification object:nil];
+    [YJNotification addObserver:self selector:@selector(IncreaseShoppingCart) name:LFBShopCarBuyNumberDidChangeNotification object:nil];
 }
 
--(void)IncreaseShopppingCart{
+-(void)IncreaseShoppingCart{
     UIViewController *shoppingVC = self.childViewControllers[1];
     NSInteger shoppingIndex = [[YJShopCarTool sharedInstance] getShopCarGoodsNumber];
     if (shoppingIndex == 0) {
