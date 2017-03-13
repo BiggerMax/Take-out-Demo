@@ -29,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"购物车";
+    self.view.backgroundColor = [UIColor colorWithRed:0.94 green:0.94 blue:0.94 alpha:1.00];
     [self buildNotification];
     [self buildTableView];
     [self buildDefaultView];
@@ -46,6 +47,7 @@
 -(void)buildTableView{
     self.tableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        tableView.backgroundColor = [UIColor whiteColor];
         tableView.delegate = self;
         tableView.dataSource = self;
         tableView.rowHeight = 80;

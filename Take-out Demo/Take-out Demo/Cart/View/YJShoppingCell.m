@@ -61,7 +61,7 @@
         [self addSubview:_buyView];
         
         [_selectedBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.with.mas_equalTo(15);
+            make.height.width.mas_equalTo(15);
             make.leading.equalTo(self).offset(10);
             make.centerY.equalTo(self);
         }];
@@ -69,9 +69,59 @@
             make.height.width.mas_equalTo(50);
             make.leading.equalTo(_selectedBtn.mas_trailing).offset(5);
             make.centerY.equalTo(self);
-
         }];
-        
+        [_siftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(25);
+            make.height.mas_equalTo(15);
+            make.top.equalTo(_shoppingIcon);
+            make.leading.equalTo(_shoppingIcon.mas_trailing).offset(5);
+        }];
+        [_shoppingName mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(_siftLabel.mas_trailing);
+            make.trailing.equalTo(self);
+            make.height.mas_equalTo(15);
+            make.top.equalTo(_shoppingIcon);
+        }];
+        [_moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(_siftLabel);
+            make.width.mas_equalTo(80);
+            make.bottom.equalTo(_shoppingIcon.mas_bottom);
+            make.height.mas_equalTo(15);
+        }];
+        [_buyView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self).offset(-2);
+            make.trailing.equalTo(self).offset(-2);
+            make.width.mas_equalTo(65);
+            make.height.mas_equalTo(25);
+        }];
     }
+    return self;
+}
+-(void)shoppingSelectedClick:(UIButton *)btn{
+    if (btn.selected) {
+        btn.selected = NO;
+        [[YJShopCarTool sharedInstance]removeFromProductShopCar:self.goods];
+        [[NSNotificationCenter defaultCenter] postNotificationName:LFBShopCarBuyNumberDidChangeNotification object:nil];
+    }else{
+        btn.selected = YES;
+        [[YJShopCarTool sharedInstance]addSupermarkProductToShopCar:self.goods];
+        [[NSNotificationCenter defaultCenter] postNotificationName:LFBShopCarBuyNumberDidChangeNotification object:nil];
+    }
+}
+
+-(void)setGoods:(YJGoods *)goods{
+    _goods = goods;
+    if (self.goods.is_xf) {
+        _siftLabel.hidden = NO;
+    }else{
+        _siftLabel.hidden = YES;
+        [_shoppingName mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(_shoppingIcon.mas_trailing);
+        }];
+    }
+    _buyView.goods = goods;
+    _moneyLabel.text = [NSString stringWithFormat:@"￥%@",goods.price];
+    [_shoppingIcon sd_setImageWithURL:[NSURL URLWithString:goods.img] placeholderImage:[UIImage imageNamed: @"v2_placeholder_half_size"]];
+    _shoppingName.text = goods.name;
 }
 @end
