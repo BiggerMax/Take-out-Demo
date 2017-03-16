@@ -32,10 +32,10 @@ static BaseTabBarViewController *controller = nil;
         if (controller == nil) {
             controller = [[self alloc] init];
             [controller buildTabBar];
-            NSArray *titles = @[@"首页",@"购物车",@"分类",@"我的"];
-            NSArray *vcs = @[[[YJHomeViewController alloc]init],[[YJCartViewController alloc]init],[[YJShoppingViewController alloc]init],[[YJMyViewController alloc]init]];
+            NSArray *titles = @[@"首页",@"分类",@"购物车",@"我的"];
+            NSArray *vcs = @[[[YJHomeViewController alloc]init],[[YJShoppingViewController alloc]init],[[YJCartViewController alloc]init],[[YJMyViewController alloc]init]];
             NSArray *images = @[@"v2_home",@"v2_order",@"shopCart",@"v2_my"];
-            NSArray *selectedImages = @[@"v2_home_r",@"shopCart_r",@"v2_order_r",@"v2_my_r"];
+            NSArray *selectedImages = @[@"v2_home_r",@"v2_order_r",@"shopCart_r",@"v2_my_r"];
             [controller addchileVc:vcs titlle:titles images:images selectedImages:selectedImages tabBarNavChildVC:[[YJBaseNavigationController alloc]init]];
         }
     }

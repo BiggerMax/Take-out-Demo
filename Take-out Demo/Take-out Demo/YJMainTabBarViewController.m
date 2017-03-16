@@ -29,8 +29,8 @@
 
 -(void)addMainTabBarControllers{
     [self addChildViewController:@"首页" viewController:[YJHomeViewController new] image:@"v2_home" selectedImage:@"v2_home_r"];
-    [self addChildViewController:@"购物车" viewController:[YJCartViewController new] image:@"v2_order" selectedImage:@"v2_order_r"];
-    [self addChildViewController:@"分类" viewController:[YJShoppingViewController new] image:@"shopCart" selectedImage:@"shopCart_r"];
+    [self addChildViewController:@"分类" viewController:[YJShoppingViewController new] image:@"v2_order" selectedImage:@"v2_order_r"];
+    [self addChildViewController:@"购物车" viewController:[YJCartViewController new] image:@"shopCart" selectedImage:@"shopCart_r"];
     [self addChildViewController:@"我的" viewController:[YJMyViewController new] image:@"v2_my" selectedImage:@"v2_my_r"];
 }
 
@@ -39,7 +39,7 @@
 }
 
 -(void)IncreaseShoppingCart{
-    UIViewController *shoppingVC = self.childViewControllers[1];
+    UIViewController *shoppingVC = self.childViewControllers[2];
     NSInteger shoppingIndex = [[YJShopCarTool sharedInstance] getShopCarGoodsNumber];
     if (shoppingIndex == 0) {
         shoppingVC.tabBarItem.badgeValue = nil;

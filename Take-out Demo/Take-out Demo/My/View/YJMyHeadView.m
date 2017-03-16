@@ -19,11 +19,11 @@
         UIImageView *avatarView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"v2_my_avatar"]];
         [self addSubview:avatarView];
         //
-        UILabel *phoneLabel = [[UILabel alloc] init];
-        phoneLabel.backgroundColor = [UIColor cyanColor];
-        phoneLabel.text = @"手机号码";
-        phoneLabel.textColor = [UIColor whiteColor];
-        [self addSubview:phoneLabel];
+        UILabel *nameLabel = [[UILabel alloc] init];
+       // nameLabel.backgroundColor = [UIColor cyanColor];
+        nameLabel.text = @"测试用专用昵称";
+        nameLabel.textColor = [UIColor whiteColor];
+        [self addSubview:nameLabel];
         
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self).offset(10);
@@ -32,13 +32,16 @@
         }];
         
         [avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(self).offset(-10);
+            make.centerY.equalTo(self);
             make.leading.mas_equalTo(10);
+            make.width.and.height.mas_equalTo(70);
+            make.top.equalTo(self).offset(40);
         }];
         
-        [phoneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(avatarView.mas_centerY);
             make.left.equalTo(avatarView.mas_right).offset(5);
-            make.top.equalTo(avatarView);
+           // make.top.equalTo(avatarView);
             make.height.mas_equalTo(@30);
         }];
     }

@@ -59,21 +59,22 @@
     [self.view addSubview:self.mainHeadView];
     [self.mainHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.and.trailing.equalTo(self.view);
-        make.height.mas_equalTo(200);
+        make.height.mas_equalTo(150);
     }];
 }
 -(void)buildScrollView{
-    self.mainScrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.height-49)];
+    self.mainScrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height-49-150)];
     self.mainScrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.mainScrollView];
     
     [self.mainScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mainHeadView.mas_bottom);
         make.leading.trailing.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-49);
+        make.bottom.equalTo(self.view).offset(49);
     }];
     //
     UIView *contenView = [[UIView alloc] init];
+    contenView.backgroundColor = [UIColor colorWithRed:0.94 green:0.94 blue:0.94 alpha:1.00];
     [self.mainScrollView addSubview:contenView];
     [contenView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.mainScrollView);
@@ -81,6 +82,7 @@
     }];
     //
     YJOrderHeadView *orderHeadView = [[YJOrderHeadView alloc] init];
+    //orderHeadView.backgroundColor = [UIColor redColor];
     [self.mainScrollView addSubview:orderHeadView];
     [orderHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mainScrollView).offset(10);
@@ -91,28 +93,29 @@
     YJMenuView *orderMenuView = [[YJMenuView alloc] initMenu:self.orderArr withLine:NO];
    // orderMenuView.backgroundColor = [UIColor redColor];
     YJMenuView *mineMenView = [[YJMenuView alloc] initMenu:self.mineArr withLine:YES];
-    mineMenView.backgroundColor = [UIColor yellowColor];
+   // mineMenView.backgroundColor = [UIColor yellowColor];
     [contenView addSubview:orderMenuView];
     [contenView addSubview:mineMenView];
     
     [orderMenuView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(orderMenuView.mas_bottom).offset(1);
+        make.top.equalTo(orderHeadView.mas_bottom).offset(5);
         make.leading.trailing.equalTo(contenView);
         make.height.mas_equalTo(75);
     }];
     [mineMenView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(orderMenuView.mas_bottom).offset(15);
+        make.top.equalTo(orderMenuView.mas_bottom).offset(10);
         make.leading.trailing.equalTo(contenView);
-        make.height.mas_equalTo(150);
+        make.height.mas_equalTo(100);
     }];
     _footerView = [[UIView alloc] init];
-    _footerView.backgroundColor = [UIColor redColor];
+   // _footerView.backgroundColor = [UIColor redColor];
     [contenView addSubview:_footerView];
     
     [_footerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(mineMenView.mas_bottom).offset(20);
         make.leading.trailing.equalTo(contenView);
-        make.height.mas_equalTo(150);
+        make.bottom.equalTo(self.view).offset(-49);
+       // make.height.mas_equalTo(150);
     }];
     [contenView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(_footerView);
@@ -131,10 +134,11 @@
         //
         [page mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.footerView);
-            make.leading.equalTo(self.footerView).offset(10);
-            make.trailing.equalTo(self.footerView).offset(-10);
+            make.leading.equalTo(self.footerView).offset(5);
+            make.trailing.equalTo(self.footerView).offset(-5);
             make.centerY.equalTo(self.footerView);
-            make.height.mas_equalTo(self.footerView.mas_width).multipliedBy(0.37);
+            make.height.equalTo(self.footerView).offset(-10);
+           // make.height.mas_equalTo(self.footerView.mas_width).multipliedBy(0.37);
         }];
     }];
 }
