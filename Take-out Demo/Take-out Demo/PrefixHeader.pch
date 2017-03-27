@@ -17,7 +17,7 @@
 #import "UIImageView+WebCache.h"
 #import <MJRefresh/MJRefresh.h>
 #import "BaseTabBarViewController.h"
-
+#import "OneKit.h"
 
 typedef NS_ENUM(NSInteger ,HeadViewItemType){
     HeadViewItemTypePage,

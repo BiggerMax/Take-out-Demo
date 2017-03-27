@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YJMyHeadView : UIImageView
-
+@property UIButton *avartarBtn;
+@property UIImage *avatarImage;
 @end

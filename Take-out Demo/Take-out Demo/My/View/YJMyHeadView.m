@@ -17,8 +17,12 @@
         [self addSubview:button];
         
         UIImageView *avatarView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"v2_my_avatar"]];
-        [self addSubview:avatarView];
-        //
+        self.avatarImage = [UIImage imageNamed:@"v2_my_avatar"];
+        _avartarBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_avartarBtn setImage:_avatarImage forState:UIControlStateNormal];
+        [_avartarBtn addTarget:self action:@selector(changeAvatar) forControlEvents:UIControlEventTouchDown];
+        [self addSubview:_avartarBtn];
+        
         UILabel *nameLabel = [[UILabel alloc] init];
        // nameLabel.backgroundColor = [UIColor cyanColor];
         nameLabel.text = @"测试用专用昵称";
@@ -31,7 +35,7 @@
             make.width.and.height.mas_equalTo(50);
         }];
         
-        [avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_avartarBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self);
             make.leading.mas_equalTo(10);
             make.width.and.height.mas_equalTo(70);
@@ -39,8 +43,8 @@
         }];
         
         [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(avatarView.mas_centerY);
-            make.left.equalTo(avatarView.mas_right).offset(5);
+            make.centerY.equalTo(_avartarBtn.mas_centerY);
+            make.left.equalTo(_avartarBtn.mas_right).offset(5);
            // make.top.equalTo(avatarView);
             make.height.mas_equalTo(@30);
         }];

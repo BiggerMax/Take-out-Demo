@@ -12,12 +12,15 @@
 #import "YJMenuView.h"
 #import "YJFooterBannerData.h"
 #import "YJScrollPageView.h"
+#import "YJLoginViewController.h"
 @interface YJMyViewController ()
 @property(nonatomic,strong)NSArray *orderArr;
 @property(nonatomic,strong)NSArray *mineArr;
 @property(nonatomic,strong)UIView *mainScrollView;
 @property(nonatomic,strong)UIView *footerView;
-@property(nonatomic,strong)YJMyHeadView *mainHeadView;
+@property UIImage *avartar;
+@property UIButton *avartarBtn;
+@property(nonatomic,strong)UIImageView *mainHeadView;
 @end
 
 @implementation YJMyViewController
@@ -49,26 +52,29 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self buildHeadView];
+    [self setHeaderView];
     [self buildScrollView];
     [self buildFooterView];
 
 }
--(void)buildHeadView{
+/*-(void)buildHeadView{
     self.mainHeadView = [[YJMyHeadView alloc] init];
+    _avartar = _mainHeadView.avatarImage;
+    [_mainHeadView.avartarBtn addTarget:self action:@selector(changeAvatar) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:self.mainHeadView];
     [self.mainHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.and.trailing.equalTo(self.view);
         make.height.mas_equalTo(150);
     }];
 }
+ */
 -(void)buildScrollView{
     self.mainScrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height-49-150)];
     self.mainScrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.mainScrollView];
     
     [self.mainScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mainHeadView.mas_bottom);
+        make.top.equalTo(self.view).offset(150);
         make.leading.trailing.equalTo(self.view);
         make.bottom.equalTo(self.view).offset(49);
     }];
@@ -146,5 +152,78 @@
     [super loadView];
     self.navigationController.navigationBar.hidden = YES;
 }
-
+-(void)setHeaderView{
+    self.mainHeadView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 150)];
+    self.mainHeadView.image = [UIImage imageNamed:@"v2_my_avatar_bg"];
+    self.mainHeadView.userInteractionEnabled = YES;
+    
+    UIButton *settingBtn = [[UIButton alloc] init];
+    [settingBtn setImage:[UIImage imageNamed:@"v2_my_settings_icon"] forState:UIControlStateNormal];
+    [_mainHeadView addSubview:settingBtn];
+    [settingBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_mainHeadView).offset(10);
+        make.trailing.equalTo(_mainHeadView).offset(5);
+        make.width.and.height.mas_equalTo(50);
+    }];
+    
+    _avartarBtn = [UIButton new];
+    _avartarBtn.imageView.layer.cornerRadius = 35;
+    _avartar = [UIImage imageNamed:@"v2_my_avatar"];
+    [_avartarBtn setImage:_avartar forState:UIControlStateNormal];
+    [_avartarBtn addTarget:self action:@selector(changeAvatar) forControlEvents:UIControlEventTouchUpInside];
+    [_mainHeadView addSubview:_avartarBtn];
+    [_avartarBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(_mainHeadView);
+        make.leading.mas_equalTo(10);
+        make.width.and.height.mas_equalTo(70);
+        make.top.equalTo(_mainHeadView).offset(40);
+    }];
+    
+    UIButton *nameBtn = [UIButton new];
+    [nameBtn setTitle:@"注册或登录" forState:UIControlStateNormal];
+    [nameBtn setTintColor:[UIColor whiteColor]];
+    [nameBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
+    [_mainHeadView addSubview:nameBtn];
+    [nameBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(_avartarBtn.mas_centerY);
+        make.left.equalTo(_avartarBtn.mas_right).offset(5);
+        // make.top.equalTo(avatarView);
+        make.height.mas_equalTo(@30);
+    }];
+    
+//    [headerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.leading.and.trailing.equalTo(self.view);
+//        make.height.mas_equalTo(150);
+//    }];
+    [self.view addSubview:_mainHeadView];
+    
+}
+-(void)changeAvatar{
+    [DIALOG chooseWithTitles:@[@"拍照",@"相册"] callback:^(int index) {
+        switch (index) {
+            case 1:
+            {
+                [CAMERA openCamera:self callback:^(UIImage *image) {
+                    [_avartarBtn setImage:image forState:UIControlStateNormal];
+                }];
+            }
+                break;
+            case 2:
+            {
+                [CAMERA openGallery:self callback:^(UIImage *image) {
+                    [_avartarBtn setImage:image forState:UIControlStateNormal];
+                }];
+            }
+                break;
+            default:
+                break;
+        }
+    }];
+}
+-(void)login{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    YJLoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"YJLoginViewController"];
+    UINavigationController *navigatinCotroller = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [self presentViewController:navigatinCotroller animated:YES completion:nil];
+}
 @end
