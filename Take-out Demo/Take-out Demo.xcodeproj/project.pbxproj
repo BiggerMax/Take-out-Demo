@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D40ACB6ED36D2AF08FC9B1C /* libPods-Take-out Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */; };
+		9D33EADD1E8AB2F500923C89 /* YJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EADC1E8AB2F500923C89 /* YJSettingController.m */; };
 		9D511D541E632B9E008C7348 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 9D511D531E632B9E008C7348 /* supermarket */; };
 		9D6769241E599BCA0029E45C /* YJOrderHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769231E599BCA0029E45C /* YJOrderHeadView.m */; };
 		9D6769271E599E3C0029E45C /* YJMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769261E599E3C0029E45C /* YJMenuView.m */; };
@@ -123,6 +124,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D33EADB1E8AB2F500923C89 /* YJSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSettingController.h; sourceTree = "<group>"; };
+		9D33EADC1E8AB2F500923C89 /* YJSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSettingController.m; sourceTree = "<group>"; };
 		9D511D531E632B9E008C7348 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Resource/supermarket; sourceTree = "<group>"; };
 		9D6769221E599BCA0029E45C /* YJOrderHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJOrderHeadView.h; path = My/View/YJOrderHeadView.h; sourceTree = "<group>"; };
 		9D6769231E599BCA0029E45C /* YJOrderHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJOrderHeadView.m; path = My/View/YJOrderHeadView.m; sourceTree = "<group>"; };
@@ -346,6 +349,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D33EAD71E8AB28C00923C89 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9D33EADB1E8AB2F500923C89 /* YJSettingController.h */,
+				9D33EADC1E8AB2F500923C89 /* YJSettingController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		9D679CD51E84058500B28501 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				9DECB8111E8803FB009F9936 /* OneKit */,
+				9D33EAD71E8AB28C00923C89 /* Setting */,
 				9D679CD51E84058500B28501 /* Login */,
 				9DA818541E090B6D00DD80B7 /* Resource */,
 				9DA818531E090B6100DD80B7 /* Common */,
@@ -1001,6 +1014,7 @@
 				9DECB8771E8803FB009F9936 /* SimplePickerView.m in Sources */,
 				9DECB8701E8803FB009F9936 /* NSData+OneKit.m in Sources */,
 				9DA818A31E0B782F00DD80B7 /* YJHeadLineView.m in Sources */,
+				9D33EADD1E8AB2F500923C89 /* YJSettingController.m in Sources */,
 				9DA8188D1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m in Sources */,
 				9DA818591E090C4B00DD80B7 /* YJConst.m in Sources */,
 				9DA818A91E0B790700DD80B7 /* YJHeadLineContentView.m in Sources */,

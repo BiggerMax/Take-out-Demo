@@ -13,6 +13,8 @@
 #import "YJFooterBannerData.h"
 #import "YJScrollPageView.h"
 #import "YJLoginViewController.h"
+#import "OneKit.h"
+#import "YJSettingController.h"
 @interface YJMyViewController ()
 @property(nonatomic,strong)NSArray *orderArr;
 @property(nonatomic,strong)NSArray *mineArr;
@@ -20,6 +22,7 @@
 @property(nonatomic,strong)UIView *footerView;
 @property UIImage *avartar;
 @property UIButton *avartarBtn;
+@property UIButton *nameBtn;
 @property(nonatomic,strong)UIImageView *mainHeadView;
 @end
 
@@ -55,6 +58,7 @@
     [self setHeaderView];
     [self buildScrollView];
     [self buildFooterView];
+    [self updateProfile];
 
 }
 /*-(void)buildHeadView{
@@ -159,6 +163,7 @@
     
     UIButton *settingBtn = [[UIButton alloc] init];
     [settingBtn setImage:[UIImage imageNamed:@"v2_my_settings_icon"] forState:UIControlStateNormal];
+    [settingBtn addTarget:self action:@selector(settingClicked) forControlEvents:UIControlEventTouchUpInside];
     [_mainHeadView addSubview:settingBtn];
     [settingBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_mainHeadView).offset(10);
@@ -179,12 +184,12 @@
         make.top.equalTo(_mainHeadView).offset(40);
     }];
     
-    UIButton *nameBtn = [UIButton new];
-    [nameBtn setTitle:@"注册或登录" forState:UIControlStateNormal];
-    [nameBtn setTintColor:[UIColor whiteColor]];
-    [nameBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
-    [_mainHeadView addSubview:nameBtn];
-    [nameBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    _nameBtn = [UIButton new];
+    [_nameBtn setTitle:@"注册或登录" forState:UIControlStateNormal];
+    [_nameBtn setTintColor:[UIColor whiteColor]];
+    [_nameBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
+    [_mainHeadView addSubview:_nameBtn];
+    [_nameBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(_avartarBtn.mas_centerY);
         make.left.equalTo(_avartarBtn.mas_right).offset(5);
         // make.top.equalTo(avatarView);
@@ -225,5 +230,22 @@
     YJLoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"YJLoginViewController"];
     UINavigationController *navigatinCotroller = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     [self presentViewController:navigatinCotroller animated:YES completion:nil];
+}
+-(void)updateProfile{
+    [MESSAGE receiveMessage:@"USERNAME" callback:^(NSDictionary *data) {
+        if (!data) {
+            return ;
+        }
+        [_nameBtn setTitle:data[@"userName"] forState:UIControlStateNormal];
+    }];
+}
+//
+-(void)settingClicked
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    YJSettingController *settingViewController = [storyboard instantiateViewControllerWithIdentifier:@"YJSettingController"];
+    settingViewController.hidesBottomBarWhenPushed = YES;
+//    UINavigationController *navigatinCotroller = [[UINavigationController alloc] initWithRootViewController:settingViewController];
+    [self.navigationController pushViewController:settingViewController animated:YES];
 }
 @end

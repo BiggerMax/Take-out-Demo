@@ -19,15 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"v2_goback"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
-    //self.view.backgroundColor = [UIColor colorWithRed:0.94 green:0.94 blue:0.94 alpha:1.00];
 
 }
 -(void)back{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)login:(UIButton *)sender {
+    if ([self.userName.text isEqualToString:@"admin"] && [self.password.text isEqualToString:@"123456"]) {
+        [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":@"admin"}];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        [DIALOG alert:@"输入错误，请重新输入!"];
+        return;
+    }
 }
 - (IBAction)forgotPsw:(id)sender {
+    [DIALOG toast:@"暂未开发，敬请期待"];
 }
 - (IBAction)registe:(UIButton *)sender {
 }
