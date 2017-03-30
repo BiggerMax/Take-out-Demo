@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YJSettingController : UIViewController
+@interface YJSettingController : UITableViewController
 
 @end

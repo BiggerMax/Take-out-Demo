@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D40ACB6ED36D2AF08FC9B1C /* libPods-Take-out Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */; };
 		9D33EADD1E8AB2F500923C89 /* YJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EADC1E8AB2F500923C89 /* YJSettingController.m */; };
+		9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D33EAFC1E8D55D000923C89 /* Cell1.xib */; };
+		9D33EB001E8D55E900923C89 /* Cell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EAFF1E8D55E900923C89 /* Cell1.m */; };
 		9D511D541E632B9E008C7348 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 9D511D531E632B9E008C7348 /* supermarket */; };
 		9D6769241E599BCA0029E45C /* YJOrderHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769231E599BCA0029E45C /* YJOrderHeadView.m */; };
 		9D6769271E599E3C0029E45C /* YJMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769261E599E3C0029E45C /* YJMenuView.m */; };
@@ -126,6 +128,9 @@
 /* Begin PBXFileReference section */
 		9D33EADB1E8AB2F500923C89 /* YJSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSettingController.h; sourceTree = "<group>"; };
 		9D33EADC1E8AB2F500923C89 /* YJSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSettingController.m; sourceTree = "<group>"; };
+		9D33EAFC1E8D55D000923C89 /* Cell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell1.xib; sourceTree = "<group>"; };
+		9D33EAFE1E8D55E900923C89 /* Cell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell1.h; sourceTree = "<group>"; };
+		9D33EAFF1E8D55E900923C89 /* Cell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell1.m; sourceTree = "<group>"; };
 		9D511D531E632B9E008C7348 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Resource/supermarket; sourceTree = "<group>"; };
 		9D6769221E599BCA0029E45C /* YJOrderHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJOrderHeadView.h; path = My/View/YJOrderHeadView.h; sourceTree = "<group>"; };
 		9D6769231E599BCA0029E45C /* YJOrderHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJOrderHeadView.m; path = My/View/YJOrderHeadView.m; sourceTree = "<group>"; };
@@ -358,6 +363,16 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		9D33EAFB1E8D55B700923C89 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				9D33EAFC1E8D55D000923C89 /* Cell1.xib */,
+				9D33EAFE1E8D55E900923C89 /* Cell1.h */,
+				9D33EAFF1E8D55E900923C89 /* Cell1.m */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		9D679CD51E84058500B28501 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +416,7 @@
 				9DA818551E090BA300DD80B7 /* Cart */,
 				9DA8184E1E090B3600DD80B7 /* Home */,
 				9DA8184F1E090B4000DD80B7 /* Main */,
+				9D33EAFB1E8D55B700923C89 /* XIB */,
 				9DA818291E090B1400DD80B7 /* AppDelegate.h */,
 				9DA8182A1E090B1400DD80B7 /* AppDelegate.m */,
 				9DA818351E090B1400DD80B7 /* Assets.xcassets */,
@@ -940,6 +956,7 @@
 				9DA818391E090B1400DD80B7 /* LaunchScreen.storyboard in Resources */,
 				9DA1F2C11E881A03005F7936 /* Main.storyboard in Resources */,
 				9D6769321E59C6CE0029E45C /* footerBanner in Resources */,
+				9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */,
 				9DA818361E090B1400DD80B7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1079,6 +1096,7 @@
 				9DECB85E1E8803FB009F9936 /* AJAX.m in Sources */,
 				9DA8186C1E0912D100DD80B7 /* YJCartViewController.m in Sources */,
 				9DA818781E09131F00DD80B7 /* YJMyViewController.m in Sources */,
+				9D33EB001E8D55E900923C89 /* Cell1.m in Sources */,
 				9D8375E81E5DE9760040E2E9 /* YJProductsViewController.m in Sources */,
 				9DA8185D1E090E4E00DD80B7 /* YJMainTabBarViewController.m in Sources */,
 				9DECB86C1E8803FB009F9936 /* MATH.m in Sources */,
