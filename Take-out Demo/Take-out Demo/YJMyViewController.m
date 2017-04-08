@@ -15,6 +15,8 @@
 #import "YJLoginViewController.h"
 #import "OneKit.h"
 #import "YJSettingController.h"
+#import "YJMyOrderingController.h"
+#import "MyAdressViewController.h"
 @interface YJMyViewController ()
 @property(nonatomic,strong)NSArray *orderArr;
 @property(nonatomic,strong)NSArray *mineArr;
@@ -23,6 +25,7 @@
 @property UIImage *avartar;
 @property UIButton *avartarBtn;
 @property UIButton *nameBtn;
+@property NSInteger viewTag;
 @property(nonatomic,strong)UIImageView *mainHeadView;
 @end
 
@@ -42,10 +45,7 @@
 - (NSArray *)mineArr{
     if (!_mineArr) {
         _mineArr = @[
-                     [YJTitleIconAction titleIconWithTitle:@"收货地址" icon:[UIImage imageNamed:@"v2_my_address_icon-1"] controller:nil tag:0],
-                     [YJTitleIconAction titleIconWithTitle:@"我的店铺" icon:[UIImage imageNamed:@"icon_mystore-1"] controller:nil tag:0],
-                     [YJTitleIconAction titleIconWithTitle:@"我的消息" icon:[UIImage imageNamed:@"icon_message"] controller:nil tag:0],
-                     [YJTitleIconAction titleIconWithTitle:@"在线客服" icon:[UIImage imageNamed:@"v2_my_serviceonline_icon-1"] controller:nil tag:0],
+                     [YJTitleIconAction titleIconWithTitle:@"收货地址" icon:[UIImage imageNamed:@"v2_my_address_icon-1"] controller:nil tag:201],
                      [YJTitleIconAction titleIconWithTitle:@"意见反馈" icon:[UIImage imageNamed:@"v2_my_feedback_icon-1"] controller:nil tag:0],
                      [YJTitleIconAction titleIconWithTitle:@"分享给朋友" icon:[UIImage imageNamed:@"v2_my_share_icon-1"] controller:nil tag:0],
                      [YJTitleIconAction titleIconWithTitle:@"帮助中心" icon:[UIImage imageNamed:@"icon_help"] controller:nil tag:0],
@@ -61,17 +61,7 @@
     [self updateProfile];
 
 }
-/*-(void)buildHeadView{
-    self.mainHeadView = [[YJMyHeadView alloc] init];
-    _avartar = _mainHeadView.avatarImage;
-    [_mainHeadView.avartarBtn addTarget:self action:@selector(changeAvatar) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:self.mainHeadView];
-    [self.mainHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.leading.and.trailing.equalTo(self.view);
-        make.height.mas_equalTo(150);
-    }];
-}
- */
+
 -(void)buildScrollView{
     self.mainScrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height-49-150)];
     self.mainScrollView.backgroundColor = [UIColor whiteColor];
@@ -92,6 +82,9 @@
     }];
     //
     YJOrderHeadView *orderHeadView = [[YJOrderHeadView alloc] init];
+    [orderHeadView setTag:101];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:tag:)];
+    [orderHeadView addGestureRecognizer:tapGesture];
     //orderHeadView.backgroundColor = [UIColor redColor];
     [self.mainScrollView addSubview:orderHeadView];
     [orderHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -103,6 +96,9 @@
     YJMenuView *orderMenuView = [[YJMenuView alloc] initMenu:self.orderArr withLine:NO];
    // orderMenuView.backgroundColor = [UIColor redColor];
     YJMenuView *mineMenView = [[YJMenuView alloc] initMenu:self.mineArr withLine:YES];
+    mineMenView.callback = ^(NSInteger tag){
+        [self creatViewByTag:tag];
+    };
    // mineMenView.backgroundColor = [UIColor yellowColor];
     [contenView addSubview:orderMenuView];
     [contenView addSubview:mineMenView];
@@ -242,10 +238,37 @@
 //
 -(void)settingClicked
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    YJSettingController *settingViewController = [storyboard instantiateViewControllerWithIdentifier:@"YJSettingController"];
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    YJSettingController *settingViewController = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJSettingController"];
     settingViewController.hidesBottomBarWhenPushed = YES;
 //    UINavigationController *navigatinCotroller = [[UINavigationController alloc] initWithRootViewController:settingViewController];
     [self.navigationController pushViewController:settingViewController animated:YES];
+}
+-(void)tapView:(UITapGestureRecognizer*)tap tag:(NSInteger)tag{
+    switch ([tap view].tag) {
+        case 101:
+        {
+            
+            YJMyOrderingController *orderingVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJMyOrderingController"];
+            [self.navigationController pushViewController:orderingVC animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
+}
+-(void)creatViewByTag:(NSInteger)tag
+{
+    switch (tag) {
+        case 201:
+        {
+            MyAdressViewController *addressVC = [[MyAdressViewController alloc] init];
+            [self.navigationController pushViewController:addressVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 @end

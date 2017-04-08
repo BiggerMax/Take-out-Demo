@@ -25,6 +25,7 @@
 		9D8375E51E5DE0890040E2E9 /* YJCategorySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8375E41E5DE0890040E2E9 /* YJCategorySource.m */; };
 		9D8375E81E5DE9760040E2E9 /* YJProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8375E71E5DE9760040E2E9 /* YJProductsViewController.m */; };
 		9D8375EB1E5DEB030040E2E9 /* YJGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8375EA1E5DEB030040E2E9 /* YJGoodsCell.m */; };
+		9D85632F1E93EA9A007F0B48 /* YJMyOrderingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D85632E1E93EA9A007F0B48 /* YJMyOrderingController.m */; };
 		9DA03ECE1E719BBD00F710A7 /* YJAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA03ECD1E719BBD00F710A7 /* YJAddressView.m */; };
 		9DA03ED11E719E1800F710A7 /* YJLightingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA03ED01E719E1800F710A7 /* YJLightingView.m */; };
 		9DA1F2C11E881A03005F7936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA1F2C01E881A03005F7936 /* Main.storyboard */; };
@@ -75,6 +76,11 @@
 		9DBC69C81E671A200077D042 /* YJDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC69C71E671A200077D042 /* YJDefaultView.m */; };
 		9DBC69CB1E671D490077D042 /* YJShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC69CA1E671D490077D042 /* YJShoppingCell.m */; };
 		9DBC69CE1E671DD30077D042 /* YJUserShopCarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC69CD1E671DD30077D042 /* YJUserShopCarTool.m */; };
+		9DDCCC821E9884F2006DE666 /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = 9DDCCC811E9884F2006DE666 /* MyAdress */; };
+		9DDCCC851E988549006DE666 /* AdressData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCCC841E988549006DE666 /* AdressData.m */; };
+		9DDCCC881E988855006DE666 /* YJUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCCC871E988855006DE666 /* YJUserInfo.m */; };
+		9DDCCC8B1E988AE1006DE666 /* MyAdressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCCC8A1E988AE1006DE666 /* MyAdressViewController.m */; };
+		9DDCCC8E1E9940C1006DE666 /* AdressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCCC8D1E9940C1006DE666 /* AdressCell.m */; };
 		9DEB1BDB1E6F04BB00EFD2C7 /* YJTableFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB1BDA1E6F04BB00EFD2C7 /* YJTableFootView.m */; };
 		9DECB85E1E8803FB009F9936 /* AJAX.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DECB8131E8803FB009F9936 /* AJAX.m */; };
 		9DECB85F1E8803FB009F9936 /* APP.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DECB8151E8803FB009F9936 /* APP.m */; };
@@ -157,6 +163,8 @@
 		9D8375E71E5DE9760040E2E9 /* YJProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJProductsViewController.m; path = Category/viewController/YJProductsViewController.m; sourceTree = "<group>"; };
 		9D8375E91E5DEB030040E2E9 /* YJGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJGoodsCell.h; path = Category/Views/YJGoodsCell.h; sourceTree = "<group>"; };
 		9D8375EA1E5DEB030040E2E9 /* YJGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJGoodsCell.m; path = Category/Views/YJGoodsCell.m; sourceTree = "<group>"; };
+		9D85632D1E93EA9A007F0B48 /* YJMyOrderingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJMyOrderingController.h; path = My/Controller/YJMyOrderingController.h; sourceTree = "<group>"; };
+		9D85632E1E93EA9A007F0B48 /* YJMyOrderingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJMyOrderingController.m; path = My/Controller/YJMyOrderingController.m; sourceTree = "<group>"; };
 		9DA03ECC1E719BBD00F710A7 /* YJAddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJAddressView.h; path = Cart/View/YJAddressView.h; sourceTree = "<group>"; };
 		9DA03ECD1E719BBD00F710A7 /* YJAddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJAddressView.m; path = Cart/View/YJAddressView.m; sourceTree = "<group>"; };
 		9DA03ECF1E719E1800F710A7 /* YJLightingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJLightingView.h; path = Cart/View/YJLightingView.h; sourceTree = "<group>"; };
@@ -254,6 +262,15 @@
 		9DBC69CA1E671D490077D042 /* YJShoppingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJShoppingCell.m; path = Cart/View/YJShoppingCell.m; sourceTree = "<group>"; };
 		9DBC69CC1E671DD30077D042 /* YJUserShopCarTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJUserShopCarTool.h; path = Common/Tools/YJUserShopCarTool.h; sourceTree = "<group>"; };
 		9DBC69CD1E671DD30077D042 /* YJUserShopCarTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJUserShopCarTool.m; path = Common/Tools/YJUserShopCarTool.m; sourceTree = "<group>"; };
+		9DDCCC811E9884F2006DE666 /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyAdress; path = Resource/MyAdress; sourceTree = "<group>"; };
+		9DDCCC831E988549006DE666 /* AdressData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdressData.h; path = My/Model/AdressData.h; sourceTree = "<group>"; };
+		9DDCCC841E988549006DE666 /* AdressData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdressData.m; path = My/Model/AdressData.m; sourceTree = "<group>"; };
+		9DDCCC861E988855006DE666 /* YJUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJUserInfo.h; path = My/Model/YJUserInfo.h; sourceTree = "<group>"; };
+		9DDCCC871E988855006DE666 /* YJUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJUserInfo.m; path = My/Model/YJUserInfo.m; sourceTree = "<group>"; };
+		9DDCCC891E988AE1006DE666 /* MyAdressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAdressViewController.h; path = My/Controller/MyAdressViewController.h; sourceTree = "<group>"; };
+		9DDCCC8A1E988AE1006DE666 /* MyAdressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAdressViewController.m; path = My/Controller/MyAdressViewController.m; sourceTree = "<group>"; };
+		9DDCCC8C1E9940C1006DE666 /* AdressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdressCell.h; path = My/View/AdressCell.h; sourceTree = "<group>"; };
+		9DDCCC8D1E9940C1006DE666 /* AdressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdressCell.m; path = My/View/AdressCell.m; sourceTree = "<group>"; };
 		9DEB1BD91E6F04BB00EFD2C7 /* YJTableFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJTableFootView.h; path = Cart/View/YJTableFootView.h; sourceTree = "<group>"; };
 		9DEB1BDA1E6F04BB00EFD2C7 /* YJTableFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJTableFootView.m; path = Cart/View/YJTableFootView.m; sourceTree = "<group>"; };
 		9DECB8121E8803FB009F9936 /* AJAX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJAX.h; sourceTree = "<group>"; };
@@ -512,6 +529,7 @@
 				9DA5117C1E534A1C00F8684D /* 首页新鲜热卖 */,
 				9D6769311E59C6CE0029E45C /* footerBanner */,
 				9D511D531E632B9E008C7348 /* supermarket */,
+				9DDCCC811E9884F2006DE666 /* MyAdress */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -686,6 +704,8 @@
 				9D6769261E599E3C0029E45C /* YJMenuView.m */,
 				9D67692B1E59A2BB0029E45C /* YJTitleIconView.h */,
 				9D67692C1E59A2BB0029E45C /* YJTitleIconView.m */,
+				9DDCCC8C1E9940C1006DE666 /* AdressCell.h */,
+				9DDCCC8D1E9940C1006DE666 /* AdressCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -695,6 +715,10 @@
 			children = (
 				9DA818761E09131F00DD80B7 /* YJMyViewController.h */,
 				9DA818771E09131F00DD80B7 /* YJMyViewController.m */,
+				9D85632D1E93EA9A007F0B48 /* YJMyOrderingController.h */,
+				9D85632E1E93EA9A007F0B48 /* YJMyOrderingController.m */,
+				9DDCCC891E988AE1006DE666 /* MyAdressViewController.h */,
+				9DDCCC8A1E988AE1006DE666 /* MyAdressViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -706,6 +730,10 @@
 				9D6769291E599E940029E45C /* YJTitleIconAction.m */,
 				9D67692E1E59BAD80029E45C /* YJFooterBannerData.h */,
 				9D67692F1E59BAD80029E45C /* YJFooterBannerData.m */,
+				9DDCCC831E988549006DE666 /* AdressData.h */,
+				9DDCCC841E988549006DE666 /* AdressData.m */,
+				9DDCCC861E988855006DE666 /* YJUserInfo.h */,
+				9DDCCC871E988855006DE666 /* YJUserInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -955,6 +983,7 @@
 				9D511D541E632B9E008C7348 /* supermarket in Resources */,
 				9DA818391E090B1400DD80B7 /* LaunchScreen.storyboard in Resources */,
 				9DA1F2C11E881A03005F7936 /* Main.storyboard in Resources */,
+				9DDCCC821E9884F2006DE666 /* MyAdress in Resources */,
 				9D6769321E59C6CE0029E45C /* footerBanner in Resources */,
 				9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */,
 				9DA818361E090B1400DD80B7 /* Assets.xcassets in Resources */,
@@ -1026,8 +1055,10 @@
 				9DECB8801E8803FB009F9936 /* UIView+OneKit.m in Sources */,
 				9DA818AF1E0BB57600DD80B7 /* YJIconImageTextView.m in Sources */,
 				9DECB87D1E8803FB009F9936 /* UIImage+OneKit.m in Sources */,
+				9DDCCC851E988549006DE666 /* AdressData.m in Sources */,
 				9DECB87B1E8803FB009F9936 /* UIButton+OneKit.m in Sources */,
 				9D67692D1E59A2BB0029E45C /* YJTitleIconView.m in Sources */,
+				9D85632F1E93EA9A007F0B48 /* YJMyOrderingController.m in Sources */,
 				9DECB8771E8803FB009F9936 /* SimplePickerView.m in Sources */,
 				9DECB8701E8803FB009F9936 /* NSData+OneKit.m in Sources */,
 				9DA818A31E0B782F00DD80B7 /* YJHeadLineView.m in Sources */,
@@ -1047,6 +1078,7 @@
 				9DECB8821E8803FB009F9936 /* WKWebView+OneKit.m in Sources */,
 				9DA818C61E0C202A00DD80B7 /* YJProgressHUDManager.m in Sources */,
 				9DA818801E0A189900DD80B7 /* YJShopCarTool.m in Sources */,
+				9DDCCC8B1E988AE1006DE666 /* MyAdressViewController.m in Sources */,
 				9DA818BF1E0C143B00DD80B7 /* YJDiscountPriceView.m in Sources */,
 				9DECB8611E8803FB009F9936 /* COLOR.m in Sources */,
 				9DECB8791E8803FB009F9936 /* TOAST.m in Sources */,
@@ -1094,7 +1126,9 @@
 				9DA818B21E0BDE0000DD80B7 /* YJWebViewController.m in Sources */,
 				9DA818C91E0C311200DD80B7 /* YJHomeCategoryCell.m in Sources */,
 				9DECB85E1E8803FB009F9936 /* AJAX.m in Sources */,
+				9DDCCC8E1E9940C1006DE666 /* AdressCell.m in Sources */,
 				9DA8186C1E0912D100DD80B7 /* YJCartViewController.m in Sources */,
+				9DDCCC881E988855006DE666 /* YJUserInfo.m in Sources */,
 				9DA818781E09131F00DD80B7 /* YJMyViewController.m in Sources */,
 				9D33EB001E8D55E900923C89 /* Cell1.m in Sources */,
 				9D8375E81E5DE9760040E2E9 /* YJProductsViewController.m in Sources */,

@@ -10,4 +10,5 @@
 #import "YJTitleIconAction.h"
 @interface YJMenuView : UIView
 -(instancetype)initMenu:(NSArray<YJTitleIconAction *>*)menus withLine:(BOOL)line;
+@property(nonatomic,copy)TapCallback callback;
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface YJMyViewController : UIViewController
-
+@property TapCallback callback;
 @end

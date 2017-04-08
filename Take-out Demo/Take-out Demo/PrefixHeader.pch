@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger ,HeadViewItemType){
 
 typedef void (^CompleteBlock)(id data,NSError *error);
 typedef void(^ClikedCallback) (HeadViewItemType type,NSInteger tag);
-
+typedef void(^TapCallback)(NSInteger tag);
 
 #define YJNotification   [NSNotificationCenter defaultCenter]
 #define Width  [[UIScreen mainScreen] bounds].size.width
@@ -37,5 +37,5 @@ typedef void(^ClikedCallback) (HeadViewItemType type,NSInteger tag);
 #define GrayColor [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1]
 #define GrayColor [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1]
 #define GeneralColor [UIColor colorWithRed:0.992 green:0.831 blue:0.192 alpha:1.000]
-
+#define STORYBOARD [UIStoryboard storyboardWithName:@"Main" bundle:nil]
 #endif /* PrefixHeader_pch */

@@ -9,6 +9,7 @@
 #import "YJMenuView.h"
 #import "YJTitleIconAction.h"
 #import "YJTitleIconView.h"
+#import "MyAdressViewController.h"
 @interface YJMenuView()
 @property(nonatomic,strong)NSArray *menus;
 @end
@@ -24,15 +25,17 @@ static const NSInteger rowNumbers = 4;
             YJTitleIconView *titleIconView = [[YJTitleIconView alloc] initWithTitleLabel:titles.title icon:titles.icon border:line];
             titleIconView.tag = titles.tag;
             titleIconView.userInteractionEnabled = YES;
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleIconViewClick)];
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleIconViewClick:)];
             [titleIconView addGestureRecognizer:tap];
             [self addSubview:titleIconView];
         }
     }
     return self;
 }
--(void)titleIconViewClick{
-    
+-(void)titleIconViewClick:(UIGestureRecognizer *)tapGes{
+    if (self.callback) {
+        self.callback(tapGes.view.tag);
+    }
 }
 -(void)layoutSubviews{
     [super layoutSubviews];
