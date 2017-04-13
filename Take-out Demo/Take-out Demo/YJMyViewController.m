@@ -263,8 +263,9 @@
         case 201:
         {
             MyAdressViewController *addressVC = [[MyAdressViewController alloc] init];
+            [addressVC setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:addressVC animated:YES];
-        }
+                    }
             break;
             
         default:

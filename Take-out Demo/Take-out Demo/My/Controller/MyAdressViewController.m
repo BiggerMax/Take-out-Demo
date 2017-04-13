@@ -9,7 +9,8 @@
 #import "MyAdressViewController.h"
 #import "AdressCell.h"
 #import "YJUserInfo.h"
-
+#import "AddAdressViewController.h"
+#import "ModifyAddressViewController.h"
 @interface MyAdressViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSArray *address;
@@ -94,6 +95,13 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [YJUserInfo shareInstance].defaultAddress = self.address[indexPath.row];
-    [self.navigationController popViewControllerAnimated:YES];
+    ModifyAddressViewController *modifyVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"ModifyAddressViewController"];
+    modifyVC.adress = self.address[indexPath.row];
+    [self.navigationController pushViewController:modifyVC animated:YES];
+}
+-(void)addAddressButtonCliked
+{
+    AddAdressViewController *addAdressVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"AddAdressViewController"];
+    [self.navigationController pushViewController:addAdressVC animated:YES];
 }
 @end

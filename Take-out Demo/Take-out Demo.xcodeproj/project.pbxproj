@@ -12,6 +12,13 @@
 		9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D33EAFC1E8D55D000923C89 /* Cell1.xib */; };
 		9D33EB001E8D55E900923C89 /* Cell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EAFF1E8D55E900923C89 /* Cell1.m */; };
 		9D511D541E632B9E008C7348 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 9D511D531E632B9E008C7348 /* supermarket */; };
+		9D5FA4C61E9D233900C15E12 /* AddAdressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FA4C51E9D233900C15E12 /* AddAdressViewController.m */; };
+		9D5FA4C91E9D289900C15E12 /* AdressLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5FA4C81E9D289900C15E12 /* AdressLabel.xib */; };
+		9D5FA4CC1E9D380400C15E12 /* ModifyAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FA4CB1E9D380400C15E12 /* ModifyAddressViewController.m */; };
+		9D5FA4D21E9E606500C15E12 /* MyOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FA4D01E9E606500C15E12 /* MyOrderTableViewCell.m */; };
+		9D5FA4D31E9E606500C15E12 /* MyOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5FA4D11E9E606500C15E12 /* MyOrderTableViewCell.xib */; };
+		9D5FA4D61E9E717A00C15E12 /* OrderData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FA4D51E9E717A00C15E12 /* OrderData.m */; };
+		9D5FA4D81E9E739F00C15E12 /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = 9D5FA4D71E9E739F00C15E12 /* MyOrders */; };
 		9D6769241E599BCA0029E45C /* YJOrderHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769231E599BCA0029E45C /* YJOrderHeadView.m */; };
 		9D6769271E599E3C0029E45C /* YJMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769261E599E3C0029E45C /* YJMenuView.m */; };
 		9D67692A1E599E940029E45C /* YJTitleIconAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6769291E599E940029E45C /* YJTitleIconAction.m */; };
@@ -138,6 +145,17 @@
 		9D33EAFE1E8D55E900923C89 /* Cell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell1.h; sourceTree = "<group>"; };
 		9D33EAFF1E8D55E900923C89 /* Cell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell1.m; sourceTree = "<group>"; };
 		9D511D531E632B9E008C7348 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Resource/supermarket; sourceTree = "<group>"; };
+		9D5FA4C41E9D233900C15E12 /* AddAdressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddAdressViewController.h; path = My/Controller/AddAdressViewController.h; sourceTree = "<group>"; };
+		9D5FA4C51E9D233900C15E12 /* AddAdressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddAdressViewController.m; path = My/Controller/AddAdressViewController.m; sourceTree = "<group>"; };
+		9D5FA4C81E9D289900C15E12 /* AdressLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdressLabel.xib; sourceTree = "<group>"; };
+		9D5FA4CA1E9D380400C15E12 /* ModifyAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAddressViewController.h; sourceTree = "<group>"; };
+		9D5FA4CB1E9D380400C15E12 /* ModifyAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyAddressViewController.m; sourceTree = "<group>"; };
+		9D5FA4CF1E9E606500C15E12 /* MyOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderTableViewCell.h; sourceTree = "<group>"; };
+		9D5FA4D01E9E606500C15E12 /* MyOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderTableViewCell.m; sourceTree = "<group>"; };
+		9D5FA4D11E9E606500C15E12 /* MyOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyOrderTableViewCell.xib; sourceTree = "<group>"; };
+		9D5FA4D41E9E717A00C15E12 /* OrderData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderData.h; path = My/Model/OrderData.h; sourceTree = "<group>"; };
+		9D5FA4D51E9E717A00C15E12 /* OrderData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderData.m; path = My/Model/OrderData.m; sourceTree = "<group>"; };
+		9D5FA4D71E9E739F00C15E12 /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyOrders; path = Resource/MyOrders; sourceTree = "<group>"; };
 		9D6769221E599BCA0029E45C /* YJOrderHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJOrderHeadView.h; path = My/View/YJOrderHeadView.h; sourceTree = "<group>"; };
 		9D6769231E599BCA0029E45C /* YJOrderHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJOrderHeadView.m; path = My/View/YJOrderHeadView.m; sourceTree = "<group>"; };
 		9D6769251E599E3C0029E45C /* YJMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJMenuView.h; path = My/View/YJMenuView.h; sourceTree = "<group>"; };
@@ -386,8 +404,20 @@
 				9D33EAFC1E8D55D000923C89 /* Cell1.xib */,
 				9D33EAFE1E8D55E900923C89 /* Cell1.h */,
 				9D33EAFF1E8D55E900923C89 /* Cell1.m */,
+				9D5FA4CF1E9E606500C15E12 /* MyOrderTableViewCell.h */,
+				9D5FA4D01E9E606500C15E12 /* MyOrderTableViewCell.m */,
+				9D5FA4D11E9E606500C15E12 /* MyOrderTableViewCell.xib */,
 			);
 			path = XIB;
+			sourceTree = "<group>";
+		};
+		9D5FA4C71E9D288200C15E12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D5FA4C81E9D289900C15E12 /* AdressLabel.xib */,
+			);
+			name = Views;
+			path = Other/Views;
 			sourceTree = "<group>";
 		};
 		9D679CD51E84058500B28501 /* Login */ = {
@@ -506,6 +536,7 @@
 		9DA818521E090B5A00DD80B7 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				9D5FA4C71E9D288200C15E12 /* Views */,
 				9DA8187D1E0A188300DD80B7 /* Tool */,
 				9DA818561E090C1F00DD80B7 /* Defines */,
 			);
@@ -530,6 +561,7 @@
 				9D6769311E59C6CE0029E45C /* footerBanner */,
 				9D511D531E632B9E008C7348 /* supermarket */,
 				9DDCCC811E9884F2006DE666 /* MyAdress */,
+				9D5FA4D71E9E739F00C15E12 /* MyOrders */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -719,6 +751,10 @@
 				9D85632E1E93EA9A007F0B48 /* YJMyOrderingController.m */,
 				9DDCCC891E988AE1006DE666 /* MyAdressViewController.h */,
 				9DDCCC8A1E988AE1006DE666 /* MyAdressViewController.m */,
+				9D5FA4C41E9D233900C15E12 /* AddAdressViewController.h */,
+				9D5FA4C51E9D233900C15E12 /* AddAdressViewController.m */,
+				9D5FA4CA1E9D380400C15E12 /* ModifyAddressViewController.h */,
+				9D5FA4CB1E9D380400C15E12 /* ModifyAddressViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -734,6 +770,8 @@
 				9DDCCC841E988549006DE666 /* AdressData.m */,
 				9DDCCC861E988855006DE666 /* YJUserInfo.h */,
 				9DDCCC871E988855006DE666 /* YJUserInfo.m */,
+				9D5FA4D41E9E717A00C15E12 /* OrderData.h */,
+				9D5FA4D51E9E717A00C15E12 /* OrderData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -983,9 +1021,12 @@
 				9D511D541E632B9E008C7348 /* supermarket in Resources */,
 				9DA818391E090B1400DD80B7 /* LaunchScreen.storyboard in Resources */,
 				9DA1F2C11E881A03005F7936 /* Main.storyboard in Resources */,
+				9D5FA4D31E9E606500C15E12 /* MyOrderTableViewCell.xib in Resources */,
 				9DDCCC821E9884F2006DE666 /* MyAdress in Resources */,
+				9D5FA4D81E9E739F00C15E12 /* MyOrders in Resources */,
 				9D6769321E59C6CE0029E45C /* footerBanner in Resources */,
 				9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */,
+				9D5FA4C91E9D289900C15E12 /* AdressLabel.xib in Resources */,
 				9DA818361E090B1400DD80B7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1087,6 +1128,7 @@
 				9DA818AC1E0BB4EF00DD80B7 /* YJHotView.m in Sources */,
 				9DECB8681E8803FB009F9936 /* IMAGE.m in Sources */,
 				9DA818CF1E0C31E000DD80B7 /* UIColor+YJExpand.m in Sources */,
+				9D5FA4D61E9E717A00C15E12 /* OrderData.m in Sources */,
 				9DA818C21E0C1F1C00DD80B7 /* YJBuyView.m in Sources */,
 				9DECB8631E8803FB009F9936 /* DatePicker.m in Sources */,
 				9DECB8751E8803FB009F9936 /* RES.m in Sources */,
@@ -1119,6 +1161,7 @@
 				9DA818BC1E0C124300DD80B7 /* YJHomeCell.m in Sources */,
 				9DA8188A1E0AD8FB00DD80B7 /* YJBaseViewController.m in Sources */,
 				9DBC69CB1E671D490077D042 /* YJShoppingCell.m in Sources */,
+				9D5FA4CC1E9D380400C15E12 /* ModifyAddressViewController.m in Sources */,
 				9DECB8721E8803FB009F9936 /* NSString+OneKit.m in Sources */,
 				9D67692A1E599E940029E45C /* YJTitleIconAction.m in Sources */,
 				9DA818341E090B1400DD80B7 /* Take_out_Demo.xcdatamodeld in Sources */,
@@ -1134,6 +1177,7 @@
 				9D8375E81E5DE9760040E2E9 /* YJProductsViewController.m in Sources */,
 				9DA8185D1E090E4E00DD80B7 /* YJMainTabBarViewController.m in Sources */,
 				9DECB86C1E8803FB009F9936 /* MATH.m in Sources */,
+				9D5FA4C61E9D233900C15E12 /* AddAdressViewController.m in Sources */,
 				9DA03ECE1E719BBD00F710A7 /* YJAddressView.m in Sources */,
 				9DA511801E534B0700F8684D /* YJAnimationRefreshHeader.m in Sources */,
 				9DECB86F1E8803FB009F9936 /* NSAttributedString+OneKit.m in Sources */,
@@ -1150,6 +1194,7 @@
 				9DECB87E1E8803FB009F9936 /* UILabel+OneKit.m in Sources */,
 				9DA818911E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m in Sources */,
 				9DA818871E0A25AC00DD80B7 /* NSString+Extension.m in Sources */,
+				9D5FA4D21E9E606500C15E12 /* MyOrderTableViewCell.m in Sources */,
 				9D8375E51E5DE0890040E2E9 /* YJCategorySource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

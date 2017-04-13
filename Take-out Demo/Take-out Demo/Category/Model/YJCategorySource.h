@@ -13,16 +13,21 @@
 @class Products;
 @class ProductCategory;
 @class YJGoods;
+
 @interface YJCategorySource : NSObject
 @property(nonatomic,copy)NSString *code;
 @property(nonatomic,copy)NSString *msg;
 @property(nonatomic,strong)SuperMarketData *data;
 +(void)loadSupermarketData:(CompleteBlock)complete;
 @end
+
+
 @interface SuperMarketData : NSObject
 @property(nonatomic,strong)NSArray<ProductCategory *>*categories;
 @property(nonatomic,strong)id products;
 @end
+
+
 @interface ProductCategory : NSObject
 @property (nonatomic, copy) NSString *id;
 @property (nonatomic, copy) NSString *name;
