@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YJUserInfo.h"
 
 @interface YJAddressView : UIView
-
+@property(nonatomic)TapCallback callback;
+@property(nonatomic,strong)Adress *defaultAdress;
 @end

@@ -13,6 +13,9 @@
 #import "YJAddressView.h"
 #import "YJLightingView.h"
 #import "YJShoppingCell.h"
+#import "YJPayView.h"
+#import "MyAdressViewController.h"
+#import "OneKit.h"
 @interface YJCartViewController ()<UITableViewDelegate,UITableViewDataSource,YJTableFootViewDelegate>
 @property UITableView *tableView;
 @property YJDefaultView *defaultView;
@@ -64,8 +67,14 @@
 -(void)buildTableHeadView{
     self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 100)];
     YJAddressView *address = [[YJAddressView alloc] initWithFrame:CGRectMake(0, 10, Width, 50)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(chooseAdress:)];
+    [address addGestureRecognizer:tap];
     YJLightingView *lightning = [[YJLightingView alloc] initWithFrame:CGRectMake(0, 70, Width, 30)];
+    //YJPayView *payView = [[YJPayView alloc] initWithFrame:CGRectMake(0, 70, Width, 30)];
+    //payView.backgroundColor = [UIColor yellowColor];
     [self.headView addSubview:address];
+    
+    //[self.headView addSubview:payView];
     [self.headView addSubview:lightning];
     self.tableView.tableHeaderView = self.headView;
 }
@@ -117,9 +126,14 @@
     return cell;
 }
 -(void)didTableFootViewCommit{
-    UIViewController *moneyVC = [UIViewController new];
-    moneyVC.view.backgroundColor = [UIColor whiteColor];
-    moneyVC.title = [NSString stringWithFormat:@"%.2lf",[[YJShopCarTool sharedInstance] getShopCarGoodsPrice]];
-    [self.navigationController pushViewController:moneyVC animated:YES];
+    [DIALOG alert:@"确认支付?" callback:^{
+        UIViewController *moneyVC = [UIViewController new];
+        moneyVC.view.backgroundColor = [UIColor whiteColor];
+        moneyVC.title = [NSString stringWithFormat:@"%.2lf",[[YJShopCarTool sharedInstance] getShopCarGoodsPrice]];
+        [self.navigationController pushViewController:moneyVC animated:YES];
+    }];
+}
+-(void)chooseAdress:(UITapGestureRecognizer *)tapGes{
+    [self.navigationController pushViewController:[MyAdressViewController new] animated:YES];
 }
 @end

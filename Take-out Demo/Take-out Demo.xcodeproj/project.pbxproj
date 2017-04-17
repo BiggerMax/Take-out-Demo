@@ -8,9 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5D40ACB6ED36D2AF08FC9B1C /* libPods-Take-out Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */; };
+		9D08FE2C1EA302AC00E057DF /* YJOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08FE2B1EA302AC00E057DF /* YJOrderDetailViewController.m */; };
+		9D08FE301EA305DC00E057DF /* Take_Out.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 9D08FE2F1EA305DC00E057DF /* Take_Out.sqlite */; };
+		9D08FE331EA308A100E057DF /* YJDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08FE321EA308A100E057DF /* YJDataManager.m */; };
+		9D08FE411EA30FA800E057DF /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08FE381EA30FA800E057DF /* FMDatabase.m */; };
+		9D08FE421EA30FA800E057DF /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08FE3A1EA30FA800E057DF /* FMDatabaseAdditions.m */; };
+		9D08FE431EA30FA800E057DF /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08FE3C1EA30FA800E057DF /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9D08FE441EA30FA800E057DF /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08FE3E1EA30FA800E057DF /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9D08FE451EA30FA800E057DF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08FE401EA30FA800E057DF /* FMResultSet.m */; };
+		9D08FE481EA3100A00E057DF /* AdressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08FE471EA3100A00E057DF /* AdressModel.m */; };
 		9D33EADD1E8AB2F500923C89 /* YJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EADC1E8AB2F500923C89 /* YJSettingController.m */; };
 		9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D33EAFC1E8D55D000923C89 /* Cell1.xib */; };
 		9D33EB001E8D55E900923C89 /* Cell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EAFF1E8D55E900923C89 /* Cell1.m */; };
+		9D4341CC1EA1BAB70031B252 /* YJPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4341CB1EA1BAB70031B252 /* YJPayView.m */; };
+		9D4341CF1EA1CF8F0031B252 /* YJAddressView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4341CE1EA1CF8F0031B252 /* YJAddressView2.m */; };
 		9D511D541E632B9E008C7348 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 9D511D531E632B9E008C7348 /* supermarket */; };
 		9D5FA4C61E9D233900C15E12 /* AddAdressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FA4C51E9D233900C15E12 /* AddAdressViewController.m */; };
 		9D5FA4C91E9D289900C15E12 /* AdressLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5FA4C81E9D289900C15E12 /* AdressLabel.xib */; };
@@ -139,11 +150,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D08FE2A1EA302AC00E057DF /* YJOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJOrderDetailViewController.h; path = My/Controller/YJOrderDetailViewController.h; sourceTree = "<group>"; };
+		9D08FE2B1EA302AC00E057DF /* YJOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJOrderDetailViewController.m; path = My/Controller/YJOrderDetailViewController.m; sourceTree = "<group>"; };
+		9D08FE2F1EA305DC00E057DF /* Take_Out.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Take_Out.sqlite; path = Resource/Take_Out.sqlite; sourceTree = "<group>"; };
+		9D08FE311EA308A100E057DF /* YJDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJDataManager.h; path = Common/Tools/YJDataManager.h; sourceTree = "<group>"; };
+		9D08FE321EA308A100E057DF /* YJDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJDataManager.m; path = Common/Tools/YJDataManager.m; sourceTree = "<group>"; };
+		9D08FE371EA30FA800E057DF /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		9D08FE381EA30FA800E057DF /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		9D08FE391EA30FA800E057DF /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		9D08FE3A1EA30FA800E057DF /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		9D08FE3B1EA30FA800E057DF /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		9D08FE3C1EA30FA800E057DF /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		9D08FE3D1EA30FA800E057DF /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		9D08FE3E1EA30FA800E057DF /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		9D08FE3F1EA30FA800E057DF /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		9D08FE401EA30FA800E057DF /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		9D08FE461EA3100A00E057DF /* AdressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdressModel.h; path = My/Model/AdressModel.h; sourceTree = "<group>"; };
+		9D08FE471EA3100A00E057DF /* AdressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdressModel.m; path = My/Model/AdressModel.m; sourceTree = "<group>"; };
 		9D33EADB1E8AB2F500923C89 /* YJSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSettingController.h; sourceTree = "<group>"; };
 		9D33EADC1E8AB2F500923C89 /* YJSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSettingController.m; sourceTree = "<group>"; };
 		9D33EAFC1E8D55D000923C89 /* Cell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell1.xib; sourceTree = "<group>"; };
 		9D33EAFE1E8D55E900923C89 /* Cell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell1.h; sourceTree = "<group>"; };
 		9D33EAFF1E8D55E900923C89 /* Cell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell1.m; sourceTree = "<group>"; };
+		9D4341CA1EA1BAB70031B252 /* YJPayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJPayView.h; path = Cart/View/YJPayView.h; sourceTree = "<group>"; };
+		9D4341CB1EA1BAB70031B252 /* YJPayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJPayView.m; path = Cart/View/YJPayView.m; sourceTree = "<group>"; };
+		9D4341CD1EA1CF8F0031B252 /* YJAddressView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJAddressView2.h; path = Shopping/Views/YJAddressView2.h; sourceTree = "<group>"; };
+		9D4341CE1EA1CF8F0031B252 /* YJAddressView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJAddressView2.m; path = Shopping/Views/YJAddressView2.m; sourceTree = "<group>"; };
 		9D511D531E632B9E008C7348 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Resource/supermarket; sourceTree = "<group>"; };
 		9D5FA4C41E9D233900C15E12 /* AddAdressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddAdressViewController.h; path = My/Controller/AddAdressViewController.h; sourceTree = "<group>"; };
 		9D5FA4C51E9D233900C15E12 /* AddAdressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddAdressViewController.m; path = My/Controller/AddAdressViewController.m; sourceTree = "<group>"; };
@@ -389,6 +421,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D08FE361EA30F8C00E057DF /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				9D08FE371EA30FA800E057DF /* FMDatabase.h */,
+				9D08FE381EA30FA800E057DF /* FMDatabase.m */,
+				9D08FE391EA30FA800E057DF /* FMDatabaseAdditions.h */,
+				9D08FE3A1EA30FA800E057DF /* FMDatabaseAdditions.m */,
+				9D08FE3B1EA30FA800E057DF /* FMDatabasePool.h */,
+				9D08FE3C1EA30FA800E057DF /* FMDatabasePool.m */,
+				9D08FE3D1EA30FA800E057DF /* FMDatabaseQueue.h */,
+				9D08FE3E1EA30FA800E057DF /* FMDatabaseQueue.m */,
+				9D08FE3F1EA30FA800E057DF /* FMResultSet.h */,
+				9D08FE401EA30FA800E057DF /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
 		9D33EAD71E8AB28C00923C89 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +501,8 @@
 		9DA818251E090B1400DD80B7 /* Take-out Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9D08FE2F1EA305DC00E057DF /* Take_Out.sqlite */,
+				9D08FE361EA30F8C00E057DF /* FMDB */,
 				9DECB8111E8803FB009F9936 /* OneKit */,
 				9D33EAD71E8AB28C00923C89 /* Setting */,
 				9D679CD51E84058500B28501 /* Login */,
@@ -672,6 +723,10 @@
 				9DA03ECD1E719BBD00F710A7 /* YJAddressView.m */,
 				9DA03ECF1E719E1800F710A7 /* YJLightingView.h */,
 				9DA03ED01E719E1800F710A7 /* YJLightingView.m */,
+				9D4341CA1EA1BAB70031B252 /* YJPayView.h */,
+				9D4341CB1EA1BAB70031B252 /* YJPayView.m */,
+				9D4341CD1EA1CF8F0031B252 /* YJAddressView2.h */,
+				9D4341CE1EA1CF8F0031B252 /* YJAddressView2.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -755,6 +810,8 @@
 				9D5FA4C51E9D233900C15E12 /* AddAdressViewController.m */,
 				9D5FA4CA1E9D380400C15E12 /* ModifyAddressViewController.h */,
 				9D5FA4CB1E9D380400C15E12 /* ModifyAddressViewController.m */,
+				9D08FE2A1EA302AC00E057DF /* YJOrderDetailViewController.h */,
+				9D08FE2B1EA302AC00E057DF /* YJOrderDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -772,6 +829,8 @@
 				9DDCCC871E988855006DE666 /* YJUserInfo.m */,
 				9D5FA4D41E9E717A00C15E12 /* OrderData.h */,
 				9D5FA4D51E9E717A00C15E12 /* OrderData.m */,
+				9D08FE461EA3100A00E057DF /* AdressModel.h */,
+				9D08FE471EA3100A00E057DF /* AdressModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -827,6 +886,8 @@
 				9DA818C51E0C202A00DD80B7 /* YJProgressHUDManager.m */,
 				9DBC69CC1E671DD30077D042 /* YJUserShopCarTool.h */,
 				9DBC69CD1E671DD30077D042 /* YJUserShopCarTool.m */,
+				9D08FE311EA308A100E057DF /* YJDataManager.h */,
+				9D08FE321EA308A100E057DF /* YJDataManager.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -1028,6 +1089,7 @@
 				9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */,
 				9D5FA4C91E9D289900C15E12 /* AdressLabel.xib in Resources */,
 				9DA818361E090B1400DD80B7 /* Assets.xcassets in Resources */,
+				9D08FE301EA305DC00E057DF /* Take_Out.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1099,6 +1161,7 @@
 				9DDCCC851E988549006DE666 /* AdressData.m in Sources */,
 				9DECB87B1E8803FB009F9936 /* UIButton+OneKit.m in Sources */,
 				9D67692D1E59A2BB0029E45C /* YJTitleIconView.m in Sources */,
+				9D4341CC1EA1BAB70031B252 /* YJPayView.m in Sources */,
 				9D85632F1E93EA9A007F0B48 /* YJMyOrderingController.m in Sources */,
 				9DECB8771E8803FB009F9936 /* SimplePickerView.m in Sources */,
 				9DECB8701E8803FB009F9936 /* NSData+OneKit.m in Sources */,
@@ -1117,10 +1180,13 @@
 				9DA818721E0912FA00DD80B7 /* YJShoppingViewController.m in Sources */,
 				9DECB8661E8803FB009F9936 /* DIALOG.m in Sources */,
 				9DECB8821E8803FB009F9936 /* WKWebView+OneKit.m in Sources */,
+				9D08FE2C1EA302AC00E057DF /* YJOrderDetailViewController.m in Sources */,
 				9DA818C61E0C202A00DD80B7 /* YJProgressHUDManager.m in Sources */,
+				9D08FE431EA30FA800E057DF /* FMDatabasePool.m in Sources */,
 				9DA818801E0A189900DD80B7 /* YJShopCarTool.m in Sources */,
 				9DDCCC8B1E988AE1006DE666 /* MyAdressViewController.m in Sources */,
 				9DA818BF1E0C143B00DD80B7 /* YJDiscountPriceView.m in Sources */,
+				9D08FE481EA3100A00E057DF /* AdressModel.m in Sources */,
 				9DECB8611E8803FB009F9936 /* COLOR.m in Sources */,
 				9DECB8791E8803FB009F9936 /* TOAST.m in Sources */,
 				9DA8187C1E09185700DD80B7 /* AppConst.m in Sources */,
@@ -1128,7 +1194,9 @@
 				9DA818AC1E0BB4EF00DD80B7 /* YJHotView.m in Sources */,
 				9DECB8681E8803FB009F9936 /* IMAGE.m in Sources */,
 				9DA818CF1E0C31E000DD80B7 /* UIColor+YJExpand.m in Sources */,
+				9D08FE331EA308A100E057DF /* YJDataManager.m in Sources */,
 				9D5FA4D61E9E717A00C15E12 /* OrderData.m in Sources */,
+				9D08FE411EA30FA800E057DF /* FMDatabase.m in Sources */,
 				9DA818C21E0C1F1C00DD80B7 /* YJBuyView.m in Sources */,
 				9DECB8631E8803FB009F9936 /* DatePicker.m in Sources */,
 				9DECB8751E8803FB009F9936 /* RES.m in Sources */,
@@ -1150,6 +1218,7 @@
 				9D7A243F1E55EE2400F1DBCA /* YJMyHeadView.m in Sources */,
 				9DECB8781E8803FB009F9936 /* STRING.m in Sources */,
 				9DA03ED11E719E1800F710A7 /* YJLightingView.m in Sources */,
+				9D08FE421EA30FA800E057DF /* FMDatabaseAdditions.m in Sources */,
 				9DECB8651E8803FB009F9936 /* DEVICE.m in Sources */,
 				9DECB8741E8803FB009F9936 /* PASSWORD.m in Sources */,
 				9DECB87F1E8803FB009F9936 /* UITextView+OneKit.m in Sources */,
@@ -1159,6 +1228,7 @@
 				9D8375D71E5C95820040E2E9 /* YJCategoryCell.m in Sources */,
 				9D6769301E59BAD80029E45C /* YJFooterBannerData.m in Sources */,
 				9DA818BC1E0C124300DD80B7 /* YJHomeCell.m in Sources */,
+				9D4341CF1EA1CF8F0031B252 /* YJAddressView2.m in Sources */,
 				9DA8188A1E0AD8FB00DD80B7 /* YJBaseViewController.m in Sources */,
 				9DBC69CB1E671D490077D042 /* YJShoppingCell.m in Sources */,
 				9D5FA4CC1E9D380400C15E12 /* ModifyAddressViewController.m in Sources */,
@@ -1172,6 +1242,8 @@
 				9DDCCC8E1E9940C1006DE666 /* AdressCell.m in Sources */,
 				9DA8186C1E0912D100DD80B7 /* YJCartViewController.m in Sources */,
 				9DDCCC881E988855006DE666 /* YJUserInfo.m in Sources */,
+				9D08FE451EA30FA800E057DF /* FMResultSet.m in Sources */,
+				9D08FE441EA30FA800E057DF /* FMDatabaseQueue.m in Sources */,
 				9DA818781E09131F00DD80B7 /* YJMyViewController.m in Sources */,
 				9D33EB001E8D55E900923C89 /* Cell1.m in Sources */,
 				9D8375E81E5DE9760040E2E9 /* YJProductsViewController.m in Sources */,

@@ -21,9 +21,10 @@
         _money.textColor = [UIColor redColor];
         [self addSubview:_money];
         
-        _commitBtn = [[UIButton alloc] init];
+        _commitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_commitBtn setTitle:@"选好了" forState:UIControlStateNormal];
         [_commitBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_commitBtn setBackgroundColor:[UIColor yellowColor]];
         [_commitBtn addTarget:self action:@selector(commitBtnClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_commitBtn];
         

@@ -11,6 +11,7 @@
 #import "YJUserInfo.h"
 #import "AddAdressViewController.h"
 #import "ModifyAddressViewController.h"
+#import "YJDataManager.h"
 @interface MyAdressViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSArray *address;
@@ -51,12 +52,15 @@
 }
 -(void)loadAddressData
 {
-    __weak typeof(self) weakSelf = self;
-    [AdressData loadAdressData:^(id data, NSError *error)
-    {
-        weakSelf.address = data;
-        [weakSelf.tableView reloadData];
-    }];
+        __weak typeof(self) weakSelf = self;
+//    [AdressData loadAdressData:^(id data, NSError *error)
+//    {
+//        weakSelf.address = data;
+//        [weakSelf.tableView reloadData];
+//    }];
+    NSArray *array = [YJDataManager getData:myAdress];
+    weakSelf.address = array;
+    [weakSelf.tableView reloadData];
 }
 - (void)buildBottonView {
     UIView *bottonView = [[UIView alloc]init];
