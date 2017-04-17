@@ -20,6 +20,8 @@
 		9D33EADD1E8AB2F500923C89 /* YJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EADC1E8AB2F500923C89 /* YJSettingController.m */; };
 		9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D33EAFC1E8D55D000923C89 /* Cell1.xib */; };
 		9D33EB001E8D55E900923C89 /* Cell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EAFF1E8D55E900923C89 /* Cell1.m */; };
+		9D3ABCEF1EA4F49700CB1073 /* Take_Out.db in Resources */ = {isa = PBXBuildFile; fileRef = 9D3ABCEE1EA4F49700CB1073 /* Take_Out.db */; };
+		9D3ABCF31EA4FF2200CB1073 /* YJUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3ABCF21EA4FF2200CB1073 /* YJUserModel.m */; };
 		9D4341CC1EA1BAB70031B252 /* YJPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4341CB1EA1BAB70031B252 /* YJPayView.m */; };
 		9D4341CF1EA1CF8F0031B252 /* YJAddressView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4341CE1EA1CF8F0031B252 /* YJAddressView2.m */; };
 		9D511D541E632B9E008C7348 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 9D511D531E632B9E008C7348 /* supermarket */; };
@@ -172,6 +174,9 @@
 		9D33EAFC1E8D55D000923C89 /* Cell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell1.xib; sourceTree = "<group>"; };
 		9D33EAFE1E8D55E900923C89 /* Cell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell1.h; sourceTree = "<group>"; };
 		9D33EAFF1E8D55E900923C89 /* Cell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell1.m; sourceTree = "<group>"; };
+		9D3ABCEE1EA4F49700CB1073 /* Take_Out.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Take_Out.db; sourceTree = "<group>"; };
+		9D3ABCF11EA4FF2200CB1073 /* YJUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJUserModel.h; sourceTree = "<group>"; };
+		9D3ABCF21EA4FF2200CB1073 /* YJUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJUserModel.m; sourceTree = "<group>"; };
 		9D4341CA1EA1BAB70031B252 /* YJPayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJPayView.h; path = Cart/View/YJPayView.h; sourceTree = "<group>"; };
 		9D4341CB1EA1BAB70031B252 /* YJPayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJPayView.m; path = Cart/View/YJPayView.m; sourceTree = "<group>"; };
 		9D4341CD1EA1CF8F0031B252 /* YJAddressView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJAddressView2.h; path = Shopping/Views/YJAddressView2.h; sourceTree = "<group>"; };
@@ -460,6 +465,15 @@
 			path = XIB;
 			sourceTree = "<group>";
 		};
+		9D3ABCF01EA4FEEA00CB1073 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D3ABCF11EA4FF2200CB1073 /* YJUserModel.h */,
+				9D3ABCF21EA4FF2200CB1073 /* YJUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9D5FA4C71E9D288200C15E12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +486,7 @@
 		9D679CD51E84058500B28501 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9D3ABCF01EA4FEEA00CB1073 /* Model */,
 				9D679CD91E8405A700B28501 /* YJLoginViewController.h */,
 				9D679CDA1E8405A700B28501 /* YJLoginViewController.m */,
 			);
@@ -501,6 +516,7 @@
 		9DA818251E090B1400DD80B7 /* Take-out Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9D3ABCEE1EA4F49700CB1073 /* Take_Out.db */,
 				9D08FE2F1EA305DC00E057DF /* Take_Out.sqlite */,
 				9D08FE361EA30F8C00E057DF /* FMDB */,
 				9DECB8111E8803FB009F9936 /* OneKit */,
@@ -1076,6 +1092,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3ABCEF1EA4F49700CB1073 /* Take_Out.db in Resources */,
 				9DECB8691E8803FB009F9936 /* Info.plist in Resources */,
 				9DA5117D1E534A1C00F8684D /* 首页新鲜热卖 in Resources */,
 				9DA5117B1E53495800F8684D /* 首页热卖 in Resources */,
@@ -1238,6 +1255,7 @@
 				9DA818971E0AE17100DD80B7 /* YJHomeHeadData.m in Sources */,
 				9DA818B21E0BDE0000DD80B7 /* YJWebViewController.m in Sources */,
 				9DA818C91E0C311200DD80B7 /* YJHomeCategoryCell.m in Sources */,
+				9D3ABCF31EA4FF2200CB1073 /* YJUserModel.m in Sources */,
 				9DECB85E1E8803FB009F9936 /* AJAX.m in Sources */,
 				9DDCCC8E1E9940C1006DE666 /* AdressCell.m in Sources */,
 				9DA8186C1E0912D100DD80B7 /* YJCartViewController.m in Sources */,

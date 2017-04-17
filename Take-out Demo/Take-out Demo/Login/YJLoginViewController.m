@@ -7,11 +7,13 @@
 //
 
 #import "YJLoginViewController.h"
-
+#import "YJDataManager.h"
+#import "YJUserModel.h"
 @interface YJLoginViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UITextField *password;
-
+@property NSArray *array;
+@property YJUserModel *model;
 @end
 
 @implementation YJLoginViewController
@@ -25,12 +27,22 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)login:(UIButton *)sender {
-    if ([self.userName.text isEqualToString:@"admin"] && [self.password.text isEqualToString:@"123456"]) {
-        [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":@"admin"}];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }else{
-        [DIALOG alert:@"输入错误，请重新输入!"];
-        return;
+    NSArray *array = [YJDataManager getData:login];
+    self.array = array;
+    for (int i = 0; i < self.array.count; i++) {
+        self.model = self.array[i];
+        NSString *username = self.model.uname;
+        NSString *psw = self.model.upsw;
+        if ([self.userName.text isEqualToString:username] && [self.password.text isEqualToString:psw]) {
+            [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":username}];
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
+            return;
+        }else{
+            [DIALOG alert:@"输入错误，请重新输入!"];
+            ;
+        }
+
     }
 }
 - (IBAction)forgotPsw:(id)sender {

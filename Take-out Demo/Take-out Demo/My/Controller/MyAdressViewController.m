@@ -15,6 +15,7 @@
 @interface MyAdressViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSArray *address;
+
 @end
 
 @implementation MyAdressViewController
