@@ -12,6 +12,7 @@ NSString * const HomeTableHeadViewHeightDidChange = @"HomeTableHeadViewHeightDid
 NSString * const HomeGoodsInventoryProblem = @"HomeGoodsInventoryProblem";
 NSString * const LFBShopCarDidRemoveProductNSNotification = @"LFBShopCarDidRemoveProductNSNotification";
 NSString * const LFBShopCarBuyNumberDidChangeNotification = @"LFBShopCarBuyNumberDidChangeNotification";
-
+NSString *const ISLOGIN = @"ISLOGIN";
+NSString *const GuideViewControllerDidFinish = @"GuideViewControllerDidFinish";
 const CGFloat HomeCollectionViewCellMargin = 10;
 const CGFloat DefaultMargin = 10;

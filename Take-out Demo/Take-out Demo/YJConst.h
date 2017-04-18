@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const GuideViewControllerDidFinish;
-extern NSString *const IsFirstOpenApp;
+
+

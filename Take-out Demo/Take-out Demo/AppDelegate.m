@@ -14,10 +14,11 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize isLogin;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [CONFIG set:@"PHONE" value:nil];
+    [CONFIG set:ISLOGIN value:NO];
     [self setAppStyle];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //NSString *isFirstOpenApp = [[NSUserDefaults standardUserDefaults] objectForKey:IsFirstOpenApp];

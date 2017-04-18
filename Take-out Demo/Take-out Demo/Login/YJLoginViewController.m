@@ -8,12 +8,16 @@
 
 #import "YJLoginViewController.h"
 #import "YJDataManager.h"
+#import "AppDelegate.h"
 #import "YJUserModel.h"
+
 @interface YJLoginViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UITextField *password;
 @property NSArray *array;
 @property YJUserModel *model;
+@property NSMutableDictionary *dic;
+@property AppDelegate *delegate;
 @end
 
 @implementation YJLoginViewController
@@ -27,23 +31,38 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)login:(UIButton *)sender {
+    __weak typeof (self)wealSelf = self;
     NSArray *array = [YJDataManager getData:login];
+    NSMutableDictionary *muDic = [NSMutableDictionary new];
+    NSMutableDictionary *phoneDic = [NSMutableDictionary new];
     self.array = array;
     for (int i = 0; i < self.array.count; i++) {
         self.model = self.array[i];
         NSString *username = self.model.uname;
         NSString *psw = self.model.upsw;
-        if ([self.userName.text isEqualToString:username] && [self.password.text isEqualToString:psw]) {
-            [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":username}];
-            [self dismissViewControllerAnimated:YES completion:nil];
-            
-            return;
-        }else{
-            [DIALOG alert:@"输入错误，请重新输入!"];
-            ;
-        }
-
+        int phone = self.model.phone;
+        //[muDic setValue:@{username:psw} forKey:[NSString stringWithFormat:@"%d",i]];
+        [muDic setValue:psw forKey:username];
+        [phoneDic setValue:@(phone) forKey:username];
     }
+    NSString *userName = self.userName.text;
+    NSString *userPsw = self.password.text;
+    NSArray *usernameArray = [muDic allKeys];
+    int phone = (int)phoneDic[userName];
+    if ([usernameArray containsObject:userName] && [userPsw isEqualToString:muDic[userName]]) {
+        [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":userName}];
+        [CONFIG set:@"PHONE" value:@(phone)];
+        wealSelf.delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//        wealSelf.delegate.isLogin = YES;
+        [CONFIG set:ISLOGIN value:@(YES)];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        return;
+    }else{
+        [DIALOG alert:@"输入错误，请重新输入!"];
+        ;
+    }
+
 }
 - (IBAction)forgotPsw:(id)sender {
     [DIALOG toast:@"暂未开发，敬请期待"];

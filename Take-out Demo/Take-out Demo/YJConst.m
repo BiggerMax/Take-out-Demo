@@ -8,5 +8,3 @@
 
 #import "YJConst.h"
 
-NSString *const GuideViewControllerDidFinish = @"GuideViewControllerDidFinish";
-NSString *const IsFirstOpenApp = @"IsFirstOpenApp";

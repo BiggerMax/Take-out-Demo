@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const GuideViewControllerDidFinish;
 extern NSString * const HomeTableHeadViewHeightDidChange;
 extern NSString * const HomeGoodsInventoryProblem;
 extern NSString * const LFBShopCarDidRemoveProductNSNotification;
 extern NSString * const LFBShopCarBuyNumberDidChangeNotification;
-
+extern NSString * const ISLOGIN;
 extern const CGFloat HomeCollectionViewCellMargin;
 extern const CGFloat DefaultMargin;

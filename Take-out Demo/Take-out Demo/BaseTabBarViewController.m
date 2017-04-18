@@ -15,7 +15,7 @@
 #import "YJShoppingViewController.h"
 #import "YJMyViewController.h"
 #import "BaseTabBatButton.h"
-#define SCREENWEIGHT [UIScreen mainScreen].bounds.size.width
+
 #define kTabBarHeight 49
 
 @interface BaseTabBarViewController ()
@@ -55,7 +55,7 @@ static BaseTabBarViewController *controller = nil;
 -(void)buildTabBar{
     self.tabBar.hidden =YES;
     CGFloat tabBarViewY = self.view.frame.size.height - 49;
-    _tabBarView = [[UIView alloc]initWithFrame:CGRectMake(0, tabBarViewY, SCREENWEIGHT, 49)];
+    _tabBarView = [[UIView alloc]initWithFrame:CGRectMake(0,tabBarViewY,Width,49)];
     _tabBarView.userInteractionEnabled = YES;
     _tabBarView.backgroundColor = [UIColor whiteColor];
     _tabBarView.alpha = 0.98;

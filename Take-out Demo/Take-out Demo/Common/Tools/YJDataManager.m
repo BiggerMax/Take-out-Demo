@@ -67,6 +67,7 @@ static FMDatabase *dataBase;
                 YJUserModel *model = [YJUserModel new];
                 model.uname = [NSString stringWithFormat:@"%@",[re stringForColumn:@"uname"]];
                 model.upsw = [NSString stringWithFormat:@"%@",[re stringForColumn:@"upsw"]];
+                model.phone = [re intForColumn:@"phone"];
                 [array addObject:model];
             }
         }
