@@ -13,4 +13,5 @@
 @property(nonatomic)NSString *uname;
 @property(nonatomic)NSString *upsw;
 @property(nonatomic)int phone;
+@property(nonatomic)NSString *address;
 @end

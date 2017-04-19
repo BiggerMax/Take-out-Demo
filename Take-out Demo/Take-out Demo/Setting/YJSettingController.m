@@ -9,11 +9,14 @@
 #import "YJSettingController.h"
 #import "AppDelegate.h"
 #import "YJDataManager.h"
+#import "YJModifyPswController.h"
+
 @interface YJSettingController ()
 @property UIView *logoutView;
 @property NSArray *dataArray;
 @property AppDelegate *delegate;
 @property (strong, nonatomic) IBOutlet UILabel *phoneLabel;
+
 @end
 #define mainScreen [UIScreen mainScreen].bounds
 @implementation YJSettingController
@@ -47,7 +50,7 @@
     [_logoutView removeFromSuperview];
 }
 -(void)loadData{
-    self.dataArray = [YJDataManager getData:login];
+    self.dataArray = [YJDataManager getData:user];
     BOOL isBool = isNull([CONFIG get:@"PHONE"]);
     NSString *phone = [NSString stringWithFormat:@"%@",[CONFIG get:@"PHONE"]];
     //
@@ -64,9 +67,23 @@
     [DIALOG confirm:@"是否退出登录" yesTitle:@"退出" noTitle:@"返回" callback:^(BOOL ok) {
         [self.navigationController popViewControllerAnimated:YES];
         [CONFIG set:@"PHONE" value:nil];
-        [CONFIG set:ISLOGIN value:NO];
+        [CONFIG set:ISLOGIN value:@NO];
+        [CONFIG set:@"USERNAME" value:nil];
         [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":@"注册或登录"}];
     }];
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0:
+        {
+            YJModifyPswController *modifyPSW = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJModifyPswController"];
+            [self.navigationController pushViewController:modifyPSW animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 //-(UIView *)logoutView{
 //    UIView *logoutView = [[UIView alloc] initWithFrame:CGRectMake(0, mainScreen.size.height-50, mainScreen.size.width, 50)];

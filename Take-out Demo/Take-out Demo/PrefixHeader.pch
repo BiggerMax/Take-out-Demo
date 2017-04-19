@@ -18,6 +18,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import "BaseTabBarViewController.h"
 #import "OneKit.h"
+#import "YJDataManager.h"
 
 typedef NS_ENUM(NSInteger ,HeadViewItemType){
     HeadViewItemTypePage,

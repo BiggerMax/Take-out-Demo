@@ -10,6 +10,7 @@
 #import "YJDataManager.h"
 #import "AppDelegate.h"
 #import "YJUserModel.h"
+#import "YJRegisterViewController.h"
 
 @interface YJLoginViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *userName;
@@ -32,7 +33,7 @@
 }
 - (IBAction)login:(UIButton *)sender {
     __weak typeof (self)wealSelf = self;
-    NSArray *array = [YJDataManager getData:login];
+    NSArray *array = [YJDataManager getData:user];
     NSMutableDictionary *muDic = [NSMutableDictionary new];
     NSMutableDictionary *phoneDic = [NSMutableDictionary new];
     self.array = array;
@@ -48,13 +49,14 @@
     NSString *userName = self.userName.text;
     NSString *userPsw = self.password.text;
     NSArray *usernameArray = [muDic allKeys];
-    int phone = (int)phoneDic[userName];
+    NSInteger phone = (NSInteger)phoneDic[userName];
     if ([usernameArray containsObject:userName] && [userPsw isEqualToString:muDic[userName]]) {
         [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":userName}];
         [CONFIG set:@"PHONE" value:@(phone)];
         wealSelf.delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
 //        wealSelf.delegate.isLogin = YES;
-        [CONFIG set:ISLOGIN value:@(YES)];
+        [CONFIG set:ISLOGIN value:@YES];
+        [CONFIG set:@"USERNAME" value:userName];
         [self dismissViewControllerAnimated:YES completion:nil];
         
         return;
@@ -67,8 +69,11 @@
 - (IBAction)forgotPsw:(id)sender {
     [DIALOG toast:@"暂未开发，敬请期待"];
 }
-- (IBAction)registe:(UIButton *)sender {
+- (IBAction)register:(UIButton *)sender {
+    YJRegisterViewController *registerVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJRegisterViewController"];
+    [self.navigationController pushViewController:registerVC animated:YES];
 }
+
 
 
 @end

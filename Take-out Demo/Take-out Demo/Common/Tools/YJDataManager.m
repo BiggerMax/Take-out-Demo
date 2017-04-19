@@ -15,8 +15,12 @@ static FMDatabase *dataBase;
 @implementation YJDataManager
 +(BOOL)openDB
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Take_Out" ofType:@"db"];
-    dataBase = [[FMDatabase alloc] initWithPath:path];
+    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:@"Take_Out.sqlite"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Take_Out" ofType:@"sqlite"];
+    NSError *error;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [fileManager copyItemAtPath:path toPath:filePath error:&error];
+    dataBase = [[FMDatabase alloc] initWithPath:filePath];
     if ([dataBase open]) {
         NSLog(@"open success");
         return true;
@@ -41,7 +45,7 @@ static FMDatabase *dataBase;
                 AdressModel *model = [AdressModel new];
                 model.name = [re stringForColumn:@"name"];
                 model.telphone = [NSString stringWithFormat:@"%@",[re stringForColumn:@"telphone"]];
-                model.accept_name = [NSString stringWithFormat:@"%@",[re stringForColumn:@"accept_nam"]];
+                model.accept_name = [NSString stringWithFormat:@"%@",[re stringForColumn:@"name"]];
                 model.address = [NSString stringWithFormat:@"%@",[re stringForColumn:@"address"]];
                 [array addObject:model];
             }
@@ -59,7 +63,7 @@ static FMDatabase *dataBase;
             }
         }
         break;
-        case login:
+        case user:
         {
             NSString *sql = @"select * FROM User";
             FMResultSet *re = [dataBase executeQuery:sql];
@@ -68,33 +72,53 @@ static FMDatabase *dataBase;
                 model.uname = [NSString stringWithFormat:@"%@",[re stringForColumn:@"uname"]];
                 model.upsw = [NSString stringWithFormat:@"%@",[re stringForColumn:@"upsw"]];
                 model.phone = [re intForColumn:@"phone"];
+                model.address = [NSString stringWithFormat:@"%@",[re stringForColumn:@"address"]];
                 [array addObject:model];
             }
         }
-            
+            break;
         default:
             break;
     }
+    [dataBase close];
     return array;
 }
-+(NSArray *)updateData:(DataType)type
++(void)updateData:(UpdateType)type record:(NSDictionary *)record callback:(void(^)(NSArray *array,BOOL isError))callback
 {
-    NSMutableArray *array = [[NSMutableArray alloc] init];
+    NSMutableString* fields = [NSMutableString new];
+    NSMutableString* values = [NSMutableString new];
+    for (NSString* keys in record.allKeys) {
+        [fields appendFormat:@",%@",keys];
+        [values appendFormat:@",\"%@\"",record[keys]];
+    }
     if ([self openDB]) {
-        
-    }else{
-        return array;
-    }
-    switch (type) {
-        case categoty:
-        {
-            //            NSString *sql =
+        switch (type) {
+            case registe:
+            {
+                NSString * sql = [NSString stringWithFormat:@"insert into User (%@) values(%@);",[fields substringFromIndex:1],[values substringFromIndex:1]];
+                if ([dataBase executeUpdate:sql]) {
+                    NSLog(@"插入成功");
+                    callback([self getData:user],NO);
+                };
+            }
+                break;
+                case changePSW:
+            {
+                NSString *sql = [NSString stringWithFormat:@"update User set upsw = (%@) where uname = (%@);",[values substringFromIndex:1],[fields substringFromIndex:1]];
+                if ([dataBase executeUpdate:sql]) {
+                    NSLog(@"更新成功");
+                    callback([self getData:user],NO);
+                }else{
+                    [DIALOG alert:@"修改失败"];
+                    
+                }
+                ;
+            }
+                break;
+            default:
+                break;
         }
-            break;
-            
-        default:
-            break;
     }
-    return array;
+
 }
 @end

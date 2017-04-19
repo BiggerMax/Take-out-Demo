@@ -13,10 +13,16 @@ typedef enum {
     footerBanner,//滚动条
     myAdress,//收货地址
     categoty,
-    login
+    user,
 }DataType;
+
+typedef enum {
+    registe,
+    changePSW
+}UpdateType;
+
 @interface YJDataManager : NSObject
 +(BOOL)openDB;
 +(NSArray *)getData:(DataType)type;
-+(NSArray *)updateData:(DataType)type;
++(void)updateData:(UpdateType)type record:(NSDictionary *)record callback:(void(^)(NSArray *array,BOOL isError))callback;
 @end
