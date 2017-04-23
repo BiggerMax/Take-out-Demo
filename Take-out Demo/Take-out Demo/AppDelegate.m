@@ -10,21 +10,25 @@
 #import "YJConst.h"
 #import "YJMainTabBarViewController.h"
 @interface AppDelegate ()
-
+{
+    BOOL login;
+}
 @end
 
 @implementation AppDelegate
 
--(void)setIsLogin:(BOOL)isLogin
-{
-    self.isLogin = isLogin;
-}
--(BOOL)isLogin{
-    return (BOOL)[CONFIG get:ISLOGIN];
-}
+//-(void)setIsLogin:(BOOL)isLogin
+//{
+//    isLogin ;
+//}
+//-(BOOL)isLogin{
+//    return login;
+//}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Bmob registerWithAppKey:@"a118803b349a7e72dd3082a709b2de97"];
     [CONFIG set:@"PHONE" value:nil];
-    [CONFIG set:ISLOGIN value:@NO];
+   // [CONFIG set:ISLOGIN value:@(NO)];
+   // self.isLogin = false;
     [self setAppStyle];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //NSString *isFirstOpenApp = [[NSUserDefaults standardUserDefaults] objectForKey:IsFirstOpenApp];

@@ -10,4 +10,5 @@
 
 @interface YJMyOrderingController : UIViewController
 @property(nonatomic,copy) NSArray *oderData;
+
 @end

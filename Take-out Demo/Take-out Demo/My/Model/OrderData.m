@@ -30,7 +30,9 @@
 
 @end
 @implementation OrderGoods
-
+//+(NSDictionary *)mj_objectClassInArray{
+//    return @{@"phone":NSStringFromClass([])}
+//}
 
 
 @end

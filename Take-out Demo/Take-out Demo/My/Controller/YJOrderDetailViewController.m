@@ -7,8 +7,15 @@
 //
 
 #import "YJOrderDetailViewController.h"
-
-@interface YJOrderDetailViewController ()
+#import "YJMyGoodsCell.h"
+@interface YJOrderDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UILabel *receiverName;
+@property (strong, nonatomic) IBOutlet UILabel *receiverAddress;
+@property (strong, nonatomic) IBOutlet UILabel *order_no;
+@property (strong, nonatomic) IBOutlet UILabel *creat_time;
+@property (strong, nonatomic) IBOutlet UILabel *comment;
+@property (strong, nonatomic) IBOutlet UIButton *deleteBtn;
 
 @end
 
@@ -16,22 +23,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setNavigationBar];
+    [self loadTableView];
+}
+-(void)setNavigationBar
+{
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationController.title = self.orderData.order_no;
+    self.navigationController.navigationBar.hidden = false;
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = false;
+}
+-(void)loadTableView{
+    [self.tableView registerNib:[UINib nibWithNibName:@"YJMyGoodsCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"MyGoodsCell"];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -- UITableView
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YJMyGoodsCell *cell =[tableView dequeueReusableCellWithIdentifier:@"MyGoodsCell"];
+    return cell;
 }
-*/
-
 @end

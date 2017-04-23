@@ -23,7 +23,7 @@
 		9D33EADD1E8AB2F500923C89 /* YJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EADC1E8AB2F500923C89 /* YJSettingController.m */; };
 		9D33EAFD1E8D55D000923C89 /* Cell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D33EAFC1E8D55D000923C89 /* Cell1.xib */; };
 		9D33EB001E8D55E900923C89 /* Cell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D33EAFF1E8D55E900923C89 /* Cell1.m */; };
-		9D3ABCEF1EA4F49700CB1073 /* TakeOut.db in Resources */ = {isa = PBXBuildFile; fileRef = 9D3ABCEE1EA4F49700CB1073 /* TakeOut.db */; };
+		9D3ABCEF1EA4F49700CB1073 /* Take_Out.db in Resources */ = {isa = PBXBuildFile; fileRef = 9D3ABCEE1EA4F49700CB1073 /* Take_Out.db */; };
 		9D3ABCF31EA4FF2200CB1073 /* YJUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3ABCF21EA4FF2200CB1073 /* YJUserModel.m */; };
 		9D4341CC1EA1BAB70031B252 /* YJPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4341CB1EA1BAB70031B252 /* YJPayView.m */; };
 		9D4341CF1EA1CF8F0031B252 /* YJAddressView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4341CE1EA1CF8F0031B252 /* YJAddressView2.m */; };
@@ -142,6 +142,12 @@
 		9DECB8811E8803FB009F9936 /* UIViewController+OneKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DECB8591E8803FB009F9936 /* UIViewController+OneKit.m */; };
 		9DECB8821E8803FB009F9936 /* WKWebView+OneKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DECB85B1E8803FB009F9936 /* WKWebView+OneKit.m */; };
 		9DECB8851E88076B009F9936 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DECB8841E88076B009F9936 /* libsqlite3.tbd */; };
+		9DFDE9751EAA2D5F0091D4DB /* YJMyGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFDE9731EAA2D5F0091D4DB /* YJMyGoodsCell.m */; };
+		9DFDE9761EAA2D5F0091D4DB /* YJMyGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDE9741EAA2D5F0091D4DB /* YJMyGoodsCell.xib */; };
+		9DFDE9791EAAFFD70091D4DB /* YJStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFDE9781EAAFFD70091D4DB /* YJStatusViewController.m */; };
+		9DFDE97D1EAB04380091D4DB /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFDE97B1EAB04380091D4DB /* StatusCell.m */; };
+		9DFDE97E1EAB04380091D4DB /* StatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDE97C1EAB04380091D4DB /* StatusCell.xib */; };
+		9DFDE9811EAB34AE0091D4DB /* YJFeedBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFDE9801EAB34AE0091D4DB /* YJFeedBackController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,7 +189,7 @@
 		9D33EAFC1E8D55D000923C89 /* Cell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell1.xib; sourceTree = "<group>"; };
 		9D33EAFE1E8D55E900923C89 /* Cell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell1.h; sourceTree = "<group>"; };
 		9D33EAFF1E8D55E900923C89 /* Cell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell1.m; sourceTree = "<group>"; };
-		9D3ABCEE1EA4F49700CB1073 /* TakeOut.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = TakeOut.db; sourceTree = "<group>"; };
+		9D3ABCEE1EA4F49700CB1073 /* Take_Out.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Take_Out.db; sourceTree = "<group>"; };
 		9D3ABCF11EA4FF2200CB1073 /* YJUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJUserModel.h; sourceTree = "<group>"; };
 		9D3ABCF21EA4FF2200CB1073 /* YJUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJUserModel.m; sourceTree = "<group>"; };
 		9D4341CA1EA1BAB70031B252 /* YJPayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJPayView.h; path = Cart/View/YJPayView.h; sourceTree = "<group>"; };
@@ -410,6 +416,16 @@
 		9DECB85A1E8803FB009F9936 /* WKWebView+OneKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+OneKit.h"; sourceTree = "<group>"; };
 		9DECB85B1E8803FB009F9936 /* WKWebView+OneKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+OneKit.m"; sourceTree = "<group>"; };
 		9DECB8841E88076B009F9936 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9DFDE9721EAA2D5F0091D4DB /* YJMyGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJMyGoodsCell.h; path = My/View/YJMyGoodsCell.h; sourceTree = "<group>"; };
+		9DFDE9731EAA2D5F0091D4DB /* YJMyGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJMyGoodsCell.m; path = My/View/YJMyGoodsCell.m; sourceTree = "<group>"; };
+		9DFDE9741EAA2D5F0091D4DB /* YJMyGoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YJMyGoodsCell.xib; path = My/View/YJMyGoodsCell.xib; sourceTree = "<group>"; };
+		9DFDE9771EAAFFD70091D4DB /* YJStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJStatusViewController.h; path = Cart/Controller/YJStatusViewController.h; sourceTree = "<group>"; };
+		9DFDE9781EAAFFD70091D4DB /* YJStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJStatusViewController.m; path = Cart/Controller/YJStatusViewController.m; sourceTree = "<group>"; };
+		9DFDE97A1EAB04380091D4DB /* StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusCell.h; path = Cart/View/StatusCell.h; sourceTree = "<group>"; };
+		9DFDE97B1EAB04380091D4DB /* StatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusCell.m; path = Cart/View/StatusCell.m; sourceTree = "<group>"; };
+		9DFDE97C1EAB04380091D4DB /* StatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatusCell.xib; path = Cart/View/StatusCell.xib; sourceTree = "<group>"; };
+		9DFDE97F1EAB34AE0091D4DB /* YJFeedBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJFeedBackController.h; path = My/Controller/YJFeedBackController.h; sourceTree = "<group>"; };
+		9DFDE9801EAB34AE0091D4DB /* YJFeedBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJFeedBackController.m; path = My/Controller/YJFeedBackController.m; sourceTree = "<group>"; };
 		CFA8B500350969133BB30524 /* libPods-Take-out Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Take-out Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4769EA533306E7C89CE4DF5 /* Pods-Take-out Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F02E2890019195B57247E513 /* Pods-Take-out Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take-out Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take-out Demo/Pods-Take-out Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -548,7 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				9D05FE591EA7B49A00B483DB /* Take_Out.sqlite */,
-				9D3ABCEE1EA4F49700CB1073 /* TakeOut.db */,
+				9D3ABCEE1EA4F49700CB1073 /* Take_Out.db */,
 				9D08FE361EA30F8C00E057DF /* FMDB */,
 				9DECB8111E8803FB009F9936 /* OneKit */,
 				9D33EAD71E8AB28C00923C89 /* Setting */,
@@ -774,6 +790,9 @@
 				9D4341CB1EA1BAB70031B252 /* YJPayView.m */,
 				9D4341CD1EA1CF8F0031B252 /* YJAddressView2.h */,
 				9D4341CE1EA1CF8F0031B252 /* YJAddressView2.m */,
+				9DFDE97A1EAB04380091D4DB /* StatusCell.h */,
+				9DFDE97B1EAB04380091D4DB /* StatusCell.m */,
+				9DFDE97C1EAB04380091D4DB /* StatusCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -783,6 +802,8 @@
 			children = (
 				9DA8186A1E0912D100DD80B7 /* YJCartViewController.h */,
 				9DA8186B1E0912D100DD80B7 /* YJCartViewController.m */,
+				9DFDE9771EAAFFD70091D4DB /* YJStatusViewController.h */,
+				9DFDE9781EAAFFD70091D4DB /* YJStatusViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -840,6 +861,9 @@
 				9D67692C1E59A2BB0029E45C /* YJTitleIconView.m */,
 				9DDCCC8C1E9940C1006DE666 /* AdressCell.h */,
 				9DDCCC8D1E9940C1006DE666 /* AdressCell.m */,
+				9DFDE9721EAA2D5F0091D4DB /* YJMyGoodsCell.h */,
+				9DFDE9731EAA2D5F0091D4DB /* YJMyGoodsCell.m */,
+				9DFDE9741EAA2D5F0091D4DB /* YJMyGoodsCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -859,6 +883,8 @@
 				9D5FA4CB1E9D380400C15E12 /* ModifyAddressViewController.m */,
 				9D08FE2A1EA302AC00E057DF /* YJOrderDetailViewController.h */,
 				9D08FE2B1EA302AC00E057DF /* YJOrderDetailViewController.m */,
+				9DFDE97F1EAB34AE0091D4DB /* YJFeedBackController.h */,
+				9DFDE9801EAB34AE0091D4DB /* YJFeedBackController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1123,13 +1149,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D3ABCEF1EA4F49700CB1073 /* TakeOut.db in Resources */,
+				9D3ABCEF1EA4F49700CB1073 /* Take_Out.db in Resources */,
 				9DECB8691E8803FB009F9936 /* Info.plist in Resources */,
 				9DA5117D1E534A1C00F8684D /* 首页新鲜热卖 in Resources */,
 				9DA5117B1E53495800F8684D /* 首页热卖 in Resources */,
 				9D511D541E632B9E008C7348 /* supermarket in Resources */,
+				9DFDE97E1EAB04380091D4DB /* StatusCell.xib in Resources */,
 				9DA818391E090B1400DD80B7 /* LaunchScreen.storyboard in Resources */,
 				9DA1F2C11E881A03005F7936 /* Main.storyboard in Resources */,
+				9DFDE9761EAA2D5F0091D4DB /* YJMyGoodsCell.xib in Resources */,
 				9D5FA4D31E9E606500C15E12 /* MyOrderTableViewCell.xib in Resources */,
 				9DDCCC821E9884F2006DE666 /* MyAdress in Resources */,
 				9D5FA4D81E9E739F00C15E12 /* MyOrders in Resources */,
@@ -1163,7 +1191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		58069784A308558643D04DD2 /* [CP] Copy Pods Resources */ = {
@@ -1214,6 +1242,7 @@
 				9DECB8771E8803FB009F9936 /* SimplePickerView.m in Sources */,
 				9DECB8701E8803FB009F9936 /* NSData+OneKit.m in Sources */,
 				9DA818A31E0B782F00DD80B7 /* YJHeadLineView.m in Sources */,
+				9DFDE97D1EAB04380091D4DB /* StatusCell.m in Sources */,
 				9D33EADD1E8AB2F500923C89 /* YJSettingController.m in Sources */,
 				9DA8188D1E0AD93D00DD80B7 /* YJSelectedAdressViewController.m in Sources */,
 				9DA818591E090C4B00DD80B7 /* YJConst.m in Sources */,
@@ -1252,8 +1281,10 @@
 				9DA8189A1E0AE30400DD80B7 /* YJActivity.m in Sources */,
 				9DA8189D1E0AE9AE00DD80B7 /* YJHomeHeadView.m in Sources */,
 				9DEB1BDB1E6F04BB00EFD2C7 /* YJTableFootView.m in Sources */,
+				9DFDE9811EAB34AE0091D4DB /* YJFeedBackController.m in Sources */,
 				9DECB86B1E8803FB009F9936 /* LOADING.m in Sources */,
 				9DECB86A1E8803FB009F9936 /* JSON.m in Sources */,
+				9DFDE9791EAAFFD70091D4DB /* YJStatusViewController.m in Sources */,
 				9DA818CC1E0C315200DD80B7 /* YJHomeCellTitleView.m in Sources */,
 				9DA818A01E0AE9E400DD80B7 /* YJScrollPageView.m in Sources */,
 				9DA818941E0ADA4900DD80B7 /* ItemCustomButton.m in Sources */,
@@ -1272,6 +1303,7 @@
 				9DECB87F1E8803FB009F9936 /* UITextView+OneKit.m in Sources */,
 				9DECB86D1E8803FB009F9936 /* MESSAGE.m in Sources */,
 				9DA818B91E0BFE5500DD80B7 /* BaseTabBatButton.m in Sources */,
+				9DFDE9751EAA2D5F0091D4DB /* YJMyGoodsCell.m in Sources */,
 				9DECB87A1E8803FB009F9936 /* UI.m in Sources */,
 				9D8375D71E5C95820040E2E9 /* YJCategoryCell.m in Sources */,
 				9D6769301E59BAD80029E45C /* YJFooterBannerData.m in Sources */,

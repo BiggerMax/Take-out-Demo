@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "OrderData.h"
 @interface YJOrderDetailViewController : UIViewController
-
+@property  Order *orderData;
 @end

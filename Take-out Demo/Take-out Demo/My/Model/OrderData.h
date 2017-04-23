@@ -21,9 +21,18 @@
 @property(nonatomic,copy)NSString *textStatus;
 @property(nonatomic,copy)NSString *user_pay_amount;
 @property(nonatomic,assign)int buy_num;
+@property(nonatomic,copy)NSString *order_no;
+@property(nonatomic,copy)NSString *accept_name;
+@property(nonatomic,copy)NSString *comment;
+@property(nonatomic,copy)NSString *mobile;
+@property(nonatomic,copy)NSString *address;
 @property(nonatomic,strong)NSArray<OrderGoods *> *order_goods;
 @end
 
 @interface OrderGoods : NSObject
 @property(nonatomic,copy)NSString *img;
+@property(nonatomic,copy)NSString *name;
+@property(nonatomic,copy)NSString *goods_nums;
+@property(nonatomic,copy)NSString *goods_price;
+
 @end

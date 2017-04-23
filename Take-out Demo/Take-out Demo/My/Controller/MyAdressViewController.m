@@ -31,7 +31,7 @@
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = TRUE;
+    self.navigationController.navigationBar.hidden = false;
 }
 - (void)buildNavigationItem {
     self.navigationItem.title = @"我的收货地址";

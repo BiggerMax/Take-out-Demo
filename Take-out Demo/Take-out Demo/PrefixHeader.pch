@@ -19,7 +19,7 @@
 #import "BaseTabBarViewController.h"
 #import "OneKit.h"
 #import "YJDataManager.h"
-
+#import <BmobSDK/Bmob.h>
 typedef NS_ENUM(NSInteger ,HeadViewItemType){
     HeadViewItemTypePage,
     HeadViewItemTypeHot,

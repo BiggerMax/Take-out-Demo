@@ -54,8 +54,8 @@
         [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":userName}];
         [CONFIG set:@"PHONE" value:@(phone)];
         wealSelf.delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//        wealSelf.delegate.isLogin = YES;
-        [CONFIG set:ISLOGIN value:@YES];
+        wealSelf.delegate.isLogin = YES;
+        //[CONFIG set:ISLOGIN value:@YES];
         [CONFIG set:@"USERNAME" value:userName];
         [self dismissViewControllerAnimated:YES completion:nil];
         

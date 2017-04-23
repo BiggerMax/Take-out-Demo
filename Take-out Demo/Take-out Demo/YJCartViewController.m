@@ -16,6 +16,7 @@
 #import "YJPayView.h"
 #import "MyAdressViewController.h"
 #import "OneKit.h"
+#import "YJStatusViewController.h"
 @interface YJCartViewController ()<UITableViewDelegate,UITableViewDataSource,YJTableFootViewDelegate>
 @property UITableView *tableView;
 @property YJDefaultView *defaultView;
@@ -126,14 +127,19 @@
     return cell;
 }
 -(void)didTableFootViewCommit{
-    [DIALOG alert:@"确认支付?" callback:^{
-        UIViewController *moneyVC = [UIViewController new];
-        moneyVC.view.backgroundColor = [UIColor whiteColor];
-        moneyVC.title = [NSString stringWithFormat:@"%.2lf",[[YJShopCarTool sharedInstance] getShopCarGoodsPrice]];
-        [self.navigationController pushViewController:moneyVC animated:YES];
+    [DIALOG confirm:@"确认支付?" yesTitle:@"确认" noTitle:@"取消" callback:^(BOOL ok) {
+        if (ok) {
+            YJStatusViewController *statusVC = [YJStatusViewController new];
+            statusVC.view.backgroundColor = [UIColor whiteColor];
+//            statusVC.title = [NSString stringWithFormat:@"%.2lf",[[YJShopCarTool sharedInstance] getShopCarGoodsPrice]];
+            [statusVC setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:statusVC animated:YES];
+        }
     }];
 }
 -(void)chooseAdress:(UITapGestureRecognizer *)tapGes{
-    [self.navigationController pushViewController:[MyAdressViewController new] animated:YES];
+    MyAdressViewController *myAdresVC = [MyAdressViewController new];
+    [myAdresVC setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:myAdresVC animated:YES];
 }
 @end

@@ -17,6 +17,8 @@
 #import "YJSettingController.h"
 #import "YJMyOrderingController.h"
 #import "MyAdressViewController.h"
+#import "AppDelegate.h"
+#import "YJFeedBackController.h"
 @interface YJMyViewController ()
 @property(nonatomic,strong)NSArray *orderArr;
 @property(nonatomic,strong)NSArray *mineArr;
@@ -27,6 +29,7 @@
 @property UIButton *nameBtn;
 @property NSInteger viewTag;
 @property(nonatomic,strong)UIImageView *mainHeadView;
+@property AppDelegate *delegate;
 @end
 
 @implementation YJMyViewController
@@ -46,7 +49,7 @@
     if (!_mineArr) {
         _mineArr = @[
                      [YJTitleIconAction titleIconWithTitle:@"收货地址" icon:[UIImage imageNamed:@"v2_my_address_icon-1"] controller:nil tag:201],
-                     [YJTitleIconAction titleIconWithTitle:@"意见反馈" icon:[UIImage imageNamed:@"v2_my_feedback_icon-1"] controller:nil tag:0],
+                     [YJTitleIconAction titleIconWithTitle:@"意见反馈" icon:[UIImage imageNamed:@"v2_my_feedback_icon-1"] controller:nil tag:202],
                      [YJTitleIconAction titleIconWithTitle:@"分享给朋友" icon:[UIImage imageNamed:@"v2_my_share_icon-1"] controller:nil tag:0],
                      [YJTitleIconAction titleIconWithTitle:@"帮助中心" icon:[UIImage imageNamed:@"icon_help"] controller:nil tag:0],
                        ];
@@ -233,6 +236,8 @@
             return ;
         }
         [_nameBtn setTitle:data[@"userName"] forState:UIControlStateNormal];
+        _delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        _nameBtn.enabled = !_delegate.isLogin;
     }];
 }
 //
@@ -267,7 +272,12 @@
             [self.navigationController pushViewController:addressVC animated:YES];
                     }
             break;
-            
+         case 202:
+        {
+            YJFeedBackController *feedbackVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJFeedBackController"];
+            [self.navigationController pushViewController:feedbackVC animated:YES];
+        }
+            break;
         default:
             break;
     }

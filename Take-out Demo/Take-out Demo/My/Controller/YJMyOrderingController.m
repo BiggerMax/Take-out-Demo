@@ -9,6 +9,7 @@
 #import "YJMyOrderingController.h"
 #import "MyOrderTableViewCell.h"
 #import "OrderData.h"
+#import "YJOrderDetailViewController.h"
 @interface YJMyOrderingController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) UITableView *tableView;
 
@@ -62,14 +63,20 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyOrderTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"MyOrderTableViewCell" owner:nil options:nil] lastObject];
-   // cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     cell.order = self.oderData[indexPath.row];
     return cell;
 }
 -(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    YJOrderDetailViewController *orderDetailVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJOrderDetailViewController"];
+    orderDetailVC.orderData.order_goods = self.oderData[indexPath.row];
+    [self.navigationController pushViewController:orderDetailVC animated:YES];
+    
     return indexPath;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 @end

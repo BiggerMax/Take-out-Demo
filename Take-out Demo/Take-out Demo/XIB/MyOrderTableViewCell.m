@@ -24,9 +24,14 @@
 }
 
 -(void)setOrder:(Order *)order{
+    NSArray *dicArray = [OrderGoods keyValuesArrayWithObjectArray:order.order_goods];
+    NSLog(@"%@",dicArray);
     self.timeLabel.text = order.create_time;
     self.statusLabel.text = order.textStatus;
     self.priceLabel.text = order.user_pay_amount;
     self.numLabel.text = [NSString stringWithFormat:@"共%d件商品",order.buy_num];
+}
+-(void)setOrder_goods:(OrderGoods *)order_goods{
+    
 }
 @end

@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *numLabel;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
 @property (strong, nonatomic) IBOutlet UIButton *delButton;
+@property (strong, nonatomic) IBOutlet UIImageView *imgeView1;
 @property(nonatomic,strong)Order *order;
+@property(nonatomic)OrderGoods *order_goods;
 +(instancetype)cellWithTableView:(UITableView *)tableView;
 @end

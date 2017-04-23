@@ -15,13 +15,15 @@ static FMDatabase *dataBase;
 @implementation YJDataManager
 +(BOOL)openDB
 {
-    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:@"Take_Out.sqlite"];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Take_Out" ofType:@"sqlite"];
+    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:@"Take_Out.db"];
+   // NSString *path = [[NSBundle mainBundle] pathForResource:@"Take_Out" ofType:@"sqlite"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Take_Out" ofType:@"db"];
     NSError *error;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     [fileManager copyItemAtPath:path toPath:filePath error:&error];
     dataBase = [[FMDatabase alloc] initWithPath:filePath];
     if ([dataBase open]) {
+        NSLog(@"%@",filePath);
         NSLog(@"open success");
         return true;
     }else{
