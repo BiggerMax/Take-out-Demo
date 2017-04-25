@@ -135,9 +135,10 @@
 -(void)buildFooterView{
     [YJFooterBannerData loadFooterBannerData:^(id data, NSError *error) {
         NSMutableArray *imageUrl = [NSMutableArray array];
-        [data enumerateObjectsUsingBlock:^(YJActivity  *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [imageUrl addObject:obj.img];
-        }];
+//        [data enumerateObjectsUsingBlock:^(YJActivity  *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            [imageUrl addObject:obj[idx]];
+//        }];
+        imageUrl = data;
         YJScrollPageView *page = [YJScrollPageView pageController:imageUrl placeHolderImage:[UIImage imageNamed:@"v2_placeholder_full_size"]];
         [self.footerView addSubview:page];
         //

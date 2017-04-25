@@ -35,7 +35,18 @@
 +(NSDictionary *)mj_replacedKeyFromPropertyName{
     return @{@"aid":@"id"};
 }
++(void)loadBannerData:(CompleteBlock)complete{
+    BmobQuery *query = [BmobQuery queryWithClassName:@"banner"];
+    NSMutableArray *dic = [NSMutableArray new];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        for (BmobObject *obj in array)
+        {
+            [dic addObject:[obj objectForKey:@"img"]];
+        }
+        complete(dic,nil);
+    }];
 
+}
 @end
 
 @implementation ExtParams

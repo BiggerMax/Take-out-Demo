@@ -26,6 +26,7 @@
 //}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Bmob registerWithAppKey:@"a118803b349a7e72dd3082a709b2de97"];
+    
     [CONFIG set:@"PHONE" value:nil];
    // [CONFIG set:ISLOGIN value:@(NO)];
    // self.isLogin = false;
