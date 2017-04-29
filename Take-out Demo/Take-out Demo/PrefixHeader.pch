@@ -20,6 +20,7 @@
 #import "OneKit.h"
 #import "YJDataManager.h"
 #import <BmobSDK/Bmob.h>
+
 typedef NS_ENUM(NSInteger ,HeadViewItemType){
     HeadViewItemTypePage,
     HeadViewItemTypeHot,
@@ -32,7 +33,9 @@ typedef void (^CompleteBlock)(id data,NSError *error);
 typedef void(^ClikedCallback) (HeadViewItemType type,NSInteger tag);
 typedef void(^TapCallback)(NSInteger tag);
 
-
+//#define APIs_TOKEN @[]
+//#define APIs_GUEST @[]
+#define URL_API @"http://127.0.0.1/api/%@.php"
 #define YJNotification   [NSNotificationCenter defaultCenter]
 #define Width  [[UIScreen mainScreen] bounds].size.width
 #define Height [[UIScreen mainScreen] bounds].size.height

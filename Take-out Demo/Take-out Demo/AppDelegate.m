@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "YJConst.h"
 #import "YJMainTabBarViewController.h"
+#import "ApiBLL.h"
+
 @interface AppDelegate ()
 {
     BOOL login;
@@ -25,6 +27,10 @@
 //    return login;
 //}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ 
+    //短信验证
+    
+    //云服务器
     [Bmob registerWithAppKey:@"a118803b349a7e72dd3082a709b2de97"];
     
     [CONFIG set:@"PHONE" value:nil];

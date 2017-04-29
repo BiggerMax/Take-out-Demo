@@ -14,7 +14,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property BOOL isLogin;
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
-
+@property NSDictionary *DATA;
 - (void)saveContext;
 
 

@@ -8,4 +8,6 @@ pod 'MJExtension'
 pod 'MJRefresh'
 pod 'Masonry'
 pod 'BmobSDK'
+pod 'MOBFoundation_IDFA'
+pod 'SMSSDK'
 end

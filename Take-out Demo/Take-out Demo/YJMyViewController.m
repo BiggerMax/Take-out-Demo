@@ -208,14 +208,14 @@
         switch (index) {
             case 1:
             {
-                [CAMERA openCamera:self callback:^(UIImage *image) {
+                [CAMERA openCamera:self edit:NO callback:^(UIImage *image) {
                     [_avartarBtn setImage:image forState:UIControlStateNormal];
                 }];
             }
                 break;
             case 2:
             {
-                [CAMERA openGallery:self callback:^(UIImage *image) {
+                [CAMERA openGallery:self edit:NO callback:^(UIImage *image) {
                     [_avartarBtn setImage:image forState:UIControlStateNormal];
                 }];
             }

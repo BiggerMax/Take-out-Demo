@@ -14,6 +14,7 @@
 #import "YJHomeCategoryCell.h"
 #import "YJHomeHeadView.h"
 #import "YJAnimationRefreshHeader.h"
+#import "ApiBLL.h"
 @interface YJHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic,strong)UICollectionView *collectionView;
 @property(nonatomic,strong)YJHomeHeadData *homeHeadData;

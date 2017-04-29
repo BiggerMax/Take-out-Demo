@@ -63,11 +63,7 @@
     
     [_scrollView layoutIfNeeded];
     [_hotView layoutIfNeeded];
-    
 
-    
-
-    
     [_headlineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_hotView.mas_bottom);
         make.trailing.equalTo(self);
