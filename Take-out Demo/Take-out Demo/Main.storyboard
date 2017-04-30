@@ -669,7 +669,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" misplaced="YES" id="4Yf-rs-R2e">
                                 <rect key="frame" x="16" y="119" width="343" height="1"/>
@@ -677,34 +677,45 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="短信验证码" textAlignment="natural" minimumFontSize="17" id="dXb-Xo-fOc">
-                                <rect key="frame" x="44" y="128" width="240" height="30"/>
+                                <rect key="frame" x="44" y="128" width="240" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rev-TO-FMu">
-                                <rect key="frame" x="298" y="127" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="点击获取"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="log_in_key_icon" id="zXX-Jv-RBf">
                                 <rect key="frame" x="16" y="95" width="20" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="log_in_key_icon" id="duU-Fl-XFQ">
-                                <rect key="frame" x="16" y="131" width="20" height="25"/>
+                                <rect key="frame" x="16" y="134" width="20" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" id="1oT-QN-KMx">
+                                <rect key="frame" x="16" y="173" width="343" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rev-TO-FMu">
+                                <rect key="frame" x="292" y="132" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="点击获取"/>
+                                <connections>
+                                    <action selector="receiveMessage:" destination="XYj-df-8d1" eventType="touchUpInside" id="XmZ-wi-b72"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="iHz-On-Pez"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="message_btn" destination="Rev-TO-FMu" id="0Rl-pu-sdR"/>
                         <outlet property="passWord" destination="Q6b-Ml-gZD" id="5XD-by-Jn9"/>
+                        <outlet property="telPhone" destination="Q4c-oC-t8A" id="vET-9f-qhf"/>
                         <outlet property="userName" destination="YM7-hh-64b" id="PR6-Fi-yKw"/>
+                        <outlet property="verifyCode" destination="dXb-Xo-fOc" id="Ni4-25-cYe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wil-nS-3Fe" userLabel="First Responder" sceneMemberID="firstResponder"/>

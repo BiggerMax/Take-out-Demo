@@ -12,6 +12,9 @@
 @interface YJRegisterViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UITextField *passWord;
+    @property (strong, nonatomic) IBOutlet UITextField *telPhone;
+    @property (strong, nonatomic) IBOutlet UITextField *verifyCode;
+    @property (strong, nonatomic) IBOutlet UIButton *message_btn;
 
 @end
 
@@ -31,15 +34,39 @@
         [DIALOG toast:@"输入错误，请重新输入"];
         return;
     }
-    [YJDataManager updateData:registe record:@{@"uname":userName,@"upsw":psw} callback:^(NSArray *array,BOOL isError)
-    {
-        if (isError) {
-            [DIALOG alert:@"修改失败"];
-            return ;
+    if (_verifyCode.text.length == 0) {
+        return;
+    }else{
+        [SMSSDK commitVerificationCode:self.verifyCode.text phoneNumber:self.telPhone.text zone:@"86" result:^(SMSSDKUserInfo *userInfo, NSError *error) {
+            if (!error) {
+                [ApiBLL registerWithUsername:userName password:psw telPhone:[self.telPhone.text integerValue] callback:^(BOOL isError, BOOL result) {
+                    if (isError) {
+                        [DIALOG alert:@"注册失败"];
+                        return ;
+                    }else{
+                        [DIALOG toast:@"注册成功，请登录!"];
+                        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+                    }
+                }];           
+            }
+            else{
+                [DIALOG alert:@"注册失败"];
+            }
+        }];
+    }
+
+}
+- (IBAction)receiveMessage:(UIButton *)sender {
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.telPhone.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+        if (!error) {
+            NSLog(@"获取验证码成功");
+            [sender setTitle:@"获取成功" forState:UIControlStateNormal];
+        } else {
+            NSLog(@"错误信息：%@",error);
+            [DIALOG toast:@"验证码错误，请重新输入"];
         }
-        [DIALOG toast:@"注册成功，请登录!"];
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-    }];
+        
+        }];
 }
 
 

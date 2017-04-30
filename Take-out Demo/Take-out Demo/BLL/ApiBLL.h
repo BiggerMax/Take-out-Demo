@@ -12,4 +12,9 @@
 + (void)logWithUsername:(NSString *)userName
                  password:(NSString *)password
                  callback:(void(^)(BOOL isError,BOOL result))callback;
+
+    +(void)registerWithUsername:(NSString *)userName
+                       password:(NSString *)password
+                       telPhone:(NSInteger)telPhone
+                       callback:(void(^)(BOOL isError,BOOL result))callback;
 @end

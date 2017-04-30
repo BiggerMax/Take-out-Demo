@@ -36,4 +36,18 @@
     }];
 }
 
+    +(void)registerWithUsername:(NSString *)userName password:(NSString *)password telPhone:(NSInteger)telPhone callback:(void (^)(BOOL, BOOL))callback
+    {
+        BmobObject *registerObject = [BmobObject objectWithClassName:@"User"];
+        [registerObject setObject:userName forKey:@"uname"];
+        [registerObject setObject:password forKey:@"upsw"];
+        [registerObject setObject:[NSNumber numberWithInteger:telPhone] forKey:@"phone"];
+        [registerObject saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+            if (isSuccessful) {
+                callback(false,true);
+            }else if (error)
+            callback(true,false);
+        }];
+        
+    }
 @end
