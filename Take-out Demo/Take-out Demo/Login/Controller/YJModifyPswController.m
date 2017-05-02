@@ -44,7 +44,7 @@
 
 #pragma mark --UITableView
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 3;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     Cell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
@@ -52,26 +52,39 @@
     switch (indexPath.row) {
         case 0:
         {
-            cell.titileLabel.text = @"新密码";
+            cell.titileLabel.text = @"旧密码";
             if(!_textField1){
                 _textField1 = [[UITextField alloc] initWithFrame:CGRectMake(20, 40, self.view.frame.size.width, 40)];
                 self.textField1.keyboardType = UIKeyboardTypeASCIICapable;
                 _textField1.secureTextEntry = YES;
                 _textField1.font = [UIFont systemFontOfSize:16.0f];
-                _textField1.placeholder = @"新密码";
+                _textField1.placeholder = @"旧密码";
                 [cell addSubview:_textField1];
             }
         }
-            break;
+        break;
         case 1:
         {
-            cell.titileLabel.text = @"确认密码";
+            cell.titileLabel.text = @"新密码";
             if(!_textField2){
                 _textField2 = [[UITextField alloc] initWithFrame:CGRectMake(20, 40, self.view.frame.size.width, 40)];
-                _textField2.font = [UIFont systemFontOfSize:16.0f];
-                _textField2.placeholder = @"确认密码";
+                self.textField2.keyboardType = UIKeyboardTypeASCIICapable;
                 _textField2.secureTextEntry = YES;
+                _textField2.font = [UIFont systemFontOfSize:16.0f];
+                _textField2.placeholder = @"新密码";
                 [cell addSubview:_textField2];
+            }
+        }
+            break;
+        case 2:
+        {
+            cell.titileLabel.text = @"确认密码";
+            if(!_textField3){
+                _textField3 = [[UITextField alloc] initWithFrame:CGRectMake(20, 40, self.view.frame.size.width, 40)];
+                _textField3.font = [UIFont systemFontOfSize:16.0f];
+                _textField3.placeholder = @"确认密码";
+                _textField3.secureTextEntry = YES;
+                [cell addSubview:_textField3];
             }
         }
             break;
@@ -88,26 +101,48 @@
 }
 -(void)comfirm:(UIBarButtonItem *)item{
     [CONFIG set:@"newPassword" value:self.textField3.text];
-    
-    if(self.textField1.text.length <= 0){
+    if (self.textField1.text.length <=0) {
+        [DIALOG alert:@"旧密码错误"];
+        return;
+    }
+
+    if(self.textField2.text.length <= 0){
         [DIALOG alert:@"新密码不能为空"];
         return;
     }
     
-    if (![self.textField1.text isEqualToString:self.textField2.text]) {
+    if (![self.textField3.text isEqualToString:self.textField2.text]) {
         [DIALOG alert:@"两次输入不一致"];
         return;
     }
     NSString *userName = [CONFIG get:@"USERNAME"];
     NSString *newPsw = self.textField2.text;
-    [YJDataManager updateData:changePSW record:@{userName:newPsw} callback:^(NSArray *array,BOOL isError) {
-        if (isError) {
-            [DIALOG alert:@"修改失败"];
-            return ;
+//    [YJDataManager updateData:changePSW record:@{userName:newPsw} callback:^(NSArray *array,BOOL isError) {
+//        if (isError) {
+//            [DIALOG alert:@"修改失败"];
+//            return ;
+//        }
+//        [DIALOG alert:@"修改成功" callback:^{
+//        [self.navigationController popViewControllerAnimated:YES];
+//    }] ;
+//    }];
+    BmobUser *user = [BmobUser currentUser];
+    [user updateCurrentUserPasswordWithOldPassword:self.textField1.text newPassword:newPsw block:^(BOOL isSuccessful, NSError *error) {
+        if (isSuccessful) {
+            [BmobUser loginWithUsernameInBackground:userName password:newPsw block:^(BmobUser *user, NSError *error) {
+                if (error) {
+                    [DIALOG alert:@"修改失败"];
+                    return ;
+                } else if(user){
+                    [DIALOG alert:@"修改成功" callback:^{
+                        [self.navigationController popViewControllerAnimated:YES];
+                    }];
+                }
+            }];
+            
+        }else {
+            [DIALOG alert:@"修改失败，检查后重新输入"];
         }
-        [DIALOG alert:@"修改成功" callback:^{
-        [self.navigationController popViewControllerAnimated:YES];
-    }] ;
     }];
 
 }

@@ -210,6 +210,7 @@
             {
                 [CAMERA openCamera:self edit:NO callback:^(UIImage *image) {
                     [_avartarBtn setImage:image forState:UIControlStateNormal];
+                    
                 }];
             }
                 break;
@@ -236,9 +237,7 @@
         if (!data) {
             return ;
         }
-        [_nameBtn setTitle:data[@"userName"] forState:UIControlStateNormal];
-        _delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-        _nameBtn.enabled = !_delegate.isLogin;
+        [_nameBtn setTitle:data[@"userName"] forState:UIControlStateDisabled];
     }];
 }
 //

@@ -18,6 +18,7 @@
 @interface YJHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic,strong)UICollectionView *collectionView;
 @property(nonatomic,strong)YJHomeHeadData *homeHeadData;
+    @property(nonatomic,strong)NSArray *homeHeadDataArray;
 @property(nonatomic,strong)YJHomeHeadView *homeHeadView;
 @property(nonatomic,strong)NSArray<YJGoods *>*freshHots;
 @end
@@ -33,9 +34,11 @@ static NSString *expandCell = @"expandCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [NSThread sleepForTimeInterval:1];
+    _homeHeadDataArray = [YJDataManager fillData:homeHeadData];
     [self addNotification];
-    [self buildCollectionView];
+   
     [self buildTableHeadView];
+     [self buildCollectionView];
     [self bulidTableViewRefresh];
 }
 -(void)addNotification{
@@ -59,6 +62,7 @@ static NSString *expandCell = @"expandCell";
         };
         [self.collectionView addSubview:self.homeHeadView];
     }];
+    
     [GoodsData loadGoodData:^(NSArray<YJGoods *> *data, NSError *error) {
         weakSelf.freshHots = data;
         [self.collectionView reloadData];
@@ -99,7 +103,7 @@ static NSString *expandCell = @"expandCell";
 }
 #pragma mark -- CollectionView
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+    return 1;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     if (section == 0) {
@@ -109,7 +113,7 @@ static NSString *expandCell = @"expandCell";
     }
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
+   // if (indexPath.section == 0) {
         YJHomeCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:homeCell forIndexPath:indexPath];
         __weak typeof(self) weakSelf = self;
         cell.callBack = ^(YJGoods *goods){
@@ -119,15 +123,18 @@ static NSString *expandCell = @"expandCell";
             goodsVc.hidesBottomBarWhenPushed = YES;
             [weakSelf.navigationController pushViewController:goodsVc animated:YES];
         };
-        cell.cellInfo = self.homeHeadData.category.act_rows[indexPath.row];
+        //cell.cellInfo = self.homeHeadData.category.act_rows[indexPath.row];
+        cell.cellInfo = self.homeHeadDataArray[indexPath.row];
+    
         return cell;
-    }else{
- 
-    YJHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:expandCell forIndexPath:indexPath];
-    YJGoods *goods = self.freshHots[indexPath.row];
-    cell.goods = goods;
-     return cell;
-    }
+   // }
+    //else{
+// 
+//    YJHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:expandCell forIndexPath:indexPath];
+//    YJGoods *goods = self.freshHots[indexPath.row];
+//    cell.goods = goods;
+//     return cell;
+//    }
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGSize itemSize = CGSizeZero;

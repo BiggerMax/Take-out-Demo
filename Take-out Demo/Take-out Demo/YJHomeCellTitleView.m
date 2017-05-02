@@ -60,10 +60,10 @@
     [super layoutSubviews];
 }
 
--(void)setActRow:(ActRow *)actRow{
-    UIColor *color = [UIColor getColor:actRow.category_detail.category_color];
-    _lineView.backgroundColor = color;
-    _titleLabel.textColor = color;
+-(void)setActRow:(ActRow1 *)actRow{
+   // UIColor *color = [UIColor getColor:actRow.category_detail.category_color];
+   // _lineView.backgroundColor = color;
+   // _titleLabel.textColor = color;
     _titleLabel.text = actRow.category_detail.name;
 }
 

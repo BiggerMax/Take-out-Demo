@@ -61,6 +61,7 @@
 }
 -(void)logout{
     [DIALOG confirm:@"是否退出登录" yesTitle:@"退出" noTitle:@"返回" callback:^(BOOL ok) {
+        [BmobUser logout];
         [self.navigationController popViewControllerAnimated:YES];
         [CONFIG set:@"PHONE" value:nil];
         _delegate.isLogin = false;

@@ -5,7 +5,7 @@
 "data": {
 "categories": [{
 "id": 103532,
-"name": "优选水果",
+"name": "小吃",
 "sort": 0,
 "visibility": 1,
 "pcid": 100001,
@@ -38,7 +38,7 @@
 "disabled_show": 0
 }, {
 "id": 103536,
-"name": "牛奶面包",
+"name": "主食",
 "sort": 1,
 "visibility": 1,
 "pcid": 100001,
@@ -76,28 +76,10 @@
 "is_open": 1,
 "flag": "",
 "disabled_show": 0
-}, {
-"id": 103581,
-"name": "卤味熟食",
-"sort": 2,
-"visibility": 1,
-"pcid": 100001,
-"cids": {
-"103582": {
-"id": 103582,
-"name": "卤味熟食",
-"sort": 0,
-"visibility": 1,
-"pcid": 103581
-}
 },
-"icon": "http:\/\/img01.bqstatic.com\/upload\/activity\/201\/603\/0309\/20160303091944_969897.jpg",
-"is_open": 1,
-"flag": "",
-"disabled_show": 0
-}, {
+{
 "id": 103541,
-"name": "休闲零食",
+"name": "甜品",
 "sort": 3,
 "visibility": 1,
 "pcid": 100001,
@@ -151,7 +133,7 @@
 "disabled_show": 0
 }, {
 "id": 103549,
-"name": "饮料酒水",
+"name": "饮料",
 "sort": 4,
 "visibility": 1,
 "pcid": 100001,
@@ -200,187 +182,6 @@
 }
 },
 "icon": "http:\/\/img01.bqstatic.com\/upload\/activity\/201\/603\/0309\/20160303091958_441458.jpg",
-"is_open": 1,
-"flag": "",
-"disabled_show": 0
-}, {
-"id": 103557,
-"name": "方便速食",
-"sort": 5,
-"visibility": 1,
-"pcid": 100001,
-"cids": {
-"103558": {
-"id": 103558,
-"name": "方便面",
-"sort": 0,
-"visibility": 1,
-"pcid": 103557
-},
-"103559": {
-"id": 103559,
-"name": "火腿肠",
-"sort": 3,
-"visibility": 1,
-"pcid": 103557
-},
-"103560": {
-"id": 103560,
-"name": "下饭小菜",
-"sort": 5,
-"visibility": 1,
-"pcid": 103557
-},
-"103561": {
-"id": 103561,
-"name": "罐头食品",
-"sort": 6,
-"visibility": 1,
-"pcid": 103557
-},
-"103562": {
-"id": 103562,
-"name": "速冻面点",
-"sort": 4,
-"visibility": 1,
-"pcid": 103557
-},
-"103563": {
-"id": 103563,
-"name": "冲调饮品",
-"sort": 7,
-"visibility": 1,
-"pcid": 103557
-},
-"103564": {
-"id": 103564,
-"name": "进口速食",
-"sort": 2,
-"visibility": 1,
-"pcid": 103557
-}
-},
-"icon": "http:\/\/img01.bqstatic.com\/upload\/activity\/201\/603\/0309\/20160303092022_103538.jpg",
-"is_open": 1,
-"flag": "",
-"disabled_show": 0
-}, {
-"id": 103565,
-"name": "肉蛋时蔬",
-"sort": 6,
-"visibility": 1,
-"pcid": 100001,
-"cids": {
-"103566": {
-"id": 103566,
-"name": "蔬菜",
-"sort": 0,
-"visibility": 1,
-"pcid": 103565
-},
-"103567": {
-"id": 103567,
-"name": "蛋类",
-"sort": 1,
-"visibility": 1,
-"pcid": 103565
-},
-"103568": {
-"id": 103568,
-"name": "水产禽肉",
-"sort": 2,
-"visibility": 1,
-"pcid": 103565
-}
-},
-"icon": "http:\/\/img01.bqstatic.com\/upload\/activity\/201\/603\/0309\/20160303092038_600042.jpg",
-"is_open": 1,
-"flag": "",
-"disabled_show": 0
-}, {
-"id": 103569,
-"name": "粮油调味",
-"sort": 7,
-"visibility": 1,
-"pcid": 100001,
-"cids": {
-"103570": {
-"id": 103570,
-"name": "杂粮米面油",
-"sort": 0,
-"visibility": 1,
-"pcid": 103569
-},
-"103571": {
-"id": 103571,
-"name": "厨房调味",
-"sort": 1,
-"visibility": 1,
-"pcid": 103569
-},
-"103572": {
-"id": 103572,
-"name": "调味酱",
-"sort": 2,
-"visibility": 1,
-"pcid": 103569
-},
-"103573": {
-"id": 103573,
-"name": "南北干货",
-"sort": 3,
-"visibility": 1,
-"pcid": 103569
-}
-},
-"icon": "http:\/\/img01.bqstatic.com\/upload\/activity\/201\/603\/0309\/20160303092044_858016.jpg",
-"is_open": 1,
-"flag": "",
-"disabled_show": 0
-}, {
-"id": 103575,
-"name": "生活用品",
-"sort": 8,
-"visibility": 1,
-"pcid": 100001,
-"cids": {
-"103576": {
-"id": 103576,
-"name": "个人护理",
-"sort": 0,
-"visibility": 1,
-"pcid": 103575
-},
-"103577": {
-"id": 103577,
-"name": "家居清洁",
-"sort": 1,
-"visibility": 1,
-"pcid": 103575
-},
-"103578": {
-"id": 103578,
-"name": "纸品",
-"sort": 2,
-"visibility": 1,
-"pcid": 103575
-},
-"103579": {
-"id": 103579,
-"name": "计生用品",
-"sort": 3,
-"visibility": 1,
-"pcid": 103575
-},
-"103580": {
-"id": 103580,
-"name": "日常用品",
-"sort": 4,
-"visibility": 1,
-"pcid": 103575
-}
-},
-"icon": "http:\/\/img01.bqstatic.com\/upload\/activity\/201\/603\/0309\/20160303092052_030865.jpg",
 "is_open": 1,
 "flag": "",
 "disabled_show": 0

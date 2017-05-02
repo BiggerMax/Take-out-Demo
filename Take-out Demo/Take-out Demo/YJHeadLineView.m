@@ -20,7 +20,8 @@
         self.layer.borderColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0].CGColor;
         self.layer.borderWidth = 1;
         _headlineImageView = [[UIImageView alloc]init];
-        _headlineImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _headlineImageView.contentMode = UIViewContentModeScaleToFill;
+        _headlineImageView.image = [UIImage imageNamed:@"sale.png"];
         [self addSubview:_headlineImageView];
         _pageView = [YJHeadLinePageVIew new];
         UIView *line = [[UIView alloc]init];
@@ -50,7 +51,6 @@
 }
 
 -(void)setHeadLine:(ActInfo *)headLine{
-    [self.headlineImageView sd_setImageWithURL:[NSURL URLWithString:headLine.head_img]];
     self.pageView.headLine = headLine;
     
 }

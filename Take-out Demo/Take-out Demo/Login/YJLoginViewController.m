@@ -48,18 +48,29 @@
 //    }
     NSString *userName = self.userName.text;
     NSString *userPsw = self.password.text;
-    [ApiBLL logWithUsername:userName password:userPsw callback:^(BOOL isError, BOOL result) {
-        if (isError) {
+    [BmobUser loginWithUsernameInBackground:userName password:userPsw block:^(BmobUser *user, NSError *error) {
+        if (error) {
+            [DIALOG alert:@"登录失败"];
             return ;
-        }
-        if (result) {
+        }else{
             [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":userName}];
             [CONFIG set:@"USERNAME" value:userName];
             [self dismissViewControllerAnimated:YES completion:nil];
-        }else{
-            [DIALOG alert:@"输入错误，请重新输入!"];
         }
     }];
+//    [ApiBLL logWithUsername:userName password:userPsw callback:^(BOOL isError, BOOL result) {
+//        if (isError) {
+//            return ;
+//        }
+//        if (result) {
+//            [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":userName}];
+//            [CONFIG set:@"USERNAME" value:userName];
+//            [self dismissViewControllerAnimated:YES completion:nil];
+//        }else{
+//            [DIALOG alert:@"输入错误，请重新输入!"];
+//        }
+//    }];
+    
 //    NSArray *usernameArray = [muDic allKeys];
 //    NSInteger phone = (NSInteger)phoneDic[userName];
 //    if ([usernameArray containsObject:userName] && [userPsw isEqualToString:muDic[userName]]) {

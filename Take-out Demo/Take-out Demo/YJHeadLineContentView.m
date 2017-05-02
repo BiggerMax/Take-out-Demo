@@ -9,6 +9,7 @@
 #import "YJHeadLineContentView.h"
 #import "YJHeadLineContentView.h"
 @interface YJHeadLineContentView ()
+
 @property(nonatomic,strong)UILabel *titleLabel;
 @property(nonatomic,strong)UILabel *contentLabel;
 @end
@@ -34,7 +35,7 @@
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.equalTo(self).offset(10);
             make.centerY.equalTo(self);
-            make.width.mas_equalTo(30);
+            make.width.mas_equalTo(100);
             make.height.mas_equalTo(18);
         }];
         [_contentLabel sizeToFit];
@@ -42,12 +43,34 @@
             make.leading.equalTo(_titleLabel.mas_trailing).offset(10);
             make.centerY.equalTo(self);
         }];
+        BmobQuery *query = [BmobQuery queryWithClassName:@"Annoucement"];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+                for (BmobObject *obj in array) {
+                    self.titleLabel.text =  [obj objectForKey:@"title"];
+                    self.contentLabel.text = [obj objectForKey:@"content"];
+                }
+            }];
+
     }
     return self;
 }
 
 -(void)setActRow:(ActRow *)actRow{
-    self.titleLabel.text = actRow.headline_detail.title;
-    self.contentLabel.text = actRow.headline_detail.content;
+    BmobQuery *query = [BmobQuery queryWithClassName:@"Annoucement"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        for (BmobObject *obj in array) {
+            self.titleLabel.text =  [obj objectForKey:@"title"];
+            self.contentLabel.text = [obj objectForKey:@"content"];
+        }
+    }];
+//    self.titleLabel.text =  actRow.headline_detail.title;
+//    self.contentLabel.text = actRow.headline_detail.content;
+    
 }
+-(void)setAnnRow:(Annoucement *)annRow
+    {
+        self.titleLabel.text = annRow.title;
+        self.contentLabel.text = annRow.content;
+    }
 @end
+

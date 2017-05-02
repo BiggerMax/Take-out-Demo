@@ -25,6 +25,7 @@
 
 @end
 @interface YJActivity : NSObject
+    +(void)loadActRowData:(CompleteBlock)complete;
 +(void)loadBannerData:(CompleteBlock)complete;
 @property (nonatomic,copy) NSString *aid;
 @property (nonatomic,copy) NSString *name;

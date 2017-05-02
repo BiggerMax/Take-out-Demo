@@ -51,8 +51,8 @@
         [iconImages addObject:obj.activity.img];
         [iconTitles addObject:obj.activity.name];
     }];
-
-    
+   // [iconImages addObject:[headData.icon allValues]];
+   // [iconTitles addObject:[headData.icon allKeys]];
     _hotView = [[YJHotView alloc] initWithImages:iconImages titles:iconTitles placeHolder:[UIImage imageNamed:@"v2_placeholder_square"]];
     _headlineView = [[YJHeadLineView alloc] init];
     _headlineView.headLine = headData.headline;

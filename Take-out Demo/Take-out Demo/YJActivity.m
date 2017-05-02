@@ -10,7 +10,7 @@
 
 @implementation HeadResource
 +(void)loadHeadData:(CompleteBlock)complete{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"首页焦点按钮" ofType:nil];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"首页热卖" ofType:nil];
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     HeadResource *headResource = [HeadResource mj_objectWithKeyValues:json];
@@ -45,6 +45,18 @@
         }
         complete(dic,nil);
     }];
+
+}
++(void)loadActRowData:(CompleteBlock)complete{
+        BmobQuery *query = [BmobQuery queryWithClassName:@"ActRow"];
+        NSMutableDictionary *dic = [NSMutableDictionary new];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+            for (BmobObject *obj in array)
+            {
+                [dic setObject:[obj objectForKey:@"img"] forKey:[obj objectForKey:@"name"]];
+            }
+            complete(dic,nil);
+        }];
 
 }
 @end

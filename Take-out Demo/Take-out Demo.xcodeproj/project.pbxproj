@@ -145,6 +145,7 @@
 		9DBF32691EB4C83A00E9E20B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBF32681EB4C83A00E9E20B /* SystemConfiguration.framework */; };
 		9DBF326B1EB4C84000E9E20B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBF326A1EB4C84000E9E20B /* CoreTelephony.framework */; };
 		9DBF326D1EB4C84500E9E20B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBF326C1EB4C84500E9E20B /* AdSupport.framework */; };
+		9DBF32731EB711BE00E9E20B /* YJCellCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBF32721EB711BE00E9E20B /* YJCellCategory.m */; };
 		9DDCCC821E9884F2006DE666 /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = 9DDCCC811E9884F2006DE666 /* MyAdress */; };
 		9DDCCC851E988549006DE666 /* AdressData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCCC841E988549006DE666 /* AdressData.m */; };
 		9DDCCC881E988855006DE666 /* YJUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCCC871E988855006DE666 /* YJUserInfo.m */; };
@@ -426,6 +427,8 @@
 		9DBF32681EB4C83A00E9E20B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9DBF326A1EB4C84000E9E20B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9DBF326C1EB4C84500E9E20B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9DBF32711EB711BE00E9E20B /* YJCellCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJCellCategory.h; path = Home/YJCellCategory.h; sourceTree = "<group>"; };
+		9DBF32721EB711BE00E9E20B /* YJCellCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJCellCategory.m; path = Home/YJCellCategory.m; sourceTree = "<group>"; };
 		9DDCCC811E9884F2006DE666 /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyAdress; path = Resource/MyAdress; sourceTree = "<group>"; };
 		9DDCCC831E988549006DE666 /* AdressData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdressData.h; path = My/Model/AdressData.h; sourceTree = "<group>"; };
 		9DDCCC841E988549006DE666 /* AdressData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdressData.m; path = My/Model/AdressData.m; sourceTree = "<group>"; };
@@ -794,6 +797,8 @@
 		9DA818631E09122900DD80B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9DBF32711EB711BE00E9E20B /* YJCellCategory.h */,
+				9DBF32721EB711BE00E9E20B /* YJCellCategory.m */,
 				9DA818811E0A18EF00DD80B7 /* YJGoods.h */,
 				9DA818821E0A18EF00DD80B7 /* YJGoods.m */,
 				9DA818951E0AE17100DD80B7 /* YJHomeHeadData.h */,
@@ -1405,6 +1410,7 @@
 				9DA818A61E0B789200DD80B7 /* YJHeadLinePageVIew.m in Sources */,
 				9DBF32331EB0B05000E9E20B /* ApiBLL.m in Sources */,
 				9DA818281E090B1400DD80B7 /* main.m in Sources */,
+				9DBF32731EB711BE00E9E20B /* YJCellCategory.m in Sources */,
 				9D05FE4A1EA7096F00B483DB /* YJRegisterViewController.m in Sources */,
 				9DA818911E0AD9AB00DD80B7 /* UIBarButtonItem+Button.m in Sources */,
 				9DA818871E0A25AC00DD80B7 /* NSString+Extension.m in Sources */,

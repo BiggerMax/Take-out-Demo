@@ -9,9 +9,7 @@
 #import "YJHomeCategoryCell.h"
 
 @interface YJHomeCategoryCell ()
-@property(nonatomic,strong)YJHomeCellTitleView *titleView;
-@property(nonatomic,strong)UIImageView *sortImage;
-@property(nonatomic,strong)YJHomeCellGoodsView *goodsView;
+
 @end
 @implementation YJHomeCategoryCell
 
@@ -43,11 +41,12 @@
     }
     return self;
 }
-- (void)setCellInfo:(ActRow *)cellInfo{
+- (void)setCellInfo:(ActRow1 *)cellInfo{
     self.titleView.actRow = cellInfo;
     self.goodsView.actRow = cellInfo;
     [self.sortImage sd_setImageWithURL:[NSURL URLWithString:cellInfo.activity.img] placeholderImage:[UIImage imageNamed:cellInfo.category_detail.name]];
 }
+
 - (void)setCellback:(ClickedCallBack)callback{
     _callBack = callback;
     self.goodsView.callBack = callback;

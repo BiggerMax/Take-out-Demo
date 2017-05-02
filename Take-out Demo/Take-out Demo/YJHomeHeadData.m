@@ -56,3 +56,24 @@
 
 @end
 
+@implementation Annoucement
+
+-(void)fillData
+    {
+        BmobQuery *query = [BmobQuery queryWithClassName:@"Annoucement"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+            for (BmobObject *obj in array) {
+                self.title =  [obj objectForKey:@"title"];
+                self.content = [obj objectForKey:@"content"];
+            }
+        }];
+
+    }
+
+@end
+
+@implementation ActRow1
+
+
+
+@end

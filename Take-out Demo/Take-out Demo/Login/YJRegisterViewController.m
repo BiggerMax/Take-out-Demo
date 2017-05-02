@@ -39,15 +39,29 @@
     }else{
         [SMSSDK commitVerificationCode:self.verifyCode.text phoneNumber:self.telPhone.text zone:@"86" result:^(SMSSDKUserInfo *userInfo, NSError *error) {
             if (!error) {
-                [ApiBLL registerWithUsername:userName password:psw telPhone:[self.telPhone.text integerValue] callback:^(BOOL isError, BOOL result) {
-                    if (isError) {
-                        [DIALOG alert:@"注册失败"];
-                        return ;
-                    }else{
+//                [ApiBLL registerWithUsername:userName password:psw telPhone:[self.telPhone.text integerValue] callback:^(BOOL isError, BOOL result) {
+//                    if (isError) {
+//                        [DIALOG alert:@"注册失败"];
+//                        return ;
+//                    }else{
+//                        [DIALOG toast:@"注册成功，请登录!"];
+//                        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+//                    }
+//                }];
+                BmobUser *bUser = [BmobUser new];
+                [bUser setUsername:userName];
+                [bUser setPassword:psw];
+                [bUser setMobilePhoneNumber:self.telPhone.text];
+                [bUser signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+                    if (isSuccessful ) {
                         [DIALOG toast:@"注册成功，请登录!"];
-                        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+                        [self performSelector:@selector(dismiss) withObject:self afterDelay:1.0];
+                        
+                    }else if (error){
+                        [DIALOG alert:@"注册失败,该手机号已被注册"];
+                        return ;
                     }
-                }];           
+                }];
             }
             else{
                 [DIALOG alert:@"注册失败"];
@@ -56,6 +70,9 @@
     }
 
 }
+    -(void)dismiss{
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    }
 - (IBAction)receiveMessage:(UIButton *)sender {
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.telPhone.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
         if (!error) {

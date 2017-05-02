@@ -14,6 +14,7 @@ typedef enum {
     myAdress,//收货地址
     categoty,
     user,
+    homeHeadData
 }DataType;
 
 typedef enum {
@@ -25,4 +26,5 @@ typedef enum {
 +(BOOL)openDB;
 +(NSArray *)getData:(DataType)type;
 +(void)updateData:(UpdateType)type record:(NSDictionary *)record callback:(void(^)(NSArray *array,BOOL isError))callback;
++(NSArray *)fillData:(DataType)type;
 @end

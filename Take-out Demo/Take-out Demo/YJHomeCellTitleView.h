@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "YJHomeHeadData.h"
+
 @interface YJHomeCellTitleView : UIView
-@property(nonatomic,strong)ActRow *actRow;
+@property(nonatomic,strong)ActRow1 *actRow;
+@property(nonatomic,strong)UILabel *titleLabel;
 @end

@@ -13,6 +13,8 @@
 @class ActRow;
 @class HeadlineDetail;
 @class CategoryDetail;
+@class Annoucement;
+@class ActRow1;
 @interface YJHomeHeadData : NSObject
 @property(nonatomic,copy)NSArray <ActInfo *>*act_info;
 
@@ -49,4 +51,17 @@
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSArray<YJGoods *> *goods;
 @property (nonatomic,strong) NSString *category_color;
+
+@end
+
+@interface Annoucement : NSObject
+    @property(nonatomic,strong)NSString *title;
+    @property(nonatomic,strong)NSString *content;
+    -(void)fillData;
+@end
+
+@interface ActRow1 : NSObject
+@property (nonatomic,strong) YJActivity *activity;
+@property (nonatomic,strong) HeadlineDetail *headline_detail;
+@property (nonatomic,strong) CategoryDetail *category_detail;
 @end

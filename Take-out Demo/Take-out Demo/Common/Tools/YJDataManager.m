@@ -11,6 +11,8 @@
 #import "AdressModel.h"
 #import "OneKit.h"
 #import "YJUserModel.h"
+#import "YJCellCategory.h"
+#import "YJHomeHeadData.h"
 static FMDatabase *dataBase;
 @implementation YJDataManager
 +(BOOL)openDB
@@ -123,4 +125,25 @@ static FMDatabase *dataBase;
     }
 
 }
+    
++(NSArray *)fillData:(DataType)type
+    {
+        NSMutableArray *array_ = [[NSMutableArray alloc] init];
+        switch (type) {
+        case homeHeadData:
+            {
+                BmobQuery *query = [BmobQuery queryWithClassName:@"Categories"];
+                [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+                    for (BmobObject *obj in array) {
+                        ActRow1 *model = [ActRow1 new];
+                        model.category_detail.name = [obj objectForKey:@"name"];
+                        [array_ addObject:model];
+                    }
+                }];
+            }
+            default:
+            break;
+        }
+        return array_;
+    }
 @end
