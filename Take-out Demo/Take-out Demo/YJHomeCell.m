@@ -43,11 +43,11 @@
         _nameLabel.font = [UIFont systemFontOfSize:14];
         _fineImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"jingxuan.png"]];
         
-        _giveImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"buyOne.png"]];
+        //_giveImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"buyOne.png"]];
         
-        _specificsLabel = [[UILabel alloc]init];
-        _specificsLabel.font = [UIFont systemFontOfSize:12];
-        _specificsLabel.textColor = [UIColor darkGrayColor];
+//        _specificsLabel = [[UILabel alloc]init];
+//        _specificsLabel.font = [UIFont systemFontOfSize:12];
+//        _specificsLabel.textColor = [UIColor darkGrayColor];
         _discountPriceView = [[YJDiscountPriceView alloc]init];
         _buyView = [[YJBuyView alloc]init];
         
@@ -55,8 +55,8 @@
         [self addSubview:_goodsImageView];
         [self addSubview:_nameLabel];
         [self addSubview:_fineImageView];
-        [self addSubview:_giveImageView];
-        [self addSubview:_specificsLabel];
+        //[self addSubview:_giveImageView];
+        //[self addSubview:_specificsLabel];
         [self addSubview:_buyView];
         [self addSubview:_discountPriceView];
         
@@ -79,17 +79,17 @@
             make.width.mas_equalTo(25);
             make.height.mas_equalTo(13);
         }];
-        [_giveImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_fineImageView);
-            make.leading.equalTo(_fineImageView.mas_trailing).offset(10);
-            make.width.mas_equalTo(30);
-            make.height.mas_equalTo(13);
-        }];
-        [_specificsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_giveImageView.mas_bottom);
-            make.leading.equalTo(_nameLabel);
-            
-        }];
+//        [_giveImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(_fineImageView);
+//            make.leading.equalTo(_fineImageView.mas_trailing).offset(10);
+//            make.width.mas_equalTo(30);
+//            make.height.mas_equalTo(13);
+//        }];
+//        [_specificsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(_giveImageView.mas_bottom);
+//            make.leading.equalTo(_nameLabel);
+//            
+//        }];
         
         [_buyView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self).offset(-2);
@@ -112,17 +112,18 @@
     _buyView.goods = goods;
     [_goodsImageView sd_setImageWithURL:[NSURL URLWithString:goods.img] placeholderImage:[UIImage imageNamed:@"v2_placeholder_square"]];
     _nameLabel.text = goods.name;
-    _specificsLabel.text = goods.specifics;
+    //_specificsLabel.text = goods.specifics;
     _discountPriceView.goods = goods;
-    if ([goods.pm_desc isEqualToString:@"买一赠一"]) {
-        self.giveImageView.hidden = NO;
-    }else{
-        self.giveImageView.hidden = YES;
-    }
+//    if ([goods.pm_desc isEqualToString:@"买一赠一"]) {
+//        self.giveImageView.hidden = NO;
+//    }else{
+//        self.giveImageView.hidden = YES;
+//    }
 }
 
 -(void)setMinusNeverShow:(BOOL)minusNeverShow{
     _buyView.minusNeverShow = YES;
+
 }
 
 -(void)cellTapgesture{

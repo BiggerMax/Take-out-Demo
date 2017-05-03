@@ -11,7 +11,7 @@
 
 @interface YJHomeCellTitleView ()
 @property(nonatomic,strong)UIView *lineView;
-@property(nonatomic,strong)UILabel *titleLabel;
+//@property(nonatomic,strong)UILabel *titleLabel;
 @property(nonatomic,strong)UILabel *moreLabel;
 @end
 @implementation YJHomeCellTitleView
@@ -23,17 +23,18 @@
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.text = @"优选水果";
         _titleLabel.font = [UIFont systemFontOfSize:15];
+        _titleLabel.textColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0f];
         [_titleLabel sizeToFit];
         
-        _moreLabel = [[UILabel alloc]init];
-        _moreLabel.font = [UIFont systemFontOfSize:12];
-        _moreLabel.textAlignment = NSTextAlignmentRight;
-        _moreLabel.text = @"更多 >";
-        [_moreLabel sizeToFit];
+//        _moreLabel = [[UILabel alloc]init];
+//        _moreLabel.font = [UIFont systemFontOfSize:12];
+//        _moreLabel.textAlignment = NSTextAlignmentRight;
+//        _moreLabel.text = @"更多 >";
+//        [_moreLabel sizeToFit];
         
         [self addSubview:_lineView];
         [self addSubview:_titleLabel];
-        [self addSubview:_moreLabel];
+       // [self addSubview:_moreLabel];
         
         [_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(3);
@@ -46,11 +47,8 @@
             make.leading.equalTo(_lineView).offset(10);
             make.height.mas_equalTo(15);
         }];
-        [_moreLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.trailing.equalTo(self).offset(10);
-            make.centerY.equalTo(_lineView);
-            make.height.mas_equalTo(15);
-        }];
+
+
 
     }
     return self;
@@ -60,10 +58,11 @@
     [super layoutSubviews];
 }
 
--(void)setActRow:(ActRow1 *)actRow{
+-(void)setActRow:(ActRow *)actRow{
    // UIColor *color = [UIColor getColor:actRow.category_detail.category_color];
-   // _lineView.backgroundColor = color;
-   // _titleLabel.textColor = color;
+    UIColor *color = [UIColor colorWithRed:arc4random()/255.0 green:arc4random()/255.0 blue:arc4random()/255.0 alpha:1];
+    _lineView.backgroundColor = color;
+    _titleLabel.textColor = color;
     _titleLabel.text = actRow.category_detail.name;
 }
 

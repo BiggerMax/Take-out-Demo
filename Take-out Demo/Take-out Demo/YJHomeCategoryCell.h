@@ -11,7 +11,7 @@
 #import "YJHomeCellTitleView.h"
 #import "YJHomeCellGoodsView.h"
 @interface YJHomeCategoryCell : UICollectionViewCell
-@property(nonatomic,strong)ActRow1 *cellInfo;
+@property(nonatomic,strong)ActRow *cellInfo;
 @property(nonatomic,copy)ClickedCallBack callBack;
 @property(nonatomic,strong)YJHomeCellTitleView *titleView;
 @property(nonatomic,strong)UIImageView *sortImage;

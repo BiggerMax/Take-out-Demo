@@ -15,10 +15,13 @@
 #import "YJHomeHeadView.h"
 #import "YJAnimationRefreshHeader.h"
 #import "ApiBLL.h"
-@interface YJHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface YJHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>{
+     NSMutableArray *homeHeadDataArray_;
+    NSMutableArray *headIcons_;
+}
 @property(nonatomic,strong)UICollectionView *collectionView;
 @property(nonatomic,strong)YJHomeHeadData *homeHeadData;
-    @property(nonatomic,strong)NSArray *homeHeadDataArray;
+    //@property(nonatomic,strong)NSMutableArray *homeHeadDataArray;
 @property(nonatomic,strong)YJHomeHeadView *homeHeadView;
 @property(nonatomic,strong)NSArray<YJGoods *>*freshHots;
 @end
@@ -33,13 +36,27 @@ static NSString *expandCell = @"expandCell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    homeHeadDataArray_ = [NSMutableArray new];
+    headIcons_ = [NSMutableArray new];
     [NSThread sleepForTimeInterval:1];
-    _homeHeadDataArray = [YJDataManager fillData:homeHeadData];
+    [self loadData];
     [self addNotification];
-   
+    [self buildCollectionView];
     [self buildTableHeadView];
-     [self buildCollectionView];
+
     [self bulidTableViewRefresh];
+}
+
+-(void)loadData{
+    BmobQuery *query = [BmobQuery queryWithClassName:@"Categories"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        for (BmobObject *objc in array) {
+            [homeHeadDataArray_ addObject:[objc objectForKey:@"name"]];
+            [headIcons_ addObject:[objc objectForKey:@"icon"]];
+        }
+        [self.collectionView reloadData];
+        
+    }];
 }
 -(void)addNotification{
     [YJNotification addObserver:self selector:@selector(homeTableHeadViewHeightDidChange:) name:HomeTableHeadViewHeightDidChange object:nil];
@@ -124,7 +141,12 @@ static NSString *expandCell = @"expandCell";
             [weakSelf.navigationController pushViewController:goodsVc animated:YES];
         };
         //cell.cellInfo = self.homeHeadData.category.act_rows[indexPath.row];
-        cell.cellInfo = self.homeHeadDataArray[indexPath.row];
+        //cell.cellInfo = self.homeHeadDataArray[indexPath.row];
+    if (homeHeadDataArray_.count >0) {
+        cell.titleView.titleLabel.text = homeHeadDataArray_[indexPath.row];
+        [cell.sortImage sd_setImageWithURL:[NSURL URLWithString:headIcons_[indexPath.row]] placeholderImage:nil];
+        cell.goodsView.actRow = self.homeHeadData.category.act_rows[indexPath.row];
+    }
     
         return cell;
    // }

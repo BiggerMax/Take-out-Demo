@@ -204,13 +204,23 @@
     
 }
 -(void)changeAvatar{
+    BmobObject *obj = [[BmobObject alloc] initWithClassName:@"User"];
     [DIALOG chooseWithTitles:@[@"拍照",@"相册"] callback:^(int index) {
         switch (index) {
             case 1:
             {
                 [CAMERA openCamera:self edit:NO callback:^(UIImage *image) {
                     [_avartarBtn setImage:image forState:UIControlStateNormal];
-                    
+                    BmobFile *file = [[BmobFile alloc] initWithFileName:@"avatar" withFileData:UIImagePNGRepresentation(image)];
+                    [file saveInBackground:^(BOOL isSuccessful, NSError *error) {
+                        if (isSuccessful) {
+                            [obj setObject:file  forKey:@"avatar"];
+                            //此处相当于新建一条记录,         //关联至已有的记录请使用 [obj updateInBackground];
+                            [obj updateInBackground];
+                        }else{
+                            //进行处理
+                        }
+                    }];
                 }];
             }
                 break;
@@ -218,6 +228,17 @@
             {
                 [CAMERA openGallery:self edit:NO callback:^(UIImage *image) {
                     [_avartarBtn setImage:image forState:UIControlStateNormal];
+                    BmobFile *file = [[BmobFile alloc] initWithFileName:@"avatar" withFileData:UIImagePNGRepresentation(image)];
+                    [file saveInBackground:^(BOOL isSuccessful, NSError *error) {
+                        if (isSuccessful) {
+                            [obj setObject:file  forKey:@"filetype"];
+                            //此处相当于新建一条记录,         //关联至已有的记录请使用 [obj updateInBackground];
+                            [obj saveInBackground];
+                        }else{
+                            //进行处理
+                        }
+                    }];
+
                 }];
             }
                 break;
@@ -237,6 +258,7 @@
         if (!data) {
             return ;
         }
+        _nameBtn.enabled = false;
         [_nameBtn setTitle:data[@"userName"] forState:UIControlStateDisabled];
     }];
 }

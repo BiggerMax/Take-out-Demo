@@ -27,13 +27,11 @@
 //    return login;
 //}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
- 
+
     //短信验证
     [SMSSDK registerApp:@"1d7302403ef3a" withSecret:@"fa072d53ec2065a77545eece002c75ad"];
     //云服务器
     [Bmob registerWithAppKey:@"a118803b349a7e72dd3082a709b2de97"];
-    BmobQuery *query = [BmobQuery queryWithClassName:@"banner"];
-    NSMutableArray *dic = [NSMutableArray new];
     
     [CONFIG set:@"PHONE" value:nil];
    // [CONFIG set:ISLOGIN value:@(NO)];

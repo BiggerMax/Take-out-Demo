@@ -117,15 +117,6 @@
     }
     NSString *userName = [CONFIG get:@"USERNAME"];
     NSString *newPsw = self.textField2.text;
-//    [YJDataManager updateData:changePSW record:@{userName:newPsw} callback:^(NSArray *array,BOOL isError) {
-//        if (isError) {
-//            [DIALOG alert:@"修改失败"];
-//            return ;
-//        }
-//        [DIALOG alert:@"修改成功" callback:^{
-//        [self.navigationController popViewControllerAnimated:YES];
-//    }] ;
-//    }];
     BmobUser *user = [BmobUser currentUser];
     [user updateCurrentUserPasswordWithOldPassword:self.textField1.text newPassword:newPsw block:^(BOOL isSuccessful, NSError *error) {
         if (isSuccessful) {

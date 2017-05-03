@@ -70,9 +70,9 @@
     }
 
 }
-    -(void)dismiss{
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-    }
+-(void)dismiss{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 - (IBAction)receiveMessage:(UIButton *)sender {
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.telPhone.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
         if (!error) {
