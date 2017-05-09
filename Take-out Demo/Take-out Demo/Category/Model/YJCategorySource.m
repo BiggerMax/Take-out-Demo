@@ -9,10 +9,12 @@
 #import "YJCategorySource.h"
 
 @implementation YJCategorySource
+
 +(void)loadSupermarketData:(CompleteBlock)complete{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"supermarket" ofType:nil];
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+	
     YJCategorySource *source = [YJCategorySource mj_objectWithKeyValues:json];
     SuperMarketData *supermarketData = source.data;
     for (NSInteger i = 0; i < supermarketData.categories.count; i++) {
@@ -22,7 +24,9 @@
     }
     complete(supermarketData,nil);
 }
-
++(void)loadProductData:(CompleteBlock)complete{
+	complete([YJDataManager fillData:produteData],nil);
+}
 @end
 
 @implementation SuperMarketData

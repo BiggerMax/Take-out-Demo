@@ -20,9 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadData];
     [self buildSortTableView];
     [self buildProductsTableView];
-    [self loadData];
+    
 }
 
 -(void)buildSortTableView{
@@ -58,6 +59,10 @@
         [weak.sortTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
         weak.productsController.superMarketData = data;
     }];
+	[YJCategorySource loadProductData:^(id data, NSError *error) {
+		weak.productsController.cateArray = data;
+	}];
+	
 }
 #pragma mark -- delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

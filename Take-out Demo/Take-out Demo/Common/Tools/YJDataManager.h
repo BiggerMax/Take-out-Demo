@@ -14,7 +14,8 @@ typedef enum {
     myAdress,//收货地址
     categoty,
     user,
-    homeHeadData
+    homeHeadData,
+	produteData
 }DataType;
 
 typedef enum {

@@ -42,6 +42,7 @@
 		9D6769301E59BAD80029E45C /* YJFooterBannerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67692F1E59BAD80029E45C /* YJFooterBannerData.m */; };
 		9D6769321E59C6CE0029E45C /* footerBanner in Resources */ = {isa = PBXBuildFile; fileRef = 9D6769311E59C6CE0029E45C /* footerBanner */; };
 		9D679CDB1E8405A700B28501 /* YJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D679CDA1E8405A700B28501 /* YJLoginViewController.m */; };
+		9D7011BA1EC2107D00ABA992 /* YJFindPSWController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7011B91EC2107D00ABA992 /* YJFindPSWController.m */; };
 		9D7A243F1E55EE2400F1DBCA /* YJMyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A243E1E55EE2400F1DBCA /* YJMyHeadView.m */; };
 		9D8375D71E5C95820040E2E9 /* YJCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8375D61E5C95820040E2E9 /* YJCategoryCell.m */; };
 		9D8375E21E5DDE9C0040E2E9 /* CategoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8375E11E5DDE9C0040E2E9 /* CategoryData.m */; };
@@ -146,6 +147,7 @@
 		9DBF326B1EB4C84000E9E20B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBF326A1EB4C84000E9E20B /* CoreTelephony.framework */; };
 		9DBF326D1EB4C84500E9E20B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBF326C1EB4C84500E9E20B /* AdSupport.framework */; };
 		9DBF32731EB711BE00E9E20B /* YJCellCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBF32721EB711BE00E9E20B /* YJCellCategory.m */; };
+		9DBF32761EC0AD0800E9E20B /* YJProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBF32751EC0AD0800E9E20B /* YJProduct.m */; };
 		9DDCCC821E9884F2006DE666 /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = 9DDCCC811E9884F2006DE666 /* MyAdress */; };
 		9DDCCC851E988549006DE666 /* AdressData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCCC841E988549006DE666 /* AdressData.m */; };
 		9DDCCC881E988855006DE666 /* YJUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCCC871E988855006DE666 /* YJUserInfo.m */; };
@@ -232,6 +234,8 @@
 		9D6769311E59C6CE0029E45C /* footerBanner */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = footerBanner; path = Resource/footerBanner; sourceTree = "<group>"; };
 		9D679CD91E8405A700B28501 /* YJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJLoginViewController.h; path = ../YJLoginViewController.h; sourceTree = "<group>"; };
 		9D679CDA1E8405A700B28501 /* YJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJLoginViewController.m; path = ../YJLoginViewController.m; sourceTree = "<group>"; };
+		9D7011B81EC2107D00ABA992 /* YJFindPSWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJFindPSWController.h; sourceTree = "<group>"; };
+		9D7011B91EC2107D00ABA992 /* YJFindPSWController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJFindPSWController.m; sourceTree = "<group>"; };
 		9D7A243D1E55EE2400F1DBCA /* YJMyHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJMyHeadView.h; path = My/View/YJMyHeadView.h; sourceTree = "<group>"; };
 		9D7A243E1E55EE2400F1DBCA /* YJMyHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJMyHeadView.m; path = My/View/YJMyHeadView.m; sourceTree = "<group>"; };
 		9D8375D51E5C95820040E2E9 /* YJCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJCategoryCell.h; path = Category/Views/YJCategoryCell.h; sourceTree = "<group>"; };
@@ -429,6 +433,8 @@
 		9DBF326C1EB4C84500E9E20B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9DBF32711EB711BE00E9E20B /* YJCellCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJCellCategory.h; path = Home/YJCellCategory.h; sourceTree = "<group>"; };
 		9DBF32721EB711BE00E9E20B /* YJCellCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJCellCategory.m; path = Home/YJCellCategory.m; sourceTree = "<group>"; };
+		9DBF32741EC0AD0800E9E20B /* YJProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YJProduct.h; path = Shopping/Model/YJProduct.h; sourceTree = "<group>"; };
+		9DBF32751EC0AD0800E9E20B /* YJProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YJProduct.m; path = Shopping/Model/YJProduct.m; sourceTree = "<group>"; };
 		9DDCCC811E9884F2006DE666 /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyAdress; path = Resource/MyAdress; sourceTree = "<group>"; };
 		9DDCCC831E988549006DE666 /* AdressData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdressData.h; path = My/Model/AdressData.h; sourceTree = "<group>"; };
 		9DDCCC841E988549006DE666 /* AdressData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdressData.m; path = My/Model/AdressData.m; sourceTree = "<group>"; };
@@ -493,6 +499,8 @@
 				9D679CDA1E8405A700B28501 /* YJLoginViewController.m */,
 				9D05FE481EA7096F00B483DB /* YJRegisterViewController.h */,
 				9D05FE491EA7096F00B483DB /* YJRegisterViewController.m */,
+				9D7011B81EC2107D00ABA992 /* YJFindPSWController.h */,
+				9D7011B91EC2107D00ABA992 /* YJFindPSWController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -880,6 +888,8 @@
 				9D8375E11E5DDE9C0040E2E9 /* CategoryData.m */,
 				9D8375E31E5DE0890040E2E9 /* YJCategorySource.h */,
 				9D8375E41E5DE0890040E2E9 /* YJCategorySource.m */,
+				9DBF32741EC0AD0800E9E20B /* YJProduct.h */,
+				9DBF32751EC0AD0800E9E20B /* YJProduct.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1308,6 +1318,7 @@
 				9DA818A91E0B790700DD80B7 /* YJHeadLineContentView.m in Sources */,
 				9DA818831E0A18EF00DD80B7 /* YJGoods.m in Sources */,
 				9D8375EB1E5DEB030040E2E9 /* YJGoodsCell.m in Sources */,
+				9DBF32761EC0AD0800E9E20B /* YJProduct.m in Sources */,
 				9DA818B51E0BDF7C00DD80B7 /* BaseTabBarViewController.m in Sources */,
 				9DBF32211EB0AE0000E9E20B /* SimplePickerView.m in Sources */,
 				9DBC69C81E671A200077D042 /* YJDefaultView.m in Sources */,
@@ -1353,6 +1364,7 @@
 				9DBF320B1EB0AE0000E9E20B /* APP.m in Sources */,
 				9DA818661E09124A00DD80B7 /* YJHomeViewController.m in Sources */,
 				9DBF321D1EB0AE0000E9E20B /* NSDate+Onekit.m in Sources */,
+				9D7011BA1EC2107D00ABA992 /* YJFindPSWController.m in Sources */,
 				9DBF321C1EB0AE0000E9E20B /* NSData+Onekit.m in Sources */,
 				9D6769271E599E3C0029E45C /* YJMenuView.m in Sources */,
 				9D7A243F1E55EE2400F1DBCA /* YJMyHeadView.m in Sources */,
@@ -1564,6 +1576,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Take-out Demo/PrefixHeader.pch";
 				INFOPLIST_FILE = "Take-out Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BiggerMax.Take-out-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1595,6 +1608,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Take-out Demo/PrefixHeader.pch";
 				INFOPLIST_FILE = "Take-out Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BiggerMax.Take-out-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -398,8 +398,8 @@
 "activity": {
 "id": "20580",
 "name": "鲜果盛宴",
-"img": "http:\/\/img01.bqstatic.com\/\/upload\/activity\/2016031810130167.jpg@90Q.jpg",
-"topimg": "http:\/\/img01.bqstatic.com\/\/upload\/activity\/2016031810130167.jpg@90Q.jpg",
+"img":"https:\/\/timgsa.baidu.com\/timg?image&quality=80&size=b9999_10000&sec=1494256989&di=e70d1de2ca5eda1aa602d655dfd360ed&imgtype=jpg&er=1&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0628%2F85f5299b6865236a1d9d5a5dc849119d.jpg",
+"topimg": "https:\/\/timgsa.baidu.com\/timg?image&quality=80&size=b9999_10000&sec=1494256989&di=e70d1de2ca5eda1aa602d655dfd360ed&imgtype=jpg&er=1&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0628%2F85f5299b6865236a1d9d5a5dc849119d.jpg",
 "jptype": "1",
 "sort": "1",
 "ext_params": {
@@ -418,7 +418,7 @@
 "category_id": "103532",
 "goods": [{
 "id": 101765,
-"name": "·红颜草莓",
+"name": "牛肉面",
 "store_nums": 50,
 "specifics": "380g\/盒",
 "attribute": "",
@@ -428,9 +428,9 @@
 "hot_degree": 0,
 "safe_day": 0,
 "safe_unit": 1,
-"market_price": 49,
+"market_price": 15,
 "pcid": 55,
-"partner_price": 21.8,
+"partner_price": 13,
 "ismix": 0,
 "pre_img": "20160316141254_414418.jpg",
 "pre_imgs": "20160316141257_361930.jpg",
@@ -459,10 +459,10 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/201\/603\/1614\/20160316141254_414418.jpg@200w_200h_90Q.jpg"
+"img": "https:\/\/timgsa.baidu.com\/timg?image&quality=80&size=b9999_10000&sec=1494256989&di=e70d1de2ca5eda1aa602d655dfd360ed&imgtype=jpg&er=1&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0628%2F85f5299b6865236a1d9d5a5dc849119d.jpg"
 }, {
 "id": 102174,
-"name": "·西瓜橙",
+"name": "套餐饭",
 "store_nums": 50,
 "specifics": "250-350g 2粒",
 "attribute": "",
@@ -474,7 +474,7 @@
 "safe_unit": 1,
 "market_price": 19.9,
 "pcid": 55,
-"partner_price": 12.8,
+"partner_price": 17.8,
 "ismix": 0,
 "pre_img": "20160316094120_299780.jpg",
 "pre_imgs": "20160316094117_297519.jpg",
@@ -503,10 +503,10 @@
 "had_pm": 1,
 "pm_desc": "买一赠一",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/201\/603\/1609\/20160316094120_299780.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/p1.meituan.net\/460.280\/deal\/03f38e5128d5bc8362badaf573476c1191121.jpg"
 }, {
 "id": 14846,
-"name": "·进口红提",
+"name": "砂锅饭",
 "store_nums": 50,
 "specifics": "400g\/盒",
 "attribute": "",
@@ -516,7 +516,7 @@
 "hot_degree": 0,
 "safe_day": 0,
 "safe_unit": 1,
-"market_price": 32,
+"market_price": 20,
 "pcid": 55,
 "partner_price": 19.8,
 "ismix": 0,
@@ -547,7 +547,7 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/201\/603\/0417\/20160304170750_398930.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/p5.qhimg.com\/dr\/_390_\/t01edc8ebd3841511ef.jpg"
 }]
 }
 }, {
@@ -574,7 +574,7 @@
 "category_id": "103536",
 "goods": [{
 "id": 100840,
-"name": "福成黄桃燕麦酸奶四连杯",
+"name": "黄金炸虾",
 "store_nums": 50,
 "specifics": "100g*4",
 "attribute": "",
@@ -584,9 +584,9 @@
 "hot_degree": 0,
 "safe_day": 21,
 "safe_unit": 1,
-"market_price": 12.9,
+"market_price": 22,
 "pcid": 55,
-"partner_price": 10.9,
+"partner_price": 21,
 "ismix": 0,
 "pre_img": "20160224092549_792387.jpg",
 "pre_imgs": "20160224092547_671486.jpg",
@@ -615,10 +615,10 @@
 "had_pm": 1,
 "pm_desc": "买一赠一",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/201\/602\/2409\/20160224092549_792387.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/cp2.douguo.net\/upload\/caiku\/d\/b\/a\/600x400_db15b5c9bb226d7b00ebec656e311faa.jpg"
 }, {
 "id": 5482,
-"name": "光明莫斯利安巴氏杀菌酸奶钻石装(箱)",
+"name": "油炸小丸子",
 "store_nums": 50,
 "specifics": "200g*12盒",
 "attribute": "",
@@ -628,9 +628,9 @@
 "hot_degree": 0,
 "safe_day": 180,
 "safe_unit": 1,
-"market_price": 69,
+"market_price": 10,
 "pcid": 55,
-"partner_price": 52.9,
+"partner_price": 10,
 "ismix": 0,
 "pre_img": "0000005482.jpg",
 "pre_imgs": "0000005482_6200.jpg",
@@ -659,10 +659,10 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/000\/5482\/0000005482.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/img1.qunarzz.com\/travel\/poi\/1508/35\/ea6efdbd686a34.jpg_720x300x95_5a8a7183.jpg"
 }, {
 "id": 94810,
-"name": "伊利利乐枕牛奶(箱)",
+"name": "芝麻肉饼",
 "store_nums": 50,
 "specifics": "240ml*16\/箱",
 "attribute": "",
@@ -672,9 +672,9 @@
 "hot_degree": 0,
 "safe_day": 45,
 "safe_unit": 1,
-"market_price": 39,
+"market_price": 16,
 "pcid": 55,
-"partner_price": 35,
+"partner_price": 16,
 "ismix": 0,
 "pre_img": "0000094810_15390.jpg",
 "pre_imgs": "0000094810_23300.jpg,",
@@ -703,7 +703,7 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/009\/4810\/0000094810_15390.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/www.xiangmu.com\/uploadpic\/201512\/29/201512101012462066245936.jpg"
 }]
 }
 },  {
@@ -730,7 +730,7 @@
 "category_id": "103541",
 "goods": [{
 "id": 98090,
-"name": "丽芝士纳宝帝奶酪威化饼干",
+"name": "鲜榨果汁",
 "store_nums": 50,
 "specifics": "58g",
 "attribute": "",
@@ -740,9 +740,9 @@
 "hot_degree": 0,
 "safe_day": 1,
 "safe_unit": 3,
-"market_price": 5.8,
+"market_price": 8,
 "pcid": 55,
-"partner_price": 4.9,
+"partner_price": 7.9,
 "ismix": 0,
 "pre_img": "0000098090_23170.jpg",
 "pre_imgs": "0000098090_30610.jpg",
@@ -771,10 +771,10 @@
 "had_pm": 1,
 "pm_desc": "买一赠一",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/009\/8090\/0000098090_23170.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/p2.so.qhmsg.com\/t010b1423bf01085207.jpg"
 }, {
 "id": 99067,
-"name": "小老板紫菜海鲜味",
+"name": "冰镇可乐",
 "store_nums": 50,
 "specifics": "36g",
 "attribute": "",
@@ -784,9 +784,9 @@
 "hot_degree": 0,
 "safe_day": 450,
 "safe_unit": 1,
-"market_price": 12.9,
+"market_price": 5,
 "pcid": 55,
-"partner_price": 12.9,
+"partner_price": 5,
 "ismix": 0,
 "pre_img": "20160109152755_753571.jpg",
 "pre_imgs": "20160109152754_685658.jpg",
@@ -815,10 +815,10 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/201\/601\/0915\/20160109152755_753571.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/img02.tooopen.com\/images\/20150621\/tooopen_sy_131451964685.jpg"
 }, {
 "id": 17044,
-"name": "小老板香脆紫菜经典原味袋装",
+"name": "预调鸡尾酒",
 "store_nums": 50,
 "specifics": "36g\/袋",
 "attribute": "",
@@ -828,9 +828,9 @@
 "hot_degree": 0,
 "safe_day": 450,
 "safe_unit": 1,
-"market_price": 12.9,
+"market_price": 25,
 "pcid": 55,
-"partner_price": 12.9,
+"partner_price": 24.5,
 "ismix": 0,
 "pre_img": "20160225171530_491340.jpg",
 "pre_imgs": "20160225171528_377573.jpg",
@@ -859,7 +859,7 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/201\/602\/2517\/20160225171530_491340.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/dongying.dzwww.com\/jiu\/rdft\/201411\/W020141112341408221259.jpg"
 }]
 }
 }, {
@@ -886,7 +886,7 @@
 "category_id": "103549",
 "goods": [{
 "id": 3076,
-"name": "维他柠檬茶饮料",
+"name": "水果蛋糕",
 "store_nums": 50,
 "specifics": "250ml",
 "attribute": "",
@@ -896,9 +896,9 @@
 "hot_degree": 0,
 "safe_day": 330,
 "safe_unit": 1,
-"market_price": 3.5,
+"market_price": 40,
 "pcid": 55,
-"partner_price": 2.9,
+"partner_price": 39,
 "ismix": 0,
 "pre_img": "0000003076_62950.jpg",
 "pre_imgs": "0000003076_14360.jpg",
@@ -927,10 +927,10 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/000\/3076\/0000003076_62950.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/i3.xiachufang.com\/image\/600\/8676c3d0cb6211e4a56fb8ca3aeed2d7.jpg"
 }, {
 "id": 6348,
-"name": "哈尔滨小麦王啤酒听装(大)",
+"name": "彩虹马卡龙",
 "store_nums": 50,
 "specifics": "500ml",
 "attribute": "",
@@ -940,9 +940,9 @@
 "hot_degree": 0,
 "safe_day": 360,
 "safe_unit": 1,
-"market_price": 4.5,
+"market_price": 25,
 "pcid": 55,
-"partner_price": 4.5,
+"partner_price": 25,
 "ismix": 0,
 "pre_img": "0000006348.jpg",
 "pre_imgs": "0000006348_7977.jpg,",
@@ -971,10 +971,10 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/000\/6348\/0000006348.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/imgx.xiawu.com\/xzimg\/i4\/i1\/T1YTU4Fj4kXXXXXXXX_!!0-item_pic.jpg"
 }, {
 "id": 11713,
-"name": "燕京普通听装箱",
+"name": "拿破仑",
 "store_nums": 50,
 "specifics": "330ml*24听\/箱",
 "attribute": "",
@@ -984,9 +984,9 @@
 "hot_degree": 0,
 "safe_day": 750,
 "safe_unit": 1,
-"market_price": 89,
+"market_price": 15,
 "pcid": 55,
-"partner_price": 67.2,
+"partner_price": 15,
 "ismix": 1,
 "pre_img": "0000011713_47800.jpg",
 "pre_imgs": "0000011713_10940.jpg,",
@@ -1015,7 +1015,7 @@
 "had_pm": 0,
 "pm_desc": "",
 "is_xf": 1,
-"img": "http:\/\/img01.bqstatic.com\/upload\/goods\/000\/001\/1713\/0000011713_47800.jpg@200w_200h_90Q.jpg"
+"img": "http:\/\/img.biud.com.cn\/upload\/baike\/2014-08-07\/photos\/middle\/napolundangao183620140807025016819095527700.jpg"
 }]
 }
 }],

@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "YJUserModel.h"
 #import "YJRegisterViewController.h"
+#import "YJFindPSWController.h"
 #import "ApiBLL.h"
 @interface YJLoginViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *userName;
@@ -32,20 +33,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)login:(UIButton *)sender {
-    __weak typeof (self)wealSelf = self;
-//    NSArray *array = [YJDataManager getData:user];
-//    NSMutableDictionary *muDic = [NSMutableDictionary new];
-//    NSMutableDictionary *phoneDic = [NSMutableDictionary new];
-//    self.array = array;
-//    for (int i = 0; i < self.array.count; i++) {
-//        self.model = self.array[i];
-//        NSString *username = self.model.uname;
-//        NSString *psw = self.model.upsw;
-//        int phone = self.model.phone;
-//        //[muDic setValue:@{username:psw} forKey:[NSString stringWithFormat:@"%d",i]];
-//        [muDic setValue:psw forKey:username];
-//        [phoneDic setValue:@(phone) forKey:username];
-//    }
     NSString *userName = self.userName.text;
     NSString *userPsw = self.password.text;
     [BmobUser loginWithUsernameInBackground:userName password:userPsw block:^(BmobUser *user, NSError *error) {
@@ -90,9 +77,10 @@
 
 }
 - (IBAction)forgotPsw:(id)sender {
-    [DIALOG toast:@"暂未开发，敬请期待"];
+	YJFindPSWController *findVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJFindPSWController"];
+	[self.navigationController pushViewController:findVC animated:YES];
 }
-- (IBAction)register:(UIButton *)sender {
+- (IBAction)register_:(UIButton *)sender {
     YJRegisterViewController *registerVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJRegisterViewController"];
     [self.navigationController pushViewController:registerVC animated:YES];
 }

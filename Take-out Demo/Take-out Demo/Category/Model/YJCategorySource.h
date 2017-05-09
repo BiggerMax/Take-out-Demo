@@ -19,6 +19,7 @@
 @property(nonatomic,copy)NSString *msg;
 @property(nonatomic,strong)SuperMarketData *data;
 +(void)loadSupermarketData:(CompleteBlock)complete;
++(void)loadProductData:(CompleteBlock)complete;
 @end
 
 

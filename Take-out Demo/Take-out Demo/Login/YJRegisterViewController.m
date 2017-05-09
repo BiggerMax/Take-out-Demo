@@ -37,53 +37,74 @@
     if (_verifyCode.text.length == 0) {
         return;
     }else{
-        [SMSSDK commitVerificationCode:self.verifyCode.text phoneNumber:self.telPhone.text zone:@"86" result:^(SMSSDKUserInfo *userInfo, NSError *error) {
-            if (!error) {
-//                [ApiBLL registerWithUsername:userName password:psw telPhone:[self.telPhone.text integerValue] callback:^(BOOL isError, BOOL result) {
-//                    if (isError) {
-//                        [DIALOG alert:@"注册失败"];
-//                        return ;
-//                    }else{
+		[BmobSMS verifySMSCodeInBackgroundWithPhoneNumber:self.telPhone.text andSMSCode:self.verifyCode.text resultBlock:^(BOOL isSuccessful, NSError *error) {
+			if (isSuccessful) {
+				BmobUser *bUser = [BmobUser new];
+				[bUser setUsername:userName];
+				[bUser setPassword:psw];
+				[bUser setMobilePhoneNumber:self.telPhone.text];
+				[bUser signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+					if (isSuccessful ) {
+						[DIALOG toast:@"注册成功，请登录!"];
+						[self performSelector:@selector(dismiss) withObject:self afterDelay:1.0];
+						
+					}else if (error){
+						[DIALOG alert:@"注册失败,该手机号已被注册"];
+						return ;
+					}
+				}];
+			}
+			else{
+				[DIALOG alert:@"注册失败"];
+			}
+		}];
+}
+//        [SMSSDK commitVerificationCode:self.verifyCode.text phoneNumber:self.telPhone.text zone:@"86" result:^(SMSSDKUserInfo *userInfo, NSError *error) {
+//            if (!error) {
+//                BmobUser *bUser = [BmobUser new];
+//                [bUser setUsername:userName];
+//                [bUser setPassword:psw];
+//                [bUser setMobilePhoneNumber:self.telPhone.text];
+//                [bUser signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+//                    if (isSuccessful ) {
 //                        [DIALOG toast:@"注册成功，请登录!"];
-//                        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+//                        [self performSelector:@selector(dismiss) withObject:self afterDelay:1.0];
+//                        
+//                    }else if (error){
+//                        [DIALOG alert:@"注册失败,该手机号已被注册"];
+//                        return ;
 //                    }
 //                }];
-                BmobUser *bUser = [BmobUser new];
-                [bUser setUsername:userName];
-                [bUser setPassword:psw];
-                [bUser setMobilePhoneNumber:self.telPhone.text];
-                [bUser signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
-                    if (isSuccessful ) {
-                        [DIALOG toast:@"注册成功，请登录!"];
-                        [self performSelector:@selector(dismiss) withObject:self afterDelay:1.0];
-                        
-                    }else if (error){
-                        [DIALOG alert:@"注册失败,该手机号已被注册"];
-                        return ;
-                    }
-                }];
-            }
-            else{
-                [DIALOG alert:@"注册失败"];
-            }
-        }];
-    }
+//            }
+//            else{
+//                [DIALOG alert:@"注册失败"];
+//            }
+//        }];
+//    }
 
 }
 -(void)dismiss{
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)receiveMessage:(UIButton *)sender {
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.telPhone.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
-        if (!error) {
-            NSLog(@"获取验证码成功");
-            [sender setTitle:@"获取成功" forState:UIControlStateNormal];
-        } else {
-            NSLog(@"错误信息：%@",error);
-            [DIALOG toast:@"验证码错误，请重新输入"];
-        }
-        
-        }];
+	[BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:self.telPhone.text andTemplate:@"注册验证码" resultBlock:^(int number, NSError *error) {
+		if (error) {
+			NSLog(@"错误信息：%@",error);
+			[DIALOG toast:@"验证码错误，请重新输入"];
+		}else{
+			[sender setTitle:@"获取成功" forState:UIControlStateNormal];
+		}
+	}];
+//    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.telPhone.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+//        if (!error) {
+//            NSLog(@"获取验证码成功");
+//            [sender setTitle:@"获取成功" forState:UIControlStateNormal];
+//        } else {
+//            NSLog(@"错误信息：%@",error);
+//            [DIALOG toast:@"验证码错误，请重新输入"];
+//        }
+//        
+//        }];
 }
 
 

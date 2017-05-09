@@ -54,9 +54,9 @@ static NSString *expandCell = @"expandCell";
             [homeHeadDataArray_ addObject:[objc objectForKey:@"name"]];
             [headIcons_ addObject:[objc objectForKey:@"icon"]];
         }
-        [self.collectionView reloadData];
-        
+        [self.collectionView reloadData];        
     }];
+    
 }
 -(void)addNotification{
     [YJNotification addObserver:self selector:@selector(homeTableHeadViewHeightDidChange:) name:HomeTableHeadViewHeightDidChange object:nil];

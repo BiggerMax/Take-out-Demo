@@ -13,6 +13,7 @@
 #import "YJUserModel.h"
 #import "YJCellCategory.h"
 #import "YJHomeHeadData.h"
+#import "YJProduct.h"
 static FMDatabase *dataBase;
 @implementation YJDataManager
 +(BOOL)openDB
@@ -141,6 +142,20 @@ static FMDatabase *dataBase;
                     }
                 }];
             }
+            break;
+            case produteData:
+        {
+			BmobQuery *query = [BmobQuery queryWithClassName:@"Products"];
+			[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+				for (BmobObject *obj in array) {
+					YJProduct *model = [YJProduct new];
+					model.pid = [obj objectForKey:@"pid"];
+					model.pname = [obj objectForKey:@"pname"];
+					[array_ addObject:model];
+				}
+			}];
+        }
+				
             default:
             break;
         }
