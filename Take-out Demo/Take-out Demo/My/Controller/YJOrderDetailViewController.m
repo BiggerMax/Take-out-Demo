@@ -42,12 +42,63 @@
 }
 
 #pragma mark -- UITableView
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+	return 2;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+	if (section == 0) {
+		return 2;
+	}else{
+		return 3;
+	}
+	
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YJMyGoodsCell *cell =[tableView dequeueReusableCellWithIdentifier:@"MyGoodsCell"];
-    return cell;
+	if (indexPath.section == 0) {
+		switch (indexPath.row) {
+			case 0:
+			{
+				cell.goodsName.text = @"油炸小丸子";
+				cell.goodsCount.text = @"×1";
+				cell.goodsPrice.text = @"￥10";
+			}
+				break;
+			case 1:
+			{
+				cell.goodsName.text = @"牛肉面";
+				cell.goodsCount.text = @"×1";
+				cell.goodsPrice.text = @"￥15";
+			}
+			default:
+				break;
+		}
+	}else{
+		switch (indexPath.row) {
+			case 0:
+			{
+				cell.goodsName.text = @"配送费";
+				cell.goodsPrice.text = @"￥0";
+
+			}
+    break;
+			case 1:
+			{
+				cell.goodsName.text = @"服务费";
+				cell.goodsPrice.text = @"￥0";
+			}
+				break;
+			case 2:
+			{
+				cell.goodsName.text = @"总价";
+				cell.goodsPrice.text = @"￥25";
+			}
+			default:
+    break;
+		}
+			}
+	    return cell;
 }
 @end

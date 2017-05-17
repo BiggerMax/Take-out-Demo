@@ -15,7 +15,8 @@ typedef enum {
     categoty,
     user,
     homeHeadData,
-	produteData
+	produteData,
+	categories
 }DataType;
 
 typedef enum {

@@ -13,4 +13,5 @@
 @interface YJProductsViewController : YJBaseViewController<YJShoppingViewControllerDelegate>
 @property(nonatomic,strong)SuperMarketData *superMarketData;
 @property(nonatomic,strong)NSArray *cateArray;
+
 @end

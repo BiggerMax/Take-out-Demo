@@ -10,7 +10,11 @@
 #import "YJGoods.h"
 #import "YJGoodsCell.h"
 #import "YJAnimationRefreshHeader.h"
+#import "YJProducate.h"
 @interface YJProductsViewController ()<UITableViewDelegate,UITableViewDataSource>
+{
+	NSMutableArray *_productArray;
+}
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *dataList;
 @property(nonatomic,strong)UIImageView *tableFooterView;
@@ -29,8 +33,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //
+	[self loadData];
     self.view = [[UIView alloc] initWithFrame:CGRectMake(Width * 0.25, 0, Width * 0.75, Height)];
     [self builtTableView];
+
+}
+-(void)loadData
+{
+	_productArray = [NSMutableArray new];
+	BmobQuery *productQuery = [BmobQuery queryWithClassName:@"Products"];
+	[productQuery orderByAscending:@"sort"];
+	[productQuery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+		for (BmobObject *obj  in array) {
+			YJProducate *model = [[YJProducate alloc] init];
+			model.pid = [obj objectForKey:@"pid"];
+			model.pname = [obj objectForKey:@"pname"];
+			model.sort = [obj objectForKey:@"sort"];
+			model.store_nums = [obj objectForKey:@"store_nums"];
+			model.spercifics = [obj objectForKey:@"spercifics"];
+			model.store_nums = [obj objectForKey:@"store_nums"];
+			model.price = [obj objectForKey:@"price"];
+			model.img = [obj objectForKey:@"img"];
+			[_productArray addObject:model];
+		}
+		NSLog(@"%@",_productArray);
+	}];
 }
 -(void)builtTableView{
     _tableView = [UITableView new];
@@ -59,7 +86,8 @@
 
 #pragma mark -- tableView
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return self.superMarketData.categories.count;
+    //return self.superMarketData.categories.count;
+	return _cateArray.count;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.superMarketData.categories[section].products.count;

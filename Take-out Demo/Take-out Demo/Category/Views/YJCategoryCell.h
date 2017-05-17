@@ -10,5 +10,7 @@
 #import "YJCategorySource.h"
 @interface YJCategoryCell : UITableViewCell
 @property(nonatomic,strong) ProductCategory *categoryData;
+@property(nonatomic,strong) NSArray *categoryData_;
+@property UILabel *titleLabel;
 +(instancetype)cellWithTable:(UITableView*)tableView;
 @end

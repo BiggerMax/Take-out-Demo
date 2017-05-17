@@ -20,6 +20,7 @@
 @property(nonatomic,strong)SuperMarketData *data;
 +(void)loadSupermarketData:(CompleteBlock)complete;
 +(void)loadProductData:(CompleteBlock)complete;
++(void)loadCategoriesData:(CompleteBlock)complete;
 @end
 
 

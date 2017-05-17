@@ -29,6 +29,7 @@
 -(void)setNavigationBar
 {
     self.navigationItem.title = @"订单状态";
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
 }
 #pragma mark --UITableView
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -68,7 +69,7 @@
             break;
         case 4:
         {
-            cell.timeLabel.text = @"16:38";
+            cell.timeLabel.text = @"15:37";
             cell.statusLabel.text = @"订单提交成功";
             cell.bottomLine.hidden = YES;
             [cell.selectedBtn setImage:[UIImage imageNamed:@"order_grayMark"] forState:UIControlStateNormal];

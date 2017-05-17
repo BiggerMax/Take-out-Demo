@@ -14,6 +14,7 @@
 #import "YJCellCategory.h"
 #import "YJHomeHeadData.h"
 #import "YJProduct.h"
+#import "YJCategory.h"
 static FMDatabase *dataBase;
 @implementation YJDataManager
 +(BOOL)openDB
@@ -143,7 +144,7 @@ static FMDatabase *dataBase;
                 }];
             }
             break;
-            case produteData:
+		case produteData:
         {
 			BmobQuery *query = [BmobQuery queryWithClassName:@"Products"];
 			[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
@@ -155,7 +156,20 @@ static FMDatabase *dataBase;
 				}
 			}];
         }
-				
+				break;
+		case categories:
+			{
+				BmobQuery *query = [BmobQuery queryWithClassName:@"Categories"];
+				[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+					for (BmobObject *obj in array) {
+						YJCategory *model = [YJCategory new];
+						model._id = [obj objectForKey:@"id"];
+						model.name = [obj objectForKey:@"name"];
+						model.sort = [obj objectForKey:@"sort"];
+						[array_ addObject:model];
+					}
+				}];
+			}
             default:
             break;
         }

@@ -27,6 +27,9 @@
 +(void)loadProductData:(CompleteBlock)complete{
 	complete([YJDataManager fillData:produteData],nil);
 }
++(void)loadCategoriesData:(CompleteBlock)complete{
+	complete([YJDataManager fillData:categories],nil);
+}
 @end
 
 @implementation SuperMarketData

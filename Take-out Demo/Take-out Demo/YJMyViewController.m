@@ -97,6 +97,9 @@
     }];
     //
     YJMenuView *orderMenuView = [[YJMenuView alloc] initMenu:self.orderArr withLine:NO];
+	orderMenuView.callback = ^(NSInteger tag) {
+		[self creatViewByTag:tag];
+	};
    // orderMenuView.backgroundColor = [UIColor redColor];
     YJMenuView *mineMenView = [[YJMenuView alloc] initMenu:self.mineArr withLine:YES];
     mineMenView.callback = ^(NSInteger tag){

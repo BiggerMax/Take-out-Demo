@@ -9,7 +9,7 @@
 #import "YJCategoryCell.h"
 #import "YJCategorySource.h"
 @interface YJCategoryCell()
-@property UILabel *titleLabel;
+
 @property UIImageView *bgImageView;
 @property UIView *yellowView;
 @property UIView *lineView;
