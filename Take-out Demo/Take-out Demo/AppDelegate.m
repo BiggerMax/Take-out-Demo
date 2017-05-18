@@ -27,27 +27,14 @@
 //    return login;
 //}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+	
     //短信验证
     [SMSSDK registerApp:@"1d7302403ef3a" withSecret:@"fa072d53ec2065a77545eece002c75ad"];
     
     //云服务器
     [Bmob registerWithAppKey:@"a118803b349a7e72dd3082a709b2de97"];
     
-//    BmobQuery *query = [BmobQuery queryWithClassName:@"Order_"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-//        for (BmobObject *object in array) {
-//            NSLog(@"%@",[object objectForKey:@"pArray"][1]);
-//        }
-//    }];
-//    BmobObject *object = [BmobObject objectWithClassName:@"Order_"];
-//    [object setObject:@[@{@"pid":@"1002009",@"number":@1,@"price":@10},@{@"pid":@"1002010",@"number":@2,@"price":@15},@{@"pid":@"1002011",@"number":@3,@"price":@5}] forKey:@"pArray"];
-//    [object saveInBackground];
-//    BmobObject *object = [BmobObject objectWithoutDataWithClassName:@"Orders" objectId:@"c8fd1d33ef"];
-//    [object addObjectsFromArray:@[@1,@2,@3,@4] forKey:@"list"];
-    //[object removeObjectsInArray:@[@1] forKey:@"list"];
-    //[object updateInBackground];
-    
+	[BmobUser logout];
     [CONFIG set:@"PHONE" value:nil];
    // [CONFIG set:ISLOGIN value:@(NO)];
    // self.isLogin = false;

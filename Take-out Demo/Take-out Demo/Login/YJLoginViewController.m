@@ -31,6 +31,7 @@
 }
 -(void)back{
     [self dismissViewControllerAnimated:YES completion:nil];
+	//[self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)login:(UIButton *)sender {
     NSString *userName = self.userName.text;
@@ -40,8 +41,8 @@
             [DIALOG alert:@"登录失败"];
             return ;
         }else{
-            [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":userName}];
-            [CONFIG set:@"USERNAME" value:userName];
+           // [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":userName}];
+           // [CONFIG set:@"USERNAME" value:userName];
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];

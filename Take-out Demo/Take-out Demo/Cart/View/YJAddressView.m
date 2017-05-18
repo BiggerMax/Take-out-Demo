@@ -22,6 +22,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+
         self.defaultAdress = [YJUserInfo shareInstance].defaultAddress;
         self.backgroundColor = [UIColor whiteColor];
         
@@ -35,7 +36,7 @@
         _address = [[UILabel alloc] init];
         _address.font = [UIFont systemFontOfSize:12];
         _address.textColor = [UIColor blackColor];
-        _address.text = [NSString stringWithFormat:@"%@%@",self.defaultAdress.address,self.defaultAdress.accept_name];
+        _address.text = [NSString stringWithFormat:@"%@",self.defaultAdress.address];
         [_address sizeToFit];
        // _address.backgroundColor = [UIColor redColor];
         [self addSubview:_address];
@@ -98,10 +99,8 @@
             make.trailing.equalTo(self).offset(-10);
             make.centerY.equalTo(self);
         }];
-                
     }
     return self;
 }
-
 
 @end

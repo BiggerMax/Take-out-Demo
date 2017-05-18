@@ -76,15 +76,16 @@
 }
 -(void)loadData{
     __weak typeof (self) weak = self;
-    /*[YJCategorySource loadSupermarketData:^(id data, NSError *error) {
+    [YJCategorySource loadSupermarketData:^(id data, NSError *error) {
         weak.superMarketData = data;
         [weak.sortTableView reloadData];
-        [weak.sortTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        //[weak.sortTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
         weak.productsController.superMarketData = data;
     }];
-	*/
+
 	[_categories removeAllObjects];
 	BmobQuery *query = [BmobQuery queryWithClassName:@"Categories"];
+	[query orderByAscending:@"sort"];
 	[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
 		for (BmobObject *obj in array) {
 			YJCategory *model = [[YJCategory alloc] init];

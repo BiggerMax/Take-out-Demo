@@ -57,6 +57,7 @@
 			[_productArray addObject:model];
 		}
 		NSLog(@"%@",_productArray);
+		[self.tableView reloadData];
 	}];
 }
 -(void)builtTableView{
@@ -90,7 +91,8 @@
 	return _cateArray.count;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.superMarketData.categories[section].products.count;
+    //return self.superMarketData.categories[section].products.count;
+	return 4;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     YJGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];

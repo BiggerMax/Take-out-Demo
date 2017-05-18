@@ -17,6 +17,7 @@
 #import "MyAdressViewController.h"
 #import "OneKit.h"
 #import "YJStatusViewController.h"
+#import "YJLoginViewController.h"
 @interface YJCartViewController ()<UITableViewDelegate,UITableViewDataSource,YJTableFootViewDelegate>
 @property UITableView *tableView;
 @property YJDefaultView *defaultView;
@@ -100,17 +101,29 @@
         self.defaultView.hidden = NO;
         self.tableView.hidden = YES;
     }else{
-        self.defaultView.hidden = YES;
-        self.tableView.hidden = NO;
-        __weak typeof (self) weakSelf = self;
-        [SVProgressHUD showWithStatus:@"加载中"];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            weakSelf.dataList = [YJShopCarTool sharedInstance].shopCar;
-            weakSelf.footView.sumMoney = [[YJShopCarTool sharedInstance]getShopCarGoodsPrice];
-            [weakSelf.tableView reloadData];
-            [SVProgressHUD dismiss];
-        });
-    }
+		BmobUser *user = [BmobUser currentUser];
+		if (user) {
+			self.defaultView.hidden = YES;
+			self.tableView.hidden = NO;
+			__weak typeof (self) weakSelf = self;
+			[SVProgressHUD showWithStatus:@"加载中"];
+			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+				weakSelf.dataList = [YJShopCarTool sharedInstance].shopCar;
+				weakSelf.footView.sumMoney = [[YJShopCarTool sharedInstance]getShopCarGoodsPrice];
+				[weakSelf.tableView reloadData];
+				[SVProgressHUD dismiss];
+			});
+
+		}else{
+			UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+			YJLoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"YJLoginViewController"];
+			UINavigationController *navigatinCotroller = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+			loginViewController.hidesBottomBarWhenPushed = YES;
+			[self presentViewController:navigatinCotroller animated:YES completion:nil];
+			
+		
+		}
+	}
 }
 
 #pragma mark -- Delegate

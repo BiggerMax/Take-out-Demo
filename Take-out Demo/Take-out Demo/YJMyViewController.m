@@ -58,13 +58,16 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+	//[self updateProfile];
     [self setHeaderView];
     [self buildScrollView];
     [self buildFooterView];
-    [self updateProfile];
-
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self updateProfile];
+}
 -(void)buildScrollView{
     self.mainScrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height-49-150)];
     self.mainScrollView.backgroundColor = [UIColor whiteColor];
@@ -257,13 +260,18 @@
     [self presentViewController:navigatinCotroller animated:YES completion:nil];
 }
 -(void)updateProfile{
-    [MESSAGE receiveMessage:@"USERNAME" callback:^(NSDictionary *data) {
-        if (!data) {
-            return ;
-        }
-        _nameBtn.enabled = false;
-        [_nameBtn setTitle:data[@"userName"] forState:UIControlStateDisabled];
-    }];
+	BmobUser *user = [BmobUser currentUser];
+	if (user) {
+		_nameBtn.enabled = false;
+		[_nameBtn setTitle:user.username forState:UIControlStateDisabled];
+	}
+//    [MESSAGE receiveMessage:@"USERNAME" callback:^(NSDictionary *data) {
+//        if (!data) {
+//            return ;
+//        }
+//        _nameBtn.enabled = false;
+//        [_nameBtn setTitle:data[@"userName"] forState:UIControlStateDisabled];
+//    }];
 }
 //
 -(void)settingClicked

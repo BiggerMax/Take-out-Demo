@@ -16,6 +16,7 @@
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     AdressData *adressData = [AdressData mj_objectWithKeyValues:dic];
     complete(adressData.data,nil);
+	
 }
 
 +(NSDictionary *)mj_objectClassInArray
