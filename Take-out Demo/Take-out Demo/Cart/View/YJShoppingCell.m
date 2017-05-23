@@ -70,20 +70,21 @@
             make.leading.equalTo(_selectedBtn.mas_trailing).offset(5);
             make.centerY.equalTo(self);
         }];
-        [_siftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(25);
-            make.height.mas_equalTo(15);
-            make.top.equalTo(_shoppingIcon);
-            make.leading.equalTo(_shoppingIcon.mas_trailing).offset(5);
-        }];
+//        [_siftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.width.mas_equalTo(25);
+//            make.height.mas_equalTo(15);
+//            make.top.equalTo(_shoppingIcon);
+//            make.leading.equalTo(_shoppingIcon.mas_trailing).offset(5);
+//        }];
         [_shoppingName mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(_siftLabel.mas_trailing);
+            make.leading.equalTo(_shoppingIcon.mas_trailing);
             make.trailing.equalTo(self);
             make.height.mas_equalTo(15);
             make.top.equalTo(_shoppingIcon);
         }];
         [_moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(_siftLabel);
+            //make.leading.equalTo(_siftLabel);
+			make.leading.equalTo(_shoppingIcon.mas_trailing);
             make.width.mas_equalTo(80);
             make.bottom.equalTo(_shoppingIcon.mas_bottom);
             make.height.mas_equalTo(15);
@@ -111,14 +112,14 @@
 
 -(void)setGoods:(YJGoods *)goods{
     _goods = goods;
-    if (self.goods.is_xf) {
-        _siftLabel.hidden = NO;
-    }else{
+//    if (self.goods.is_xf) {
+//        _siftLabel.hidden = NO;
+//    }else{
         _siftLabel.hidden = YES;
         [_shoppingName mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.equalTo(_shoppingIcon.mas_trailing);
         }];
-    }
+    //}
     _buyView.goods = goods;
     _moneyLabel.text = [NSString stringWithFormat:@"￥%@",goods.price];
     [_shoppingIcon sd_setImageWithURL:[NSURL URLWithString:goods.img] placeholderImage:[UIImage imageNamed: @"v2_placeholder_half_size"]];

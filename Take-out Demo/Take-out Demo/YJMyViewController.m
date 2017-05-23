@@ -66,6 +66,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+	self.navigationController.navigationBar.hidden = YES;
 	[self updateProfile];
 }
 -(void)buildScrollView{
@@ -283,36 +284,44 @@
     [self.navigationController pushViewController:settingViewController animated:YES];
 }
 -(void)tapView:(UITapGestureRecognizer*)tap tag:(NSInteger)tag{
-    switch ([tap view].tag) {
-        case 101:
-        {
-            
-            YJMyOrderingController *orderingVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJMyOrderingController"];
-            [self.navigationController pushViewController:orderingVC animated:YES];
-        }
-            break;
-        default:
-            break;
-    }
+	BmobUser *user = [BmobUser currentUser];
+	if (user) {
+		switch ([tap view].tag) {
+			case 101:
+			{
+				
+				YJMyOrderingController *orderingVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJMyOrderingController"];
+				[self.navigationController pushViewController:orderingVC animated:YES];
+			}
+				break;
+			default:
+				break;
+		}
+
+	}
 }
 -(void)creatViewByTag:(NSInteger)tag
 {
-    switch (tag) {
-        case 201:
-        {
-            MyAdressViewController *addressVC = [[MyAdressViewController alloc] init];
-            [addressVC setHidesBottomBarWhenPushed:YES];
-            [self.navigationController pushViewController:addressVC animated:YES];
-                    }
-            break;
-         case 202:
-        {
-            YJFeedBackController *feedbackVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJFeedBackController"];
-            [self.navigationController pushViewController:feedbackVC animated:YES];
-        }
-            break;
-        default:
-            break;
-    }
+	BmobUser *user = [BmobUser currentUser];
+	if (user) {
+		switch (tag) {
+			case 201:
+			{
+				MyAdressViewController *addressVC = [[MyAdressViewController alloc] init];
+				[addressVC setHidesBottomBarWhenPushed:YES];
+				[self.navigationController pushViewController:addressVC animated:YES];
+			}
+				break;
+			case 202:
+			{
+				YJFeedBackController *feedbackVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJFeedBackController"];
+				[self.navigationController pushViewController:feedbackVC animated:YES];
+			}
+				break;
+			default:
+				break;
+		}
+
+	}
 }
 @end

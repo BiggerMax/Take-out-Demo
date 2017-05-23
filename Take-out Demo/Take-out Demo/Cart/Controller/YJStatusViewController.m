@@ -29,7 +29,10 @@
 -(void)setNavigationBar
 {
     self.navigationItem.title = @"订单状态";
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(close:)];
+}
+-(void)close:(UIBarButtonItem *)btn{
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 #pragma mark --UITableView
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -43,7 +46,7 @@
             cell.timeLabel.text = @"16:38";
             cell.statusLabel.text = @"已完成";
             cell.topLine.hidden = YES;
-            [cell.selectedBtn setImage:[UIImage imageNamed:@"order_yellowMark"] forState:UIControlStateNormal];
+            [cell.selectedBtn setImage:[UIImage imageNamed:@"order_grayMark"] forState:UIControlStateNormal];
         }
             break;
         case 1:
@@ -72,7 +75,7 @@
             cell.timeLabel.text = @"15:37";
             cell.statusLabel.text = @"订单提交成功";
             cell.bottomLine.hidden = YES;
-            [cell.selectedBtn setImage:[UIImage imageNamed:@"order_grayMark"] forState:UIControlStateNormal];
+            [cell.selectedBtn setImage:[UIImage imageNamed:@"order_yellowMark"] forState:UIControlStateNormal];
         }
             break;
         default:

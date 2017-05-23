@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YJMyOrderingController : UIViewController
-@property(nonatomic,copy) NSArray *oderData;
+
 
 @end

@@ -12,9 +12,12 @@
 #import "AddAdressViewController.h"
 #import "ModifyAddressViewController.h"
 #import "YJDataManager.h"
+#import "AdressModel.h"
+#import "AdressData.h"
 @interface MyAdressViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView *tableView;
-@property(nonatomic,strong) NSArray *address;
+@property(nonatomic,strong) NSMutableArray<Adress *> *address;
+@property UIRefreshControl *refreshControl;
 
 @end
 
@@ -22,17 +25,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.address = [NSMutableArray<Adress *> new];
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.navigationBar.hidden = FALSE;
     [self buildNavigationItem];
+	[self loadAddressData];
     [self buildAddressTableView];
-    [self loadAddressData];
+	[self setUpRefresh];
     [self buildBottonView];
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.hidden = false;
 }
+
 - (void)buildNavigationItem {
     self.navigationItem.title = @"我的收货地址";
 }
@@ -53,15 +59,27 @@
 }
 -(void)loadAddressData
 {
-        __weak typeof(self) weakSelf = self;
-//    [AdressData loadAdressData:^(id data, NSError *error)
-//    {
-//        weakSelf.address = data;
-//        [weakSelf.tableView reloadData];
-//    }];
-    NSArray *array = [YJDataManager getData:myAdress];
-    weakSelf.address = array;
-    [weakSelf.tableView reloadData];
+	[self.address removeAllObjects];
+	//__weak typeof(self) weakSelf = self;
+	__block NSArray *addArray = [NSArray new];
+	BmobUser *user = [BmobUser currentUser];
+	NSString *username = user.username;
+	BmobQuery *query = [BmobQuery queryWithClassName:@"_User"];
+	[query whereKey:@"username" equalTo:username];
+	[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+		for (BmobObject *obj in array) {
+			addArray = [NSArray arrayWithArray:[obj objectForKey:@"addressArray"]];
+			for (NSDictionary *dic in addArray) {
+				Adress *model = [Adress new];
+				model.accept_name = [dic objectForKey:@"name"];
+				model.telphone = [dic objectForKey:@"phone"];
+				model.address = [dic objectForKey:@"address"];
+				[self.address addObject:model];
+			}
+			[self.tableView reloadData];
+		}
+	}];
+	
 }
 - (void)buildBottonView {
     UIView *bottonView = [[UIView alloc]init];
@@ -92,21 +110,38 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     AdressCell *cell = [AdressCell cellWithTable:tableView indexPath:indexPath callback:^(NSInteger tag) {
-        
+		NSLog(@"%ld",(long)tag);
+		ModifyAddressViewController *modifyVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"ModifyAddressViewController"];
+		modifyVC.adress = self.address[tag];
+		[self.navigationController pushViewController:modifyVC animated:YES];
     }];
     cell.address = self.address[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [YJUserInfo shareInstance].defaultAddress = self.address[indexPath.row];
-    ModifyAddressViewController *modifyVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"ModifyAddressViewController"];
-    modifyVC.adress = self.address[indexPath.row];
-    [self.navigationController pushViewController:modifyVC animated:YES];
+	[MESSAGE sendMessage:@"ADDRESS" data:@{@"address":self.address[indexPath.row]}];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 -(void)addAddressButtonCliked
 {
     AddAdressViewController *addAdressVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"AddAdressViewController"];
     [self.navigationController pushViewController:addAdressVC animated:YES];
+}
+-(void)setUpRefresh{
+	self.refreshControl = [[UIRefreshControl alloc] init];
+	[self.refreshControl addTarget:self action:@selector(refreshClick:) forControlEvents:UIControlEventValueChanged];
+	[self.tableView addSubview:self.refreshControl];
+	
+	// [self.refreshControl beginRefreshing];
+	// [self refreshClick:self.refreshControl];
+}
+- (void)refreshClick:(UIRefreshControl *)refreshControl {
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		[self.refreshControl endRefreshing];
+	});
+	[self loadAddressData];
+	
+	
 }
 @end

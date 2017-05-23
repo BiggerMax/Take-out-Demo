@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationBar];
+	[self loadHeaderView];
     [self loadTableView];
 }
 -(void)setNavigationBar
@@ -31,6 +32,13 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.title = self.orderData.order_no;
     self.navigationController.navigationBar.hidden = false;
+}
+-(void)loadHeaderView
+{
+	self.receiverName.text = self.orderData.accept_name;
+	self.order_no.text = self.orderData.order_no;
+	self.creat_time.text = self.orderData.create_time;
+	self.receiverAddress.text = self.orderData.address;
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -48,7 +56,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 	if (section == 0) {
-		return 2;
+		return self.orderData.order_goods.count;
 	}else{
 		return 3;
 	}
@@ -58,24 +66,13 @@
 {
     YJMyGoodsCell *cell =[tableView dequeueReusableCellWithIdentifier:@"MyGoodsCell"];
 	if (indexPath.section == 0) {
-		switch (indexPath.row) {
-			case 0:
-			{
-				cell.goodsName.text = @"油炸小丸子";
-				cell.goodsCount.text = @"×1";
-				cell.goodsPrice.text = @"￥10";
-			}
-				break;
-			case 1:
-			{
-				cell.goodsName.text = @"牛肉面";
-				cell.goodsCount.text = @"×1";
-				cell.goodsPrice.text = @"￥15";
-			}
-			default:
-				break;
-		}
-	}else{
+				cell.goodsName.text = [self.orderData.order_goods[indexPath.row] objectForKey:@"pname"];
+		NSString *nums = [NSString stringWithFormat:@"×%@",[self.orderData.order_goods[indexPath.row] objectForKey:@"num"]];
+		cell.goodsCount.text = nums;
+		NSString *price = [self.orderData.order_goods[indexPath.row] objectForKey:@"price"];
+//		cell.goodsPrice.text = [NSString stringWithFormat:@"%ld",([price integerValue]*[nums intValue])];
+		cell.goodsPrice.text = [NSString stringWithFormat:@"¥%@",price];
+		}else{
 		switch (indexPath.row) {
 			case 0:
 			{
@@ -92,8 +89,8 @@
 				break;
 			case 2:
 			{
-				cell.goodsName.text = @"总价";
-				cell.goodsPrice.text = @"￥25";
+				cell.goodsName.text = @"¥总价";
+				cell.goodsPrice.text = self.orderData.user_pay_amount;
 			}
 			default:
     break;

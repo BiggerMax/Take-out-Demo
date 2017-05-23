@@ -26,7 +26,7 @@
 @property(nonatomic,copy)NSString *comment;
 @property(nonatomic,copy)NSString *mobile;
 @property(nonatomic,copy)NSString *address;
-@property(nonatomic,strong)NSArray<OrderGoods *> *order_goods;
+@property(nonatomic,strong)NSArray<NSDictionary *> *order_goods;
 @end
 
 @interface OrderGoods : NSObject

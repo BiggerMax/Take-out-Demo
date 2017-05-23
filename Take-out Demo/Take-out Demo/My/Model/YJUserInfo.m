@@ -21,21 +21,6 @@
 				//userInfo.defaultAddress = allAdress[1];
 			}
 		}];
-		BmobUser *user = [BmobUser currentUser];
-		NSString *username = user.username;
-		BmobQuery *query = [BmobQuery queryWithClassName:@"_User"];
-		[query whereKey:@"username" equalTo:username];
-		[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-			for (BmobUser *user in array) {
-				Adress *model = [Adress new];
-				model.name = [user objectForKey:@"accpet_name"];
-				model.telphone = user.mobilePhoneNumber;
-				model.address = [user objectForKey:@"address"];
-				userInfo.defaultAddress = model;
-			}
-			
-		}];
-		
 	});
 	return userInfo;
 }

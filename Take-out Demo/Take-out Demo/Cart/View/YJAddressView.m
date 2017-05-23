@@ -23,7 +23,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
 
-        self.defaultAdress = [YJUserInfo shareInstance].defaultAddress;
+        //self.defaultAdress = [YJUserInfo shareInstance].defaultAddress;
         self.backgroundColor = [UIColor whiteColor];
         
         _addressLabel = [[UILabel alloc] init];
@@ -36,7 +36,7 @@
         _address = [[UILabel alloc] init];
         _address.font = [UIFont systemFontOfSize:12];
         _address.textColor = [UIColor blackColor];
-        _address.text = [NSString stringWithFormat:@"%@",self.defaultAdress.address];
+       // _address.text = [NSString stringWithFormat:@"%@",self.defaultAdress.address];
         [_address sizeToFit];
        // _address.backgroundColor = [UIColor redColor];
         [self addSubview:_address];
@@ -49,13 +49,13 @@
         _name = [UILabel new];
         _name.font = [UIFont systemFontOfSize:14];
         //_name.backgroundColor = [UIColor grayColor];
-        _name.text = self.defaultAdress.name;
+        //_name.text = self.defaultAdress.name;
         [self addSubview:_name];
         
         _phone = [UILabel new];
         _phone.font = [UIFont systemFontOfSize:14];
         //_phone.backgroundColor = [UIColor greenColor];
-        _phone.text = self.defaultAdress.telphone;
+       // _phone.text = self.defaultAdress.telphone;
         [self addSubview:_phone];
         
         _arrows = [UIImageView new];
@@ -102,5 +102,10 @@
     }
     return self;
 }
-
+-(void)setDefaultAdress:(Adress *)defaultAdress
+{
+	_address.text = [NSString stringWithFormat:@"%@",defaultAdress.address];
+	_name.text = defaultAdress.accept_name;
+	_phone.text = defaultAdress.telphone;
+}
 @end
