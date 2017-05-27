@@ -42,8 +42,7 @@ static NSString *expandCell = @"expandCell";
     [self loadData];
     [self addNotification];
     [self buildCollectionView];
-    [self buildTableHeadView];
-
+	[self buildTableHeadView];
     [self bulidTableViewRefresh];
 }
 

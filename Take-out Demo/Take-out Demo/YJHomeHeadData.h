@@ -55,9 +55,9 @@
 @end
 
 @interface Annoucement : NSObject
-    @property(nonatomic,strong)NSString *title;
-    @property(nonatomic,strong)NSString *content;
-    -(void)fillData;
+@property(nonatomic,strong)NSString *title;
+@property(nonatomic,strong)NSString *content;
+-(void)fillData;
 @end
 
 @interface ActRow1 : NSObject

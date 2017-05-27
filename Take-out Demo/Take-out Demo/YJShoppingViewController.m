@@ -27,25 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//	[YJCategorySource loadCategoriesData:^(id data, NSError *error) {
-//		//if (isNull(data) ) {
-//			self.superMarketData = data;
-//			self.categories = data;
-//			[self.sortTableView reloadData];
-//			[self.sortTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-//			
-//		//}
-//
-//		
-//	}];
-//	[YJCategorySource loadProductData:^(id data, NSError *error) {
-//		self.productsController.cateArray = data;
-//	}];
 	_categories = [[NSMutableArray alloc] initWithCapacity:1];
     [self buildSortTableView];
-	[self loadData];
     [self buildProductsTableView];
-	
+	[self loadData];
     
 }
 
@@ -79,47 +64,37 @@
     [YJCategorySource loadSupermarketData:^(id data, NSError *error) {
         weak.superMarketData = data;
         [weak.sortTableView reloadData];
-        //[weak.sortTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        [weak.sortTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
         weak.productsController.superMarketData = data;
     }];
 
-	[_categories removeAllObjects];
-	BmobQuery *query = [BmobQuery queryWithClassName:@"Categories"];
-	[query orderByAscending:@"sort"];
-	[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-		for (BmobObject *obj in array) {
-			YJCategory *model = [[YJCategory alloc] init];
-			model._id = [obj objectForKey:@"id"];
-			model.name = [obj objectForKey:@"name"];
-			model.sort = [obj objectForKey:@"sort"];
-			[_categories addObject:model];
-		}
-		[self.sortTableView reloadData];
-		[weak.sortTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-		self.productsController.cateArray = _categories;
-	}];
-
-//	[YJCategorySource loadCategoriesData:^(id data, NSError *error) {
-//		weak.superMarketData = data;
-//		weak.categories = data;
-//		[weak.sortTableView reloadData];
+//	[_categories removeAllObjects];
+//	BmobQuery *query = [BmobQuery queryWithClassName:@"Categories"];
+//	[query orderByAscending:@"sort"];
+//	[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+//		for (BmobObject *obj in array) {
+//			YJCategory *model = [[YJCategory alloc] init];
+//			model._id = [obj objectForKey:@"id"];
+//			model.name = [obj objectForKey:@"name"];
+//			model.sort = [obj objectForKey:@"sort"];
+//			[_categories addObject:model];
+//		}
+//		[self.sortTableView reloadData];
 //		[weak.sortTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//		self.productsController.cateArray = _categories;
 //	}];
-//	[YJCategorySource loadProductData:^(id data, NSError *error) {
-//		weak.productsController.superMarketData = data;
-//	}];
-	
+
 }
 #pragma mark -- delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    //return self.superMarketData.categories.count;
-	return _categories.count;
+    return self.superMarketData.categories.count;
+	//return _categories.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     YJCategoryCell *cell = [YJCategoryCell cellWithTable:tableView];
-	YJCategory *category = (YJCategory*)[_categories objectAtIndex:indexPath.row];
-    //cell.categoryData = self.superMarketData.categories[indexPath.row];
-	cell.titleLabel.text = category.name;
+	//YJCategory *category = (YJCategory*)[_categories objectAtIndex:indexPath.row];
+    cell.categoryData = self.superMarketData.categories[indexPath.row];
+	//cell.titleLabel.text = category.name;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

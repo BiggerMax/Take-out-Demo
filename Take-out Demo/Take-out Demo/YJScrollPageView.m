@@ -8,7 +8,7 @@
 
 #import "YJScrollPageView.h"
 
-static const NSInteger MaxImageViewCount = 3;
+static const NSInteger MaxImageViewCount = 8;
 @interface YJScrollPageView()<UIScrollViewDelegate>
 @property(nonatomic,strong)UIPageControl *pageControl;
 @property(nonatomic,strong)UIScrollView *scrollView;
@@ -72,7 +72,7 @@ static const NSInteger MaxImageViewCount = 3;
         UIImageView *image = self.scrollView.subviews[i];
         image.frame = CGRectMake(scrollViewW * i, 0, scrollViewW, scrollViewH);
     }
-    self.pageControl.frame = CGRectMake(scrollViewW - 80, scrollViewH - 20 , 80, 20);
+    self.pageControl.frame = CGRectMake(scrollViewW - 100, scrollViewH - 20 , 80, 20);
     [self updataPageScrollView];
 }
 -(void)imageViewClick:(UITapGestureRecognizer *)tapGes{

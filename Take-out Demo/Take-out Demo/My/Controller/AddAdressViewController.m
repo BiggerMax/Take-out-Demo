@@ -39,6 +39,8 @@
 	NSString *telphone = self.telTextField.text;
 	NSString *address = self.addTextField.text;
 	//[addObject addUniqueObjectsFromArray:@[@{@"name":name,@"phone":telphone,@"address":address}] forKey:@"addressArray"];
+	[addObject setObject:self.nameTextField.text forKey:@"accpet_name"];
+	[addObject setObject:self.addTextField.text forKey:@"address"];
 	[addObject addObjectsFromArray:@[@{@"name":name,@"phone":telphone,@"address":address}] forKey:@"addressArray"];
 	[addObject updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
 		if (isSuccessful) {

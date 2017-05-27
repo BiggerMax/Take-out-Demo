@@ -774,9 +774,16 @@
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="意见反馈" id="ybq-Sv-83e">
-                        <barButtonItem key="rightBarButtonItem" title="提交" id="N5O-eq-zkC"/>
+                        <barButtonItem key="rightBarButtonItem" title="提交" id="N5O-eq-zkC">
+                            <connections>
+                                <action selector="commitBtn:" destination="VhS-zJ-K42" id="J8l-2Y-A96"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="textView" destination="c4C-9c-edS" id="AMR-Sb-Vxk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAl-Lh-mxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

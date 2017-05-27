@@ -52,7 +52,6 @@
 
 -(void)setHeadLine:(ActInfo *)headLine{
     self.pageView.headLine = headLine;
-    
 }
 
 -(void)setCallBack:(ClikedCallback)callBack{

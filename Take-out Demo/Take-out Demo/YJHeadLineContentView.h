@@ -10,4 +10,5 @@
 #import "YJHomeHeadData.h"
 @interface YJHeadLineContentView : UIView
 @property(nonatomic,strong)ActRow *actRow;
+@property(nonatomic,strong)HeadlineDetail *headLine;
 @end

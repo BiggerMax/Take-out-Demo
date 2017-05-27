@@ -87,12 +87,12 @@
 
 #pragma mark -- tableView
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    //return self.superMarketData.categories.count;
-	return _cateArray.count;
+    return self.superMarketData.categories.count;
+	//return _cateArray.count;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    //return self.superMarketData.categories[section].products.count;
-	return 4;
+    return self.superMarketData.categories[section].products.count;
+	
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     YJGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];

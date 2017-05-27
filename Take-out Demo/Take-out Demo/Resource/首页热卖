@@ -417,7 +417,7 @@
 "category_color": "F38631",
 "category_id": "103532",
 "goods": [{
-"id": 101765,
+"id": 1002001,
 "name": "牛肉面",
 "store_nums": 50,
 "specifics": "380g\/盒",
@@ -461,7 +461,7 @@
 "is_xf": 1,
 "img": "https:\/\/timgsa.baidu.com\/timg?image&quality=80&size=b9999_10000&sec=1494256989&di=e70d1de2ca5eda1aa602d655dfd360ed&imgtype=jpg&er=1&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0628%2F85f5299b6865236a1d9d5a5dc849119d.jpg"
 }, {
-"id": 102174,
+"id": 1002010,
 "name": "套餐饭",
 "store_nums": 50,
 "specifics": "250-350g 2粒",
@@ -505,7 +505,7 @@
 "is_xf": 1,
 "img": "http:\/\/p1.meituan.net\/460.280\/deal\/03f38e5128d5bc8362badaf573476c1191121.jpg"
 }, {
-"id": 14846,
+"id": 1002011,
 "name": "砂锅饭",
 "store_nums": 50,
 "specifics": "400g\/盒",
@@ -573,7 +573,7 @@
 "category_color": "20B1FA",
 "category_id": "103536",
 "goods": [{
-"id": 100840,
+"id": 1002022,
 "name": "黄金炸虾",
 "store_nums": 50,
 "specifics": "100g*4",
@@ -617,7 +617,7 @@
 "is_xf": 1,
 "img": "http:\/\/cp2.douguo.net\/upload\/caiku\/d\/b\/a\/600x400_db15b5c9bb226d7b00ebec656e311faa.jpg"
 }, {
-"id": 5482,
+"id": 1002024,
 "name": "油炸小丸子",
 "store_nums": 50,
 "specifics": "200g*12盒",
@@ -661,7 +661,7 @@
 "is_xf": 1,
 "img": "http:\/\/img1.qunarzz.com\/travel\/poi\/1508/35\/ea6efdbd686a34.jpg_720x300x95_5a8a7183.jpg"
 }, {
-"id": 94810,
+"id": 1002021,
 "name": "芝麻肉饼",
 "store_nums": 50,
 "specifics": "240ml*16\/箱",
@@ -729,7 +729,7 @@
 "category_color": "E80013",
 "category_id": "103541",
 "goods": [{
-"id": 98090,
+"id": 1002025,
 "name": "鲜榨果汁",
 "store_nums": 50,
 "specifics": "58g",
@@ -773,7 +773,7 @@
 "is_xf": 1,
 "img": "http:\/\/p2.so.qhmsg.com\/t010b1423bf01085207.jpg"
 }, {
-"id": 99067,
+"id": 1002004,
 "name": "冰镇可乐",
 "store_nums": 50,
 "specifics": "36g",
@@ -817,7 +817,7 @@
 "is_xf": 1,
 "img": "http:\/\/img02.tooopen.com\/images\/20150621\/tooopen_sy_131451964685.jpg"
 }, {
-"id": 17044,
+"id": 1002019,
 "name": "预调鸡尾酒",
 "store_nums": 50,
 "specifics": "36g\/袋",
@@ -885,7 +885,7 @@
 "category_color": "FF3319",
 "category_id": "103549",
 "goods": [{
-"id": 3076,
+"id": 1002015,
 "name": "水果蛋糕",
 "store_nums": 50,
 "specifics": "250ml",
@@ -929,7 +929,7 @@
 "is_xf": 1,
 "img": "http:\/\/i3.xiachufang.com\/image\/600\/8676c3d0cb6211e4a56fb8ca3aeed2d7.jpg"
 }, {
-"id": 6348,
+"id": 1002023,
 "name": "彩虹马卡龙",
 "store_nums": 50,
 "specifics": "500ml",
@@ -973,7 +973,7 @@
 "is_xf": 1,
 "img": "http:\/\/imgx.xiawu.com\/xzimg\/i4\/i1\/T1YTU4Fj4kXXXXXXXX_!!0-item_pic.jpg"
 }, {
-"id": 11713,
+"id": 1002016,
 "name": "拿破仑",
 "store_nums": 50,
 "specifics": "330ml*24听\/箱",

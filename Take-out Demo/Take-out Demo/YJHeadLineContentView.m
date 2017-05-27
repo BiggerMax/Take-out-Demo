@@ -56,21 +56,21 @@
 }
 
 -(void)setActRow:(ActRow *)actRow{
-    BmobQuery *query = [BmobQuery queryWithClassName:@"Annoucement"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-        for (BmobObject *obj in array) {
-            self.titleLabel.text =  [obj objectForKey:@"title"];
-            self.contentLabel.text = [obj objectForKey:@"content"];
-        }
-    }];
+//    BmobQuery *query = [BmobQuery queryWithClassName:@"Annoucement"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+//        for (BmobObject *obj in array) {
+//            self.titleLabel.text =  [obj objectForKey:@"title"];
+//            self.contentLabel.text = [obj objectForKey:@"content"];
+//        }
+//    }];
 //    self.titleLabel.text =  actRow.headline_detail.title;
 //    self.contentLabel.text = actRow.headline_detail.content;
-    
+	
 }
--(void)setAnnRow:(Annoucement *)annRow
-    {
-        self.titleLabel.text = annRow.title;
-        self.contentLabel.text = annRow.content;
-    }
+-(void)setHeadLine:(HeadlineDetail *)headLine
+{
+	self.titleLabel.text =  headLine.title;
+	self.contentLabel.text = headLine.content;
+}
 @end
 

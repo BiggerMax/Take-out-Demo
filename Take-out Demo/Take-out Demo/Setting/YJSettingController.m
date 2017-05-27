@@ -14,8 +14,7 @@
 @interface YJSettingController ()
 @property UIView *logoutView;
 @property NSArray *dataArray;
-@property AppDelegate *delegate;
-@property BOOL login;
+@property BmobUser *user;
 @property (strong, nonatomic) IBOutlet UILabel *phoneLabel;
 
 @end
@@ -24,9 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    _delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    self.automaticallyAdjustsScrollViewInsets = false;
+	self.user = [BmobUser currentUser];
+	self.automaticallyAdjustsScrollViewInsets = false;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.title = @"设置";
     self.navigationController.navigationBar.hidden = false;
@@ -43,8 +41,11 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    BOOL login = _delegate.isLogin;
-    _logoutView.hidden = !login;
+	if (self.user) {
+		_logoutView.hidden = false;
+	}else{
+		_logoutView.hidden = true;
+	}
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -64,24 +65,27 @@
         [BmobUser logout];
         [self.navigationController popViewControllerAnimated:YES];
         [CONFIG set:@"PHONE" value:nil];
-        _delegate.isLogin = false;
         [CONFIG set:@"USERNAME" value:nil];
         [MESSAGE sendMessage:@"USERNAME" data:@{@"userName":@"注册或登录"}];
         [self.view layoutIfNeeded];
     }];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    switch (indexPath.row) {
-        case 0:
-        {
-            YJModifyPswController *modifyPSW = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJModifyPswController"];
-            [self.navigationController pushViewController:modifyPSW animated:YES];
-        }
-            break;
-            
-        default:
-            break;
-    }
+	
+	if (indexPath.section == 0) {
+		switch (indexPath.row) {
+			case 0:
+			{
+				YJModifyPswController *modifyPSW = [STORYBOARD instantiateViewControllerWithIdentifier:@"YJModifyPswController"];
+				[self.navigationController pushViewController:modifyPSW animated:YES];
+			}
+				break;
+				
+			default:
+				break;
+		}
+	}
+	
 }
 //-(UIView *)logoutView{
 //    UIView *logoutView = [[UIView alloc] initWithFrame:CGRectMake(0, mainScreen.size.height-50, mainScreen.size.width, 50)];

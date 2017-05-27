@@ -87,7 +87,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyOrderTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"MyOrderTableViewCell" owner:nil options:nil] lastObject];
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     cell.order = self.orderData[indexPath.row];
     return cell;
 }
