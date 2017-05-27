@@ -29,6 +29,7 @@
 		[iconImages addObject:obj.activity.img];
 		[iconTitles addObject:obj.activity.name];
 	}];
+	_hotView = [[YJHotView alloc] initWithImages:iconImages titles:iconTitles placeHolder:[UIImage imageNamed:@"v2_placeholder_square"]];
 	BmobQuery *query = [BmobQuery queryWithClassName:@"banner"];
 	[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
 		for (BmobObject *obj in array)
@@ -37,7 +38,7 @@
 		}
 		_scrollView = [YJScrollPageView pageController:focusImages placeHolderImage:[UIImage imageNamed:@"v2_placeholder_full_size"]];
 		_scrollView.backgroundColor = [UIColor orangeColor];
-		_hotView = [[YJHotView alloc] initWithImages:iconImages titles:iconTitles placeHolder:[UIImage imageNamed:@"v2_placeholder_square"]];
+	
 		_headlineView = [[YJHeadLineView alloc] init];
 		_headlineView.headLine = headData.headline;
 		[self addSubview:_headlineView];
